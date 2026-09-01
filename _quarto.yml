@@ -9,11 +9,12 @@ project:
 
 book:
   title: Reportes FACSO - Plantilla Quarto
-  subtitle: Tesis, informes e investigaciones
+  subtitle: Entrega 1
   output-file: reportes-facso-plantilla
   repo-url: https://github.com/KAravena/reportesfacsobook_template  #URL del repositorio del libro (cambia segun tu repo)
   author:
-    - name: Nombre Apellido
+    - name: Amalia Tsukame
+    - name: Elisa Calderón 
       affiliation: Departamento de Sociologia, Universidad de Chile
       orcid: 0000-0000-0000-0000
   date: today              # Usa fecha fija (YYYY-MM-DD) si necesitas control editorial
@@ -33,14 +34,14 @@ book:
   favicon: assets/favicon-2025-20251031.svg  # Apunta al favicon versionado para romper cache
   chapters:
     - index.qmd            # Capitulo inicial o resumen ejecutivo
-    - 00-prefacio.qmd
-    - 01-introduccion.qmd
-    - 02-marco-teorico.qmd
+    - 00-definicion-del-problema.qmd
+    - 01-objeto-de-estudio.qmd
+    - 02-pregunta-de-investigacion.qmd
     - 03-metodologia.qmd
-    - 04-resultados.qmd
-    - 05-discusion.qmd
-    - 06-conclusiones.qmd
-    - references.qmd
+    - 04-revision-inicial-de-literatura.qmd
+    - 05-propuesta-metodologica.qmd
+    - 06-disponibilidad-datos.qmd
+    - 07-referencias-bibliograficas.qmd
     # Para agregar un nuevo capitulo duplica un archivo .qmd y agregalo aqui:
     # ej: - 07-analisis-cualitativo.qmd
   appendices:
