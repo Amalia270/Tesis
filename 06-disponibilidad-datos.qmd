@@ -1,4 +1,4 @@
 ﻿---
-title: "Discusión"
+title: "Disponibilidad de datos"
 ---
-Interpreta resultados, limitaciones y aportes.
+Síntesis y proyecciones futuras.
