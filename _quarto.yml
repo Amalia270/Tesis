@@ -39,11 +39,10 @@ book:
     - 01-definicion-del-problema.qmd
     - 02-objeto-de-estudio.qmd
     - 03-pregunta-de-investigacion.qmd
-    - 04-metodologia.qmd
-    - 05-revision-inicial-de-literatura.qmd
-    - 06-propuesta-metodologica.qmd
-    - 07-disponibilidad-datos.qmd
-    - 08-referencias-bibliograficas.qmd
+    - 04-revision-inicial-de-literatura.qmd
+    - 05-propuesta-metodologica.qmd
+    - 06-disponibilidad-datos.qmd
+    - 07-referencias-biblograficas.qmd 
     # Para agregar un nuevo capitulo duplica un archivo .qmd y agregalo aqui:
     # ej: - 07-analisis-cualitativo.qmd
   appendices:
