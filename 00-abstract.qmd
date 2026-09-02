@@ -1,0 +1,12 @@
+﻿---
+number-sections: false
+numbered: false
+---
+
+# 1. Definición del problema {.unnumbered}
+
+Agradecimientos opcionales, dedicatorias, notas sobre financiamiento, etc.
+
+::: {=latex}
+\mainmatter
+:::
