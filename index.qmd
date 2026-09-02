@@ -23,7 +23,3 @@ div[data-when-format="pdf"] { display: none !important; }
 <span class="keywords-line"><strong>Palabras clave:</strong> sociología, educación, Chile</span>
 :::
 
-# Abstract {.unnumbered}
-
-Resumen en español (200-300). Expón propósito, método, resultados clave y conclusiones.
-Puede incluir citas como @xie2017bookdown y se actualizarán automáticamente.
