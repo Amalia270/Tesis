@@ -11,7 +11,7 @@ format:
 ---
 
 ::: {.content-visible when-format="pdf"}
-\small\textbf{Palabras clave:} Sociologia, educacion, Chile
+\small\textbf{Palabras clave:} Sociologia, Chile, Envejecimiento poblacional, Sistema de salud
 \normalsize
 :::
 
@@ -20,6 +20,6 @@ format:
 nav#TOC { display: none !important; }
 div[data-when-format="pdf"] { display: none !important; }
 </style>
-<span class="keywords-line"><strong>Palabras clave:</strong> sociología, educación, Chile</span>
+<span class="keywords-line"><strong>Palabras clave:</strong> Sociologia, Chile, Envejecimiento poblacional, Sistema de salud</span>
 :::
 
