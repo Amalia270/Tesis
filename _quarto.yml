@@ -35,8 +35,7 @@ book:
   page-navigation: true    # Controla flechas siguiente/anterior en la cabecera
   favicon: assets/favicon-2025-20251031.svg  # Apunta al favicon versionado para romper cache
   chapters:
-    - index.qmd
-    - 00-abstract.qmd            # Capitulo inicial o resumen ejecutivo
+    - index.qmd           # Capitulo inicial o resumen ejecutivo
     - 01-definicion-del-problema.qmd
     - 02-objeto-de-estudio.qmd
     - 03-pregunta-de-investigacion.qmd
