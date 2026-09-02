@@ -1,5 +1,5 @@
 ---
-title: "Antecedentes conceptuales y empíricos"
+title: "3. Pregunta de investigación"
 ---
 
 Sintetiza la literatura relevante. Usa referencias como @desmond2019poverty.

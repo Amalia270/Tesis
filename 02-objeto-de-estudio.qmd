@@ -1,5 +1,5 @@
 ﻿---
-title: "Introducción"
+title: "2. Objeto de estudio"
 numbered: true
 ---
 
