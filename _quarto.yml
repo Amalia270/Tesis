@@ -11,7 +11,7 @@ book:
   title: Reportes FACSO 
   subtitle: Entrega 1
   output-file: reportes-facso-plantilla
-  repo-url: https://github.com/KAravena/reportesfacsobook_template  #URL del repositorio del libro (cambia segun tu repo)
+  repo-url: https://github.com/Amalia270/Tesis  #URL del repositorio del libro (cambia segun tu repo)
   author:
     - name: Elisa Calderón
       affiliation: Departamento de Sociología, Universidad de Chile
