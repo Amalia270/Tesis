@@ -54,7 +54,7 @@ reference-location: section      # Citas agrupadas al final de cada seccion
 format:
   html:
     page-layout: full 
-    theme:
+    theme:  
     light: cosmo
     toc: true
     toc-depth: 3
