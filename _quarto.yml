@@ -53,10 +53,9 @@ reference-location: section      # Citas agrupadas al final de cada seccion
 
 format:
   html:
-    page-layout: full 
-    theme:  
-    light: cosmo
-    toc: true
+    theme:
+      light: cosmo               # Cualquier tema Bootswatch (journal, litera, etc.)
+    toc: true 
     toc-depth: 3
     toc-location: right
     number-sections: true
