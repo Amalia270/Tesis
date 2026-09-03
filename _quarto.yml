@@ -75,8 +75,11 @@ format:
       - includes/renumber.html    # Reajusta numeracion de figuras/tablas si es necesario
       - includes/code-toggle.html # Boton global para mostrar/ocultar bloques de codigo
       - includes/toc-enhance.html # Sincroniza el resaltado del TOC en el margen
-
-  pdf:
+    grid:
+    sidebar-width: 250px
+    body-width: 1100px
+    margin-width: 250px
+ 
     pdf-engine: xelatex          # Requiere LaTeX con soporte para fuentes OpenType
     toc: false                   # Generamos TOC/LOF/LOT manualmente en title-pdf.tex
     lof: false
