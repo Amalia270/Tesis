@@ -13,12 +13,12 @@ book:
   output-file: reportes-facso-plantilla
   repo-url: https://github.com/KAravena/reportesfacsobook_template  #URL del repositorio del libro (cambia segun tu repo)
   author:
+    - name: Elisa Calderón
+      affiliation: Departamento de Sociología, Universidad de Chile
+      orcid: 0009-0001-0171-7199
     - name: Amalia Tsukame
-      affiliation: Departamento de Sociologia, Universidad de Chile
-      orcid: 0000-0000-0000-0000
-    - name: Elisa Calderón 
-      affiliation: Departamento de Sociologia, Universidad de Chile
-      orcid: 0000-0000-0000-0000
+      affiliation: Departamento de Sociología, Universidad de Chile
+      orcid: 0009-0004-3578-1289
   date: 2026-09-10          # Usa fecha fija (YYYY-MM-DD) si necesitas control editorial
   date-format: D [de] MMMM [de] YYYY
   doi: ""
@@ -55,7 +55,7 @@ format:
   html:
     page-layout: full 
     theme:
-      light: cosmo
+    light: cosmo
     toc: true
     toc-depth: 3
     toc-location: right
