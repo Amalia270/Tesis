@@ -54,41 +54,45 @@ reference-location: section      # Citas agrupadas al final de cada seccion
 format:
   html:
     theme:
-      light: cosmo               # Cualquier tema Bootswatch (journal, litera, etc.)
-    toc: true                   
+      light: cosmo
+    toc: true
     toc-depth: 3
     toc-location: right
     number-sections: true
-    code-copy: true              # Boton copiar codigo
-    code-tools: true             # Menu con toggles para mostrar/ocultar codigo
-    df-print: paged              # Usa "kable" o "default" si prefieres otra salida
-    css: assets/styles.scss      # Punto central para tus estilos personalizados
-    favicon: assets/favicon-2025-20251031.svg  # Cache-bust del favicon anterior
+    code-copy: true
+    code-tools: true
+    df-print: paged
+    css: assets/styles.scss
+    favicon: assets/favicon-2025-20251031.svg
     anchor-sections: true
     smooth-scroll: true
     link-external-newwindow: true
+
     include-in-header:
-      - includes/justify.html     # Ajusta justificacion a nivel global
+      - includes/justify.html
+
     include-after-body:
-      - includes/logo-link.html   # Enlaces adicionales (logo clicable y descarga ZIP)
-      - includes/citefix.html     # Corrige estilos de citas
-      - includes/renumber.html    # Reajusta numeracion de figuras/tablas si es necesario
-      - includes/code-toggle.html # Boton global para mostrar/ocultar bloques de codigo
-      - includes/toc-enhance.html # Sincroniza el resaltado del TOC en el margen
-    
+      - includes/logo-link.html
+      - includes/citefix.html
+      - includes/renumber.html
+      - includes/code-toggle.html
+      - includes/toc-enhance.html
+
     grid:
-    sidebar-width: 250px
-    body-width: 1100px
-    margin-width: 250px
-    pdf-engine: xelatex          # Requiere LaTeX con soporte para fuentes OpenType
-    toc: false                   # Generamos TOC/LOF/LOT manualmente en title-pdf.tex
+      sidebar-width: 250px
+      body-width: 1100px
+      margin-width: 250px
+
+  pdf:
+    pdf-engine: xelatex
+    toc: false
     lof: false
     lot: false
     keep-tex: true
-    documentclass: scrbook       # Usa report/book si prefieres otra estructura
+    documentclass: scrbook
     classoption:
       - oneside
-    papersize: a4                # Cambia a letter si trabajas con papel tamano carta
+    papersize: a4
     geometry:
       - top=25mm
       - bottom=25mm
@@ -96,9 +100,9 @@ format:
       - right=20mm
     colorlinks: true
     number-sections: true
-    include-in-header: includes/preamble.tex     # Configuracion avanzada PDF
-    include-before-body: includes/title-pdf.tex  # Portada personalizada
-    include-after-body: includes/backmatter.tex  # Material posterior (glosario, licencias, etc.)
+    include-in-header: includes/preamble.tex
+    include-before-body: includes/title-pdf.tex
+    include-after-body: includes/backmatter.tex
     fig-cap-location: top
     tbl-cap-location: top
 
