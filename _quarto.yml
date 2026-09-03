@@ -53,6 +53,7 @@ reference-location: section      # Citas agrupadas al final de cada seccion
 
 format:
   html:
+    page-layout: full 
     theme:
       light: cosmo
     toc: true
@@ -77,11 +78,6 @@ format:
       - includes/renumber.html
       - includes/code-toggle.html
       - includes/toc-enhance.html
-
-    grid:
-      sidebar-width: 250px
-      body-width: 1100px
-      margin-width: 250px
 
   pdf:
     pdf-engine: xelatex
