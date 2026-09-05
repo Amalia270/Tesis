@@ -1,4 +1,4 @@
 ﻿---
-title: "Discusión"
+title: "Propuesta metodológica"
 ---
 Interpreta resultados, limitaciones y aportes.

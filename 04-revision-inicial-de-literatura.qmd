@@ -1,4 +1,4 @@
 ﻿---
-title: "Discusión"
+title: "Revisión inicial de literatura"
 ---
 Interpreta resultados, limitaciones y aportes.
