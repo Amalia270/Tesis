@@ -1,13 +1,16 @@
-﻿---
-title: "Abstract"
+﻿
+---
 number-sections: false
 numbered: false
-format:
-  html:
-    title-block-style: none
-    toc: false
-  pdf:
-    title-block-style: none
+---
+# Abstract {.unnumbered}
+
+Agradecimientos opcionales, dedicatorias, notas sobre financiamiento, etc.
+
+::: {=latex}
+\mainmatter
+:::
+
 ---
 
 ::: {.content-visible when-format="pdf"}
