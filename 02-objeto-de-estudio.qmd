@@ -1,6 +1,5 @@
 ﻿---
 title: "Objeto de estudio"
-numbered: true
 ---
 
 Motivación, preguntas de investigación, Objetivo general y específicos, contribución esperada, estructura del documento.
