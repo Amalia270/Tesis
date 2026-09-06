@@ -36,13 +36,14 @@ book:
   favicon: assets/favicon-2025-20251031.svg  # Apunta al favicon versionado para romper cache
   chapters:
     - index.qmd # Capitulo inicial o resumen ejecutivo
+    
     - 01-definicion-del-problema.qmd 
     - 02-objeto-de-estudio.qmd
     - 03-pregunta-de-investigacion.qmd
     - 04-revision-inicial-de-literatura.qmd
     - 05-propuesta-metodologica.qmd
     - 06-disponibilidad-datos.qmd
-    - 07-referencias-biblograficas.qmd 
+    - 07-referencias-bibliograficas.qmd 
     # Para agregar un nuevo capitulo duplica un archivo .qmd y agregalo aqui:
     # ej: - 07-analisis-cualitativo.qmd
 
