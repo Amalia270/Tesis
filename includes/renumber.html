@@ -17,10 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!parts.length) {
       return "";
     }
-  parts[0] = parts[0] - 1;
-    if (parts[0] <= 0) {
-      return "";
-    }
+    // Se eliminó "parts[0] = parts[0] - 1;" porque Quarto ya numera
+    // correctamente de forma nativa; esa resta dejaba el primer
+    // capítulo en 0 y por eso desaparecía del sidebar.
     return formatNumberParts(parts);
   };
 
