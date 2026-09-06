@@ -36,7 +36,7 @@ book:
   favicon: assets/favicon-2025-20251031.svg  # Apunta al favicon versionado para romper cache
   chapters:
     - index.qmd           # Capitulo inicial o resumen ejecutivo
-    - 01-definicion-del-problema.qmd
+    - 01-definicion-del-problema.qmd 
     - 02-objeto-de-estudio.qmd
     - 03-pregunta-de-investigacion.qmd
     - 04-revision-inicial-de-literatura.qmd
