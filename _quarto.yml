@@ -8,7 +8,7 @@ project:
     - assets/favicon-2025-20251031.svg  # Asegura que el favicon versionado llegue a docs/
 
 book:
-  title: En un país que envejece: análisis de la utilización de servicios de salud en Chile. 
+  title: En un país que envejece; Análisis de la utilización de servicios de salud en Chile. 
   subtitle: Entrega 1
   output-file: reportes-facso-plantilla
   repo-url: https://github.com/Amalia270/Tesis  #URL del repositorio del libro (cambia segun tu repo)
