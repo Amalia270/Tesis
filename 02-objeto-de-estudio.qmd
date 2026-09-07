@@ -1,4 +1,0 @@
-﻿---
-title: "Objeto de estudio"
----
-El objeto de estudio corresponde a la utilización de servicios de salud en la población residente en Chile.

@@ -1,6 +1,0 @@
-﻿---
-title: "Disponibilidad de datos"
----
-Los datos utilizados en esta investigación corresponden a la Encuesta CASEN 2024, cuya base de datos y documentación metodológica son de carácter público y de libre acceso CASEN. El Ministerio de Desarrollo Social y Familia, a través del Observatorio Social, pone a disposición de la ciudadanía la base de microdatos (en formato SPSS, Stata y CSV), el libro de códigos, el diccionario de variables, la ficha técnica y el manual de aplicación del cuestionario, entre otros documentos metodológicos, sin requerir solicitud de acceso ni autorización previa (MDSF, 2024). 
-
-
