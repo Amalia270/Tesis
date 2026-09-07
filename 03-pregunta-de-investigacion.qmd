@@ -1,8 +1,8 @@
 ---
 title: "Pregunta de investigación"
 ---
+A partir de lo anterior, se formula la siguiente pregunta de investigación:
 
-Sintetiza la literatura relevante. Usa referencias como @desmond2019poverty.
+¿Cómo se relaciona el envejecimiento con la utilización de los servicios de salud en Chile y en qué medida esta relación se modifica según las necesidades de salud y las condiciones sociales, económicas, institucionales y territoriales de las personas? 
 
-## Marco conceptual
 

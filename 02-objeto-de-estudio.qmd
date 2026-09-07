@@ -1,5 +1,4 @@
 ﻿---
 title: "Objeto de estudio"
 ---
-
-Motivación, preguntas de investigación, Objetivo general y específicos, contribución esperada, estructura del documento.
+El objeto de estudio corresponde a la utilización de servicios de salud en la población residente en Chile.
