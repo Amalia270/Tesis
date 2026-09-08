@@ -3,9 +3,7 @@
 number-sections: false
 numbered: false
 ---
-# Abstract {.unnumbered}
-
-Agradecimientos opcionales, dedicatorias, notas sobre financiamiento, etc.
+# On this page: {.unnumbered}
 
 ::: {=latex}
 \mainmatter
