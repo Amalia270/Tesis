@@ -3,7 +3,7 @@
 number-sections: false
 numbered: false
 ---
-# On this page: {.unnumbered}
+# {.unnumbered}
 
 ::: {=latex}
 \mainmatter
