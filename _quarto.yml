@@ -45,7 +45,7 @@ book:
     # ej: - 07-analisis-cualitativo.qmd
 
 csl: refs\apa.csl           # Estilo de citas (cambia a otro .csl si lo prefieres)
-bibliography: refs\re
+bibliography: refs\entrega1referencias.bib 
 link-citations: true             # Enlaces desde el texto hacia la bibliografia
 reference-location: section      # Citas agrupadas al final de cada seccion
 
