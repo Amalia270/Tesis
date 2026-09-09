@@ -66,46 +66,6 @@
 \fi
 \makeatother
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{241,243,245}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \usepackage{longtable,booktabs,array}
 \newcounter{none} % for unnumbered tables
@@ -410,7 +370,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Reportes FACSO},
+  pdftitle={En un país que envejece:Análisis de la utilización de servicios de salud en Chile.},
   pdfauthor={Elisa Calderón; Amalia Tsukame},
   pdflang={es},
   colorlinks=true,
@@ -421,7 +381,8 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{Reportes FACSO}
+\title{En un país que envejece:Análisis de la utilización de servicios
+de salud en Chile.}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
@@ -531,13 +492,10 @@
 \mainmatter
 \bookmarksetup{startatroot}
 
-\chapter*{Abstract}\label{abstract}
-\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{}\label{section}
+\addcontentsline{toc}{chapter}{}
 
-\markboth{Abstract}{Abstract}
-
-Agradecimientos opcionales, dedicatorias, notas sobre financiamiento,
-etc.
+\markboth{}{}
 
 \mainmatter
 
@@ -550,70 +508,236 @@ poblacional, Sistema de salud \normalsize
 
 \chapter{Definición del problema}\label{definiciuxf3n-del-problema}
 
-Motivación, preguntas de investigación, Objetivo general y específicos,
-contribución esperada, estructura del documento.
+En la actualidad, Chile atraviesa un sostenido y avanzado proceso de
+envejecimiento poblacional que está modificando la estructura por edades
+de la población. Los resultados del Censo 2024 muestran que la población
+de 65 años y más representa el 14\% de la población nacional, mientras
+que en 1992 era un 6,6\%. En paralelo, ha disminuido el porcentaje de
+personas de 14 años o menos de 29,4\% a 17,7\% en el mismo período. Con
+lo anterior, el Índice de Envejecimiento muestra que por cada 100
+personas de 14 años o menos hay 79 personas de 65 años o más en el país,
+cifra que para el año 1992 era 22,3. Adicionalmente, el 11,6\% de los
+hogares a nivel nacional están conformados solo por personas de 65 años
+o más. Esta cifra era 8,3\% en 1992 (\citeproc{ref-INE2024a}{Instituto
+Nacional de Estadísticas, 2025}) . Las nuevas proyecciones del INE
+indican que este proceso seguirá profundizándose en las próximas
+décadas, de manera que para 2045, la población de 65 años y más
+triplicaría a la población menor de 15 años
+(\citeproc{ref-INE2024b}{Instituto Nacional de Estadísticas, 2024}).
 
-\bookmarksetup{startatroot}
+Este proceso plantea interrogantes y desafíos respecto de las demandas
+futuras que podrían enfrentar las instituciones, y en particular el
+sistema de salud. La relación entre envejecimiento poblacional y la
+utilización del sistema de salud no se puede reducir a que las personas
+mayores utilizarán más los servicios de atención médica. Si bien la edad
+cronológica se relaciona con cambios en la salud, presencia de
+enfermedades o limitaciones funcionales, estos no se distribuyen de
+manera homogénea en la población, sino que están sujetos a condiciones
+socioeconómicas, educativas, culturales y territoriales.
 
-\chapter{Objeto de estudio}\label{objeto-de-estudio}
+Desde una perspectiva sociológica, el envejecimiento constituye, por
+tanto, un fenómeno que debe ser comprendido en relación con las
+desigualdades sociales acumuladas a lo largo de la vida. Personas de la
+misma edad pueden presentar diferentes condiciones de salud y distintas
+posibilidades de acceder a los servicios sanitarios. En este marco, el
+problema de investigación se sitúa en la necesidad de comprender cómo se
+relaciona la edad con la utilización de distintos servicios de salud en
+Chile y en qué medida esta relación se encuentra condicionada por las
+necesidades de salud y por factores sociales y estructurales que
+facilitan o dificultan el acceso. Comprender esta relación permite
+caracterizar las diferencias actuales en el uso de servicios de salud, y
+aproximarse a los posibles cambios futuros en la demanda sanitaria que
+traerá el envejecimiento poblacional.
 
-Motivación, preguntas de investigación, Objetivo general y específicos,
-contribución esperada, estructura del documento.
+\section{Objeto de estudio}\label{objeto-de-estudio}
 
-\bookmarksetup{startatroot}
+El objeto de estudio corresponde a la utilización de servicios de salud
+en la población residente en Chile.
 
-\chapter{Pregunta de investigación}\label{pregunta-de-investigaciuxf3n}
+\section{Pregunta de investigación}\label{pregunta-de-investigaciuxf3n}
 
-Sintetiza la literatura relevante. Usa referencias como Desmond \&
-Wilmers (\citeproc{ref-desmond2019poverty}{2019}).
+A partir de lo anterior, se formula la siguiente pregunta de
+investigación:
 
-\section{Marco conceptual}\label{marco-conceptual}
+¿Cómo se relaciona el envejecimiento con la utilización de los servicios
+de salud en Chile y en qué medida esta relación se modifica según las
+necesidades de salud y las condiciones sociales, económicas,
+institucionales y territoriales de las personas?
 
 \bookmarksetup{startatroot}
 
 \chapter{Revisión inicial de
 literatura}\label{revisiuxf3n-inicial-de-literatura}
 
-Interpreta resultados, limitaciones y aportes.
+La investigación se sitúa inicialmente en la intersección de cuatro
+campos conceptuales: el envejecimiento poblacional, las desigualdades
+sociales en salud, las instituciones y la utilización de servicios
+sanitarios.
+
+En relación al envejecimiento demográfico, este es definido como el
+aumento progresivo de la proporción de personas mayores, producto de la
+evolución conjunta de fecundidad y mortalidad
+(\citeproc{ref-CEPAL}{Comisión Económica para América Latina y el Caribe
+(s.f.), s.f}). Desde una perspectiva individual y biológica, el
+envejecimiento implica cambios graduales de las capacidades físicas y
+mentales, y un mayor riesgo de enfermedad
+(\citeproc{ref-OMS2025}{Organización Mundial de la Salud, 2025, 1 de
+octubre}). Sin embargo, para esta investigación, el envejecimiento se
+aborda como proceso que se desarrolla a lo largo del curso de vida, por
+lo que la edad es una dimensión relevante pero no suficiente para
+explicar las diferencias en las condiciones de salud y la utilización de
+los servicios médicos.
+
+En este sentido, y bajo el marco de los determinantes sociales de la
+salud, se señala que las personas que logran una mejor posición social
+tendrán menos probabilidades de estar expuestos a enfermedades y en caso
+de enfermar, tendrán mejores posibilidades para afrontarlo y sufrir
+menores consecuencias sociales y económicas
+(\citeproc{ref-MoscosoCuaresma}{Moscoso Cuaresma, J. R. et~al., 2017}).
+Por ello, las desigualdades acumuladas a lo largo del curso de vida
+pueden contribuir a que personas de una misma edad presenten diferentes
+necesidades de salud y distintas posibilidades de acceder a atención
+sanitaria.
+
+Estas diferencias son relevantes al considerar el rol de las
+instituciones, ya que estas constituyen mecanismos desde el cual se
+canalizan las demandas de grupos vulnerables y se sostiene la
+cooperación colectiva (\citeproc{ref-Huenchuan}{Huenchuan, S., 2016}).
+En este marco, el sistema de salud representa la institución central
+para responder a las necesidades sanitarias de la población. Sin
+embargo, la forma en que se organizan y distribuyen los recursos
+institucionales puede contribuir a facilitar o restringir las
+posibilidades de acceso de distintos grupos sociales.
+
+Para organizar analíticamente estos factores, se utilizará el Modelo
+Conductual del Uso de los Servicios de Salud de Andersen, el cual
+sugiere que ``el uso de los servicios de salud por parte de las personas
+depende de su predisposición a utilizarlos, así como de factores que
+facilitan o dificultan su uso y la necesidad de atención médica''
+(\citeproc{ref-Andersen}{2008, p. 651}). Para esto, desarrolla tres
+grupos de factores: factores predisponentes, los que corresponden a
+características individuales y sociales que anteceden a la utilización y
+que estructuran la propensión a utilizar servicios; factores
+facilitadores, los cuales representan recursos y condiciones que pueden
+permitir o dificultar la utilización; factores de necesidad que
+representan las condiciones que hacen necesaria o potencialmente
+necesaria la utilización de servicios.
 
 \bookmarksetup{startatroot}
 
 \chapter{Propuesta metodológica}\label{propuesta-metodoluxf3gica}
 
-Interpreta resultados, limitaciones y aportes.
+La investigación tendrá un enfoque cuantitativo, observacional y
+transversal. Se utilizará como fuente principal de datos la {[}Encuesta
+de Caracterización Socioeconómica Nacional (CASEN) 2024{]}
+(https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2024),
+desarrollada por el Ministerio de Desarrollo Social y Familia. La
+encuesta recopila información sobre aspectos demográficos, módulos de
+salud, educación, vivienda, trabajo e ingresos, que permite conocer
+periódicamente la situación de los hogares y de la población,
+especialmente de aquella en situación de pobreza y de aquellos grupos
+definidos como prioritarios por la política social, además, de evaluar
+el impacto de la política social (\citeproc{ref-MDSF2024}{Ministerio de
+Desarrollo Social y Familia, 2024})
+
+La unidad de análisis de esta investigación corresponde a las personas
+residentes en los hogares particulares encuestados por la CASEN 2024. La
+encuesta contempla un total de 218.367 personas, pertenecientes a 78.654
+hogares y 77.618 viviendas (\citeproc{ref-MDSF2024}{Ministerio de
+Desarrollo Social y Familia, 2024}). Para efectos de esta investigación,
+se utilizará como referencia la muestra de personas, mientras que el
+número de observaciones efectivo podrá variar entre los distintos
+modelos de acuerdo con el universo específico de cada variable, la
+aplicación de filtros y la disponibilidad de información.
+
+Las variables dependientes serán indicadores de utilización de servicios
+de salud: atención de medicina general en los últimos tres meses,
+atención de especialidad en los últimos tres meses y hospitalización o
+intervención quirúrgica en los últimos doce meses.
+
+Las variables independientes serán organizadas en función del Modelo
+Conductual de Andersen. En donde, en primer lugar, las variables
+predisponentes (edad, sexo, nivel educacional y estado civil) dan cuenta
+de las características demográficas y sociales que pueden condicionar la
+propensión individual a utilizar servicios de salud. En segundo lugar,
+las variables facilitadoras o de acceso (sistema previsional, ingreso
+per cápita del hogar, región y área de residencia, y proximidad al
+centro de salud) reflejan los recursos materiales e institucionales que
+habilitan o restringen el acceso efectivo a la atención. En tercer
+lugar, las variables de necesidad capturan condiciones de salud que
+pueden generar la búsqueda de atención como son las condiciones de larga
+duración y limitaciones funcionales.
+
+En relación al análisis, se utilizarán modelos de regresión logística
+binaria para estimar la probabilidad de utilización de cada tipo de
+servicio. Se propone una estrategia de modelos anidados. Un primer
+modelo incorporará las características predisponentes y permitirá
+observar la asociación inicial entre edad y utilización. Un segundo
+modelo añadirá las variables de necesidad para analizar en qué medida la
+asociación con la edad se modifica al considerar diferencias en el
+estado de salud. Finalmente, un tercer modelo incorporará los factores
+facilitadores, permitiendo evaluar la asociación de los recursos
+económicos, institucionales y territoriales con la utilización, una vez
+consideradas las características predisponentes y las necesidades de
+salud.
+
+\section{Disponibilidad de datos}\label{disponibilidad-de-datos}
+
+Los datos utilizados en esta investigación corresponden a la Encuesta
+CASEN 2024, cuya base de datos y documentación metodológica son de
+carácter público y de libre acceso. El Ministerio de Desarrollo Social y
+Familia, a través del Observatorio Social, pone a disposición de la
+ciudadanía la base de microdatos (en formato SPSS, Stata y CSV), el
+libro de códigos, el diccionario de variables, la ficha técnica y el
+manual de aplicación del cuestionario, entre otros documentos
+metodológicos, sin requerir solicitud de acceso ni autorización previa
+(\citeproc{ref-MDSF2024}{Ministerio de Desarrollo Social y Familia,
+2024}).
 
 \bookmarksetup{startatroot}
 
-\chapter{Disponibilidad de datos}\label{disponibilidad-de-datos}
-
-\bookmarksetup{startatroot}
-
-\chapter{Resultados}\label{resultados}
-
-\section{Analisis descriptivo}\label{analisis-descriptivo}
-
-Resumen de las estadisticas descriptivas clave y visualizaciones de
-apoyo.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ControlFlowTok{if}\NormalTok{ (}\FunctionTok{requireNamespace}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{, }\AttributeTok{quietly =} \ConstantTok{TRUE}\NormalTok{)) \{}
-  \FunctionTok{library}\NormalTok{(ggplot2)}
-  \FunctionTok{ggplot}\NormalTok{(mtcars, }\FunctionTok{aes}\NormalTok{(wt, mpg)) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{()}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-\section{Modelos}\label{modelos}
-
-Presentacion de los resultados de los modelos propuestos, con
-interpretacion y conclusiones.
+\chapter{Referencias
+bibliográficas}\label{referencias-bibliogruxe1ficas}
 
 \protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-desmond2019poverty}
-Desmond, M., \& Wilmers, N. (2019). The Racialized Geography of Housing.
-\emph{American Journal of Sociology}.
+\bibitem[\citeproctext]{ref-Andersen}
+Andersen, R. M. (2008). \emph{National Health Surveys and the Behavioral
+Model of Health Services Use}.
+
+\bibitem[\citeproctext]{ref-CEPAL}
+Comisión Económica para América Latina y el Caribe (s.f.). (s.f).
+\emph{{Acerca de Envejecimiento \textbar{} CEPAL}}.
+https://www.cepal.org/es/temas/envejecimiento/acerca-envejecimiento.
+
+\bibitem[\citeproctext]{ref-Huenchuan}
+Huenchuan, S. (2016). \emph{{Envejecimiento e institucionalidad pública
+en América Latina y el Caribe: conceptos, metodologías y casos prácticos
+\textbar{} CEPAL}}.
+https://www.cepal.org/es/publicaciones/40197-envejecimiento-institucionalidad-publica-america-latina-caribe-conceptos.
+
+\bibitem[\citeproctext]{ref-INE2024b}
+Instituto Nacional de Estadísticas. (2024). \emph{Estimaciones y
+Proyecciones de Población 1992-2070, Base 2024: Presentación de
+Resultados}.
+
+\bibitem[\citeproctext]{ref-INE2024a}
+Instituto Nacional de Estadísticas. (2025). {Primeros resultados del
+Censo 2024: 18.480.432 personas fueron censadas en Chile, manteniéndose
+la tendencia de envejecimiento de la población}. En \emph{Censo 2024}.
+
+\bibitem[\citeproctext]{ref-MDSF2024}
+Ministerio de Desarrollo Social y Familia. (2024). \emph{{Informe
+metodológico Casen 2024}}.
+
+\bibitem[\citeproctext]{ref-MoscosoCuaresma}
+Moscoso Cuaresma, J. R., Cárdenas, E., \& Juárez, C. (2017).
+\emph{Determinantes Sociales En Salud}.
+
+\bibitem[\citeproctext]{ref-OMS2025}
+Organización Mundial de la Salud. (2025, 1 de octubre). {Envejecimiento
+y salud}. En \emph{World Health Organization}.
+https://www.who.int/es/news-room/fact-sheets/detail/ageing-and-health.
 
 \end{CSLReferences}
 
