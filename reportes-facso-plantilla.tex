@@ -66,48 +66,9 @@
 \fi
 \makeatother
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{241,243,245}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.40,0.45,0.13}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\ExtensionTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.28,0.35,0.67}{#1}}
-\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.46,0.62}{#1}}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.68,0.00,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{\textcolor[rgb]{0.00,0.23,0.31}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.07,0.07,0.07}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.13,0.47,0.30}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.37,0.37,0.37}{\textit{#1}}}
 
 \usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -169,13 +130,13 @@
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \ifLuaTeX
-\usepackage[bidi=basic]{babel}
+\usepackage[bidi=basic,shorthands=off]{babel}
 \else
-\usepackage[bidi=default]{babel}
+\usepackage[bidi=default,shorthands=off]{babel}
 \fi
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
 
 
 \setlength{\emergencystretch}{3em} % prevent overfull lines
@@ -409,8 +370,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Reportes FACSO - Plantilla Quarto},
-  pdfauthor={Nombre Apellido},
+  pdftitle={En un país que envejece:Análisis de la utilización de servicios de salud en Chile.},
+  pdfauthor={Elisa Calderón; Amalia Tsukame},
   pdflang={es},
   colorlinks=true,
   linkcolor={Maroon},
@@ -420,16 +381,17 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\title{Reportes FACSO - Plantilla Quarto}
+\title{En un país que envejece:Análisis de la utilización de servicios
+de salud en Chile.}
 \usepackage{etoolbox}
 \makeatletter
 \providecommand{\subtitle}[1]{% add subtitle to \maketitle
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{Tesis, informes e investigaciones}
-\author{Nombre Apellido}
-\date{17 de noviembre de 2025}
+\subtitle{Informe de avance 1}
+\author{Elisa Calderón \and Amalia Tsukame}
+\date{10 de septiembre de 2026}
 \begin{document}
 \frontmatter
 \maketitle
@@ -458,7 +420,11 @@
   \endgroup
 }
 \newcommand{\PrintAuthor}{%
-  {\Large\bfseries \@author\par}%
+  {\Large\bfseries Elisa Calder\'on \\[2pt] Amalia Tsukame\par}%
+  \vspace{4mm}
+  {\small
+   Departamento de Sociolog\'ia, Universidad de Chile\\
+   ORCID: 0009-0001-0171-7199 \quad\textbar\quad 0009-0004-3578-1289\par}%
 }
 \newcommand{\PrintDate}{%
   {\small \@date\par}%
@@ -535,344 +501,294 @@
 
 \markboth{Abstract}{Abstract}
 
-\small\textbf{Palabras clave:} Sociologia, educacion, Chile \normalsize
+El envejecimiento poblacional constituye una de las principales
+transformaciones demográficas que enfrenta Chile y plantea nuevos
+desafíos para la organización y utilización del sistema de salud. El
+aumento de la población de mayor edad no implica únicamente un
+incremento en el número de personas que requieren atención, sino también
+una posible transformación en los patrones de utilización de los
+servicios, asociada a cambios en las necesidades de salud, la
+prevalencia de enfermedades crónicas y las condiciones sociales y
+territoriales en que se produce el acceso a la atención. En este
+contexto, resulta relevante analizar el envejecimiento no solo como un
+fenómeno demográfico, sino también en relación con la forma en que las
+instituciones sanitarias organizan y median la respuesta frente a dichas
+necesidades.
 
-Resumen en español (200-300). Expón propósito, método, resultados clave
-y conclusiones. Puede incluir citas como Xie
-(\citeproc{ref-xie2017bookdown}{2017}) y se actualizarán
-automáticamente.
+Esta investigación busca analizar la relación entre la estructura etaria
+de la población chilena y los patrones de utilización de los servicios
+de salud, considerando las condiciones sociales e institucionales que
+intervienen en dicha relación. Desde una perspectiva sociológica, se
+propone comprender el sistema de salud como una institución que
+estructura oportunidades diferenciadas de acceso y utilización,
+particularmente en un contexto caracterizado por la segmentación entre
+FONASA e Isapres. Para organizar analíticamente estos factores se
+utilizará como referencia el modelo conductual de utilización de
+servicios de salud de Andersen, distinguiendo factores predisponentes,
+facilitadores y de necesidad.
 
-\bookmarksetup{startatroot}
+Empíricamente, se utilizará la Encuesta de Caracterización
+Socioeconómica Nacional (CASEN) 2024 para estimar, mediante modelos de
+regresión logística binaria, la relación entre edad, características
+sociodemográficas, condiciones de acceso y necesidad de salud y la
+utilización de distintos servicios, tales como atención médica general,
+atención de especialidad y hospitalización. El análisis considerará
+además las diferencias asociadas a la adscripción previsional y otras
+condiciones sociales y territoriales. Finalmente, a partir de los
+patrones estimados y de las proyecciones de población del Instituto
+Nacional de Estadísticas (INE), se evaluará la factibilidad de
+desarrollar escenarios de proyección o microsimulación que permitan
+explorar cómo la transformación futura de la estructura etaria podría
+modificar los patrones de utilización del sistema de salud. La dimensión
+territorial podrá incorporarse en función de la disponibilidad y
+precisión de los datos, considerando especialmente el nivel regional.
 
-\chapter*{Prefacio}\label{prefacio}
-\addcontentsline{toc}{chapter}{Prefacio}
+\noindent\small\textbf{Palabras clave:} Sociologia, Chile,
+Envejecimiento poblacional, Sistema de salud chileno, Modelo conductual
+de Andersen, Encuesta CASEN.
 
-\markboth{Prefacio}{Prefacio}
-
-Agradecimientos opcionales, dedicatorias, notas sobre financiamiento,
-etc.
-
-\mainmatter
-
-\bookmarksetup{startatroot}
-
-\chapter{Introducción}\label{introducciuxf3n}
-
-Motivación, preguntas de investigación, Objetivo general y específicos,
-contribución esperada, estructura del documento.
-
-\bookmarksetup{startatroot}
-
-\chapter{Antecedentes conceptuales y
-empíricos}\label{antecedentes-conceptuales-y-empuxedricos}
-
-Sintetiza la literatura relevante. Usa referencias como Desmond \&
-Wilmers (\citeproc{ref-desmond2019poverty}{2019}).
-
-\section{Marco conceptual}\label{marco-conceptual}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at
-nulla a ligula volutpat dictum. Sed dictum hendrerit augue, vitae
-efficitur nisl hendrerit nec. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Integer at nulla a ligula volutpat dictum. Sed dictum
-hendrerit augue, vitae efficitur nisl hendrerit nec. Lorem ipsum dolor
-sit amet, consectetur adipiscing elit. Integer at nulla a ligula
-volutpat dictum. Sed dictum hendrerit augue, vitae efficitur nisl
-hendrerit nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Integer at nulla a ligula volutpat dictum. Sed dictum hendrerit augue,
-vitae efficitur nisl hendrerit nec.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at
-nulla a ligula volutpat dictum. Sed dictum hendrerit augue, vitae
-efficitur nisl hendrerit nec. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Integer at nulla a ligula volutpat dictum. Sed dictum
-hendrerit augue, vitae efficitur nisl hendrerit nec. Lorem ipsum dolor
-sit amet, consectetur adipiscing elit. Integer at nulla a ligula
-volutpat dictum. Sed dictum hendrerit augue, vitae efficitur nisl
-hendrerit nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Integer at nulla a ligula volutpat dictum. Sed dictum hendrerit augue,
-vitae efficitur nisl hendrerit nec.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at
-nulla a ligula volutpat dictum. Sed dictum hendrerit augue, vitae
-efficitur nisl hendrerit nec. Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Integer at nulla a ligula volutpat dictum. Sed dictum
-hendrerit augue, vitae efficitur nisl hendrerit nec. Lorem ipsum dolor
-sit amet, consectetur adipiscing elit. Integer at nulla a ligula
-volutpat dictum. Sed dictum hendrerit augue, vitae efficitur nisl
-hendrerit nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Integer at nulla a ligula volutpat dictum. Sed dictum hendrerit augue,
-vitae efficitur nisl hendrerit nec.
-
-\subsection{Ejemplos APA 7}\label{ejemplos-apa-7}
-
-Según Desmond \& Wilmers (\citeproc{ref-desmond2019poverty}{2019}), los
-patrones de segregación residencial configuran los límites de
-oportunidad urbana y permiten introducir la sintaxis de cita narrativa
-dentro del flujo del texto.
-
-Los matices culturales del gusto pueden reforzar desigualdades cuando se
-institucionalizan en jerarquías de prestigio académico
-(\citeproc{ref-bourdieu2012}{Bourdieu, 2012, p. 35}), lo que ilustra la
-cita parentética con número de página.
-
-Para contrastar hallazgos se pueden reunir múltiples referencias en un
-mismo paréntesis analítico (\citeproc{ref-desmond2019poverty}{Desmond \&
-Wilmers, 2019}; \citeproc{ref-xie2017bookdown}{Xie, 2017}), destacando
-cómo distintos diseños metodológicos convergen en un mecanismo causal
-compartido.
-
-\begin{quote}
-Las aspiraciones colectivas se negocian constantemente en espacios
-cotidianos que traducen capital cultural en prácticas concretas,
-reescribiendo así el mapa de posibilidades percibidas por cada agente
-social en contextos urbanos desiguales. Este entramado simbólico orienta
-aspiraciones futuras y limita adaptaciones comunitarias.
-(\citeproc{ref-bourdieu2012}{Bourdieu, 2012, p. 87})
-\end{quote}
-
-\section{Resumen del capítulo}\label{resumen-del-capuxedtulo}
-
-\begin{quote}
-Este capítulo ofreció una revisión breve de los conceptos fundamentales
-y estableció proposiciones para guiar el análisis empírico posterior.
-\end{quote}
+\par
 
 \bookmarksetup{startatroot}
 
-\chapter{Metodología}\label{metodologuxeda}
+\chapter{Definición del problema}\label{definiciuxf3n-del-problema}
 
-\section{Datos}\label{datos}
+En la actualidad, Chile atraviesa un sostenido y avanzado proceso de
+envejecimiento poblacional que está modificando la estructura por edades
+de la población. Los resultados del Censo 2024 muestran que la población
+de 65 años y más representa el 14\% de la población nacional, mientras
+que en 1992 era un 6,6\%. En paralelo, ha disminuido el porcentaje de
+personas de 14 años o menos de 29,4\% a 17,7\% en el mismo período. Con
+lo anterior, el Índice de Envejecimiento muestra que por cada 100
+personas de 14 años o menos hay 79 personas de 65 años o más en el país,
+cifra que para el año 1992 era 22,3. Adicionalmente, el 11,6\% de los
+hogares a nivel nacional están conformados solo por personas de 65 años
+o más. Esta cifra era 8,3\% en 1992 (\citeproc{ref-ine2024a}{Instituto
+Nacional de Estadísticas, 2025}) . Las nuevas proyecciones del INE
+indican que este proceso seguirá profundizándose en las próximas
+décadas, de manera que para 2045, la población de 65 años y más
+triplicaría a la población menor de 15 años
+(\citeproc{ref-ine2024b}{Instituto Nacional de Estadísticas, 2024}).
 
-Texto de muestra para describir las fuentes de datos utilizadas.
+Este proceso plantea interrogantes y desafíos respecto de las demandas
+futuras que podrían enfrentar las instituciones, y en particular el
+sistema de salud. La relación entre envejecimiento poblacional y la
+utilización del sistema de salud no se puede reducir a que las personas
+mayores utilizarán más los servicios de atención médica. Si bien la edad
+cronológica se relaciona con cambios en la salud, presencia de
+enfermedades o limitaciones funcionales, estos no se distribuyen de
+manera homogénea en la población, sino que están sujetos a condiciones
+socioeconómicas, educativas, culturales y territoriales.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Carga paquetes de ejemplo}
-\FunctionTok{library}\NormalTok{(tidyverse)}
-\end{Highlighting}
-\end{Shaded}
+Desde una perspectiva sociológica, el envejecimiento constituye, por
+tanto, un fenómeno que debe ser comprendido en relación con las
+desigualdades sociales acumuladas a lo largo de la vida. Personas de la
+misma edad pueden presentar diferentes condiciones de salud y distintas
+posibilidades de acceder a los servicios sanitarios. En este marco, el
+problema de investigación se sitúa en la necesidad de comprender cómo se
+relaciona la edad con la utilización de distintos servicios de salud en
+Chile y en qué medida esta relación se encuentra condicionada por las
+necesidades de salud y por factores sociales y estructurales que
+facilitan o dificultan el acceso. Comprender esta relación permite
+caracterizar las diferencias actuales en el uso de servicios de salud, y
+aproximarse a los posibles cambios futuros en la demanda sanitaria que
+traerá el envejecimiento poblacional.
 
-\begin{verbatim}
-      mpg             cyl             disp             hp       
- Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
- 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
- Median :19.20   Median :6.000   Median :196.3   Median :123.0  
- Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
- 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
- Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
-      drat             wt             qsec             vs        
- Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
- 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
- Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
- Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
- 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
- Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
-       am              gear            carb      
- Min.   :0.0000   Min.   :3.000   Min.   :1.000  
- 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
- Median :0.0000   Median :4.000   Median :2.000  
- Mean   :0.4062   Mean   :3.688   Mean   :2.812  
- 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
- Max.   :1.0000   Max.   :5.000   Max.   :8.000  
-\end{verbatim}
+\section{Objeto de estudio}\label{objeto-de-estudio}
 
-\section{Variables}\label{variables}
+El objeto de estudio corresponde a la utilización de servicios de salud
+en la población residente en Chile.
 
-Detalle de las variables incluidas en el análisis, así como escalas de
-medición.
+\section{Pregunta de investigación}\label{pregunta-de-investigaciuxf3n}
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.4085}}
-  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0563}}
-  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1268}}
-  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1690}}
-  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1127}}
-  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1268}}@{}}
-\caption{Estadísticas descriptivas por variable
-(ejemplo)}\tabularnewline
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Variable
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-N
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Media
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Desv. Est.
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Min
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Max
-\end{minipage} \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Variable
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-N
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Media
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Desv. Est.
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Min
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Max
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Ingreso per cápita (mensual) & 32 & 20.091 & 6.027 & 10.400 & 33.900 \\
-Capital social barrial & 32 & 3.217 & 0.978 & 1.513 & 5.424 \\
-Precariedad laboral & 32 & 146.688 & 68.563 & 52.000 & 335.000 \\
-Capital institucional & 32 & 3.597 & 0.535 & 2.760 & 4.930 \\
-Participación comunitaria & 32 & 17.849 & 1.787 & 14.500 & 22.900 \\
-\end{longtable}
+A partir de lo anterior, se formula la siguiente pregunta de
+investigación:
 
-\section{Métodos}\label{muxe9todos}
-
-Breve descripción de los procedimientos aplicados para procesar y
-analizar la información.
+¿Cómo se relaciona el envejecimiento con la utilización de los servicios
+de salud en Chile y en qué medida esta relación se modifica según las
+necesidades de salud y las condiciones sociales, económicas,
+institucionales y territoriales de las personas?
 
 \bookmarksetup{startatroot}
 
-\chapter{Resultados}\label{resultados}
+\chapter{Revisión inicial de
+literatura}\label{revisiuxf3n-inicial-de-literatura}
 
-\section{Analisis descriptivo}\label{analisis-descriptivo}
+La investigación se sitúa inicialmente en la intersección de cuatro
+campos conceptuales: el envejecimiento poblacional, las desigualdades
+sociales en salud, las instituciones y la utilización de servicios
+sanitarios.
 
-Resumen de las estadisticas descriptivas clave y visualizaciones de
-apoyo.
+En relación al envejecimiento demográfico, este es definido como el
+aumento progresivo de la proporción de personas mayores, producto de la
+evolución conjunta de fecundidad y mortalidad
+(\citeproc{ref-cepal}{Comisión Económica para América Latina y el
+Caribe, s.~f.}). Desde una perspectiva individual y biológica, el
+envejecimiento implica cambios graduales de las capacidades físicas y
+mentales, y un mayor riesgo de enfermedad
+(\citeproc{ref-oms2025}{Organización Mundial de la Salud, s.~f.}). Sin
+embargo, para esta investigación, el envejecimiento se aborda como
+proceso que se desarrolla a lo largo del curso de vida, por lo que la
+edad es una dimensión relevante pero no suficiente para explicar las
+diferencias en las condiciones de salud y la utilización de los
+servicios médicos.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\ControlFlowTok{if}\NormalTok{ (}\FunctionTok{requireNamespace}\NormalTok{(}\StringTok{"ggplot2"}\NormalTok{, }\AttributeTok{quietly =} \ConstantTok{TRUE}\NormalTok{)) \{}
-  \FunctionTok{library}\NormalTok{(ggplot2)}
-  \FunctionTok{ggplot}\NormalTok{(mtcars, }\FunctionTok{aes}\NormalTok{(wt, mpg)) }\SpecialCharTok{+} \FunctionTok{geom\_point}\NormalTok{()}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
+En este sentido, y bajo el marco de los determinantes sociales de la
+salud, se señala que las personas que logran una mejor posición social
+tendrán menos probabilidades de estar expuestos a enfermedades y en caso
+de enfermar, tendrán mejores posibilidades para afrontarlo y sufrir
+menores consecuencias sociales y económicas
+(\citeproc{ref-moscosocuaresma}{Moscoso Cuaresma et~al., 2017}). Por
+ello, las desigualdades acumuladas a lo largo del curso de vida pueden
+contribuir a que personas de una misma edad presenten diferentes
+necesidades de salud y distintas posibilidades de acceder a atención
+sanitaria.
 
-\begin{figure}[H]
+Estas diferencias son relevantes al considerar el rol de las
+instituciones, ya que estas constituyen mecanismos desde el cual se
+canalizan las demandas de grupos vulnerables y se sostiene la
+cooperación colectiva (\citeproc{ref-huenchuan}{Huenchuan, 2016}). En
+este marco, el sistema de salud representa la institución central para
+responder a las necesidades sanitarias de la población. Sin embargo, la
+forma en que se organizan y distribuyen los recursos institucionales
+puede contribuir a facilitar o restringir las posibilidades de acceso de
+distintos grupos sociales.
 
-\caption{Relacion X\^{}2}
-
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{04-resultados_files/figure-pdf/grafico-ejemplo-1.pdf}}
-
-}
-
-\end{figure}%
-
-\section{Modelos}\label{modelos}
-
-Presentacion de los resultados de los modelos propuestos, con
-interpretacion y conclusiones.
-
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2738}}
-  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0952}}
-  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1310}}
-  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1071}}
-  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1071}}
-  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0714}}
-  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2143}}@{}}
-\caption{Resumen comparativo de modelos}\tabularnewline
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Predictor
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Coef.
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Std. Err.
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-t-valor
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-p-valor
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Sig.
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-IC 95 \%
-\end{minipage} \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Predictor
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Coef.
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Std. Err.
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-t-valor
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-p-valor
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-Sig.
-\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-IC 95 \%
-\end{minipage} \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Constante & 37.227 & 1.599 & 23.28 & \textless0.001 & *** & {[}33.957,
-40.497{]} \\
-Capital social barrial & -3.878 & 0.633 & -6.13 & \textless0.001 & *** &
-{[}-5.172, -2.584{]} \\
-Precariedad laboral & -0.032 & 0.009 & -3.52 & 0.001 & ** & {[}-0.050,
--0.013{]} \\
-N & 32 & & & & & \\
-R\^{}2 & 0.827 & & & & & \\
-R\^{}2 ajustado & 0.815 & & & & & \\
-\end{longtable}
+Para organizar analíticamente estos factores, se utilizará el Modelo
+Conductual del Uso de los Servicios de Salud de Andersen, el cual
+sugiere que ``el uso de los servicios de salud por parte de las personas
+depende de su predisposición a utilizarlos, así como de factores que
+facilitan o dificultan su uso y la necesidad de atención médica''
+(\citeproc{ref-andersen}{2008, p. 651}). Para esto, desarrolla tres
+grupos de factores: factores predisponentes, los que corresponden a
+características individuales y sociales que anteceden a la utilización y
+que estructuran la propensión a utilizar servicios; factores
+facilitadores, los cuales representan recursos y condiciones que pueden
+permitir o dificultar la utilización; factores de necesidad que
+representan las condiciones que hacen necesaria o potencialmente
+necesaria la utilización de servicios.
 
 \bookmarksetup{startatroot}
 
-\chapter{Discusión}\label{discusiuxf3n}
+\chapter{Propuesta metodológica}\label{propuesta-metodoluxf3gica}
 
-Interpreta resultados, limitaciones y aportes.
+La investigación tendrá un enfoque cuantitativo, observacional y
+transversal. Se utilizará como fuente principal de datos la
+\href{https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2024}{Encuesta
+de Caracterización Socioeconómica Nacional (CASEN) 2024}, desarrollada
+por el Ministerio de Desarrollo Social y Familia. La encuesta recopila
+información sobre aspectos demográficos, módulos de salud, educación,
+vivienda, trabajo e ingresos, que permite conocer periódicamente la
+situación de los hogares y de la población, especialmente de aquella en
+situación de pobreza y de aquellos grupos definidos como prioritarios
+por la política social, además, de evaluar el impacto de la política
+social (\citeproc{ref-mdsf2024}{Ministerio de Desarrollo Social y
+Familia, 2024})
+
+La unidad de análisis de esta investigación corresponde a las personas
+residentes en los hogares particulares encuestados por la CASEN 2024. La
+encuesta contempla un total de 218.367 personas, pertenecientes a 78.654
+hogares y 77.618 viviendas (\citeproc{ref-mdsf2024}{Ministerio de
+Desarrollo Social y Familia, 2024}). Para efectos de esta investigación,
+se utilizará como referencia la muestra de personas, mientras que el
+número de observaciones efectivo podrá variar entre los distintos
+modelos de acuerdo con el universo específico de cada variable, la
+aplicación de filtros y la disponibilidad de información.
+
+Las variables dependientes serán indicadores de utilización de servicios
+de salud: atención de medicina general en los últimos tres meses,
+atención de especialidad en los últimos tres meses y hospitalización o
+intervención quirúrgica en los últimos doce meses.
+
+Las variables independientes serán organizadas en función del Modelo
+Conductual de Andersen. En donde, en primer lugar, las variables
+predisponentes (edad, sexo, nivel educacional y estado civil) dan cuenta
+de las características demográficas y sociales que pueden condicionar la
+propensión individual a utilizar servicios de salud. En segundo lugar,
+las variables facilitadoras o de acceso (sistema previsional, ingreso
+per cápita del hogar, región y área de residencia, y proximidad al
+centro de salud) reflejan los recursos materiales e institucionales que
+habilitan o restringen el acceso efectivo a la atención. En tercer
+lugar, las variables de necesidad capturan condiciones de salud que
+pueden generar la búsqueda de atención como son las condiciones de larga
+duración y limitaciones funcionales.
+
+En relación al análisis, se utilizarán modelos de regresión logística
+binaria para estimar la probabilidad de utilización de cada tipo de
+servicio. Se propone una estrategia de modelos anidados. Un primer
+modelo incorporará las características predisponentes y permitirá
+observar la asociación inicial entre edad y utilización. Un segundo
+modelo añadirá las variables de necesidad para analizar en qué medida la
+asociación con la edad se modifica al considerar diferencias en el
+estado de salud. Finalmente, un tercer modelo incorporará los factores
+facilitadores, permitiendo evaluar la asociación de los recursos
+económicos, institucionales y territoriales con la utilización, una vez
+consideradas las características predisponentes y las necesidades de
+salud.
+
+\section{Disponibilidad de datos}\label{disponibilidad-de-datos}
+
+Los datos utilizados en esta investigación corresponden a la Encuesta
+CASEN 2024, cuya base de datos y documentación metodológica son de
+carácter público y de libre acceso. El Ministerio de Desarrollo Social y
+Familia, a través del Observatorio Social, pone a disposición de la
+ciudadanía la base de microdatos (en formato SPSS, Stata y CSV), el
+libro de códigos, el diccionario de variables, la ficha técnica y el
+manual de aplicación del cuestionario, entre otros documentos
+metodológicos, sin requerir solicitud de acceso ni autorización previa
+(\citeproc{ref-mdsf2024}{Ministerio de Desarrollo Social y Familia,
+2024}).
 
 \bookmarksetup{startatroot}
 
-\chapter{Conclusiones}\label{conclusiones}
+\chapter{Referencias
+bibliográficas}\label{referencias-bibliogruxe1ficas}
 
-Síntesis y proyecciones futuras.
-
-\bookmarksetup{startatroot}
-
-\chapter{Referencias}\label{referencias}
-
-\phantomsection\label{refs}
+\protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-bourdieu2012}
-Bourdieu, P. (2012). \emph{La distinci{ó}n: Criterio y bases sociales
-del gusto}. Taurus.
+\bibitem[\citeproctext]{ref-andersen}
+Andersen, R. M. (2008). National Health Surveys and the Behavioral Model
+of Health Services Use. \emph{Medical Care}, \emph{46}(7), 647-653.
 
-\bibitem[\citeproctext]{ref-desmond2019poverty}
-Desmond, M., \& Wilmers, N. (2019). The Racialized Geography of Housing.
-\emph{American Journal of Sociology}.
+\bibitem[\citeproctext]{ref-cepal}
+Comisión Económica para América Latina y el Caribe. (s.~f.).
+\emph{{Acerca de Envejecimiento CEPAL}}. Recuperado
+\url{https://www.cepal.org/es/temas/envejecimiento/acerca-envejecimiento}
 
-\bibitem[\citeproctext]{ref-xie2017bookdown}
-Xie, Y. (2017). \emph{bookdown: Authoring Books and Technical Documents
-with R Markdown}. Chapman; Hall/CRC.
+\bibitem[\citeproctext]{ref-huenchuan}
+Huenchuan, S. (2016). \emph{{Envejecimiento e institucionalidad pública
+en América Latina y el Caribe: conceptos, metodologías y casos
+prácticos}}. {Comisión Económica para América Latina y el Caribe
+(CEPAL)}.
+\url{https://www.cepal.org/es/publicaciones/40197-envejecimiento-institucionalidad-publica-america-latina-caribe-conceptos}
+
+\bibitem[\citeproctext]{ref-ine2024b}
+Instituto Nacional de Estadísticas. (2024). \emph{Estimaciones y
+Proyecciones de Población 1992-2070, Base 2024: Presentación de
+Resultados}.
+
+\bibitem[\citeproctext]{ref-ine2024a}
+Instituto Nacional de Estadísticas. (2025). \emph{{Primeros resultados
+del Censo 2024: 18.480.432 personas fueron censadas en Chile,
+manteniéndose la tendencia de envejecimiento de la población}}.
+\url{https://censo2024.ine.gob.cl/primeros-resultados-del-censo-2024-18-480-432-personas-fueron-censadas-en-chile-manteniendose-la-tendencia-de-envejecimiento-de-la-poblacion/}
+
+\bibitem[\citeproctext]{ref-mdsf2024}
+Ministerio de Desarrollo Social y Familia. (2024). \emph{{Informe
+metodológico Casen 2024}}.
+
+\bibitem[\citeproctext]{ref-moscosocuaresma}
+Moscoso Cuaresma, J. R., Cárdenas, E., \& Juárez, C. (2017).
+\emph{Determinantes Sociales en Salud}. {Universidad Peruana de Ciencias
+Aplicadas}.
+\url{https://www.researchgate.net/profile/Julio-Ricardo-Moscoso-Cuaresma/publication/385822723_Determinantes_sociales_en_salud/links/6736a966a78ba469f0617e2a/Determinantes-sociales-en-salud.pdf}
+
+\bibitem[\citeproctext]{ref-oms2025}
+Organización Mundial de la Salud. (s.~f.). \emph{{Envejecimiento y
+salud}}. Recuperado
+\url{https://www.who.int/es/news-room/fact-sheets/detail/ageing-and-health}
 
 \end{CSLReferences}
-
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{part}{Apéndices}
-\appendix
-
-\chapter{Instrumentos de
-levantamiento}\label{instrumentos-de-levantamiento}
-
-Incluye cuestionarios, guias de entrevista, etc.
-
-\chapter{Tablas adicionales}\label{tablas-adicionales}
-
-Tablas extendidas, tests de robustez, etc.
 
 
 \backmatter
