@@ -1,10 +1,9 @@
----
-title: "Referencias"
-suppress-bibliography: false
+﻿---
 nocite: |
   @*
-number-sections: true 
 ---
+
+## Referencias
+
 ::: {#refs}
 :::
-
