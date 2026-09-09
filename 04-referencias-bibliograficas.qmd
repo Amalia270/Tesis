@@ -1,4 +1,9 @@
-﻿## Referencias
+﻿---
+nocite: |
+  @*
+---
+
+## Referencias
 
 ::: {#refs}
-::: 
+:::
