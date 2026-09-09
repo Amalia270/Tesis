@@ -40,7 +40,7 @@ book:
     - 01-definicion-del-problema.qmd 
     - 02-revision-inicial-de-literatura.qmd
     - 03-propuesta-metodologica.qmd
-    - 04-referencias-bibliograficas.qmd 
+    - references.qmd  
     # Para agregar un nuevo capitulo duplica un archivo .qmd y agregalo aqui:
     # ej: - 07-analisis-cualitativo.qmd
 
