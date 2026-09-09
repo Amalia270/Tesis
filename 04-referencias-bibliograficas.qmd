@@ -1,9 +1,4 @@
-﻿---
-title: "Referencias bibliográficas"
-suppress-bibliography: false
-nocite: |
-  @*
-number-sections: false
----
+﻿## Referencias
+
 ::: {#refs}
-:::
+::: 
