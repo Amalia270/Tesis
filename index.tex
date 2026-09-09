@@ -11,7 +11,7 @@
 \usepackage{xcolor}
 \usepackage[top=25mm,bottom=25mm,left=30mm,right=20mm]{geometry}
 \usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -389,7 +389,7 @@ de salud en Chile.}
   \apptocmd{\@title}{\par {\large #1 \par}}{}{}
 }
 \makeatother
-\subtitle{Entrega 1}
+\subtitle{Informe de avance 1}
 \author{Elisa Calderón \and Amalia Tsukame}
 \date{10 de septiembre de 2026}
 \begin{document}
@@ -492,17 +492,58 @@ de salud en Chile.}
 \mainmatter
 \bookmarksetup{startatroot}
 
-\chapter*{}\label{section}
-\addcontentsline{toc}{chapter}{}
+\chapter*{Abstract}\label{abstract}
+\addcontentsline{toc}{chapter}{Abstract}
 
-\markboth{}{}
+\markboth{Abstract}{Abstract}
 
-\mainmatter
+El envejecimiento poblacional constituye una de las principales
+transformaciones demográficas que enfrenta Chile y plantea nuevos
+desafíos para la organización y utilización del sistema de salud. El
+aumento de la población de mayor edad no implica únicamente un
+incremento en el número de personas que requieren atención, sino también
+una posible transformación en los patrones de utilización de los
+servicios, asociada a cambios en las necesidades de salud, la
+prevalencia de enfermedades crónicas y las condiciones sociales y
+territoriales en que se produce el acceso a la atención. En este
+contexto, resulta relevante analizar el envejecimiento no solo como un
+fenómeno demográfico, sino también en relación con la forma en que las
+instituciones sanitarias organizan y median la respuesta frente a dichas
+necesidades.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+Esta investigación busca analizar la relación entre la estructura etaria
+de la población chilena y los patrones de utilización de los servicios
+de salud, considerando las condiciones sociales e institucionales que
+intervienen en dicha relación. Desde una perspectiva sociológica, se
+propone comprender el sistema de salud como una institución que
+estructura oportunidades diferenciadas de acceso y utilización,
+particularmente en un contexto caracterizado por la segmentación entre
+FONASA e Isapres. Para organizar analíticamente estos factores se
+utilizará como referencia el modelo conductual de utilización de
+servicios de salud de Andersen, distinguiendo factores predisponentes,
+facilitadores y de necesidad.
 
-\small\textbf{Palabras clave:} Sociologia, Chile, Envejecimiento
-poblacional, Sistema de salud \normalsize
+Empíricamente, se utilizará la Encuesta de Caracterización
+Socioeconómica Nacional (CASEN) 2024 para estimar, mediante modelos de
+regresión logística binaria, la relación entre edad, características
+sociodemográficas, condiciones de acceso y necesidad de salud y la
+utilización de distintos servicios, tales como atención médica general,
+atención de especialidad y hospitalización. El análisis considerará
+además las diferencias asociadas a la adscripción previsional y otras
+condiciones sociales y territoriales. Finalmente, a partir de los
+patrones estimados y de las proyecciones de población del Instituto
+Nacional de Estadísticas (INE), se evaluará la factibilidad de
+desarrollar escenarios de proyección o microsimulación que permitan
+explorar cómo la transformación futura de la estructura etaria podría
+modificar los patrones de utilización del sistema de salud. La dimensión
+territorial podrá incorporarse en función de la disponibilidad y
+precisión de los datos, considerando especialmente el nivel regional.
+
+\noindent\small\textbf{Palabras clave:} Sociologia, Chile,
+Envejecimiento poblacional, Sistema de salud chileno, Modelo conductual
+de Andersen, Encuesta CASEN.
+
+\par
 
 \bookmarksetup{startatroot}
 
@@ -518,12 +559,12 @@ lo anterior, el Índice de Envejecimiento muestra que por cada 100
 personas de 14 años o menos hay 79 personas de 65 años o más en el país,
 cifra que para el año 1992 era 22,3. Adicionalmente, el 11,6\% de los
 hogares a nivel nacional están conformados solo por personas de 65 años
-o más. Esta cifra era 8,3\% en 1992 (\citeproc{ref-INE2024a}{Instituto
+o más. Esta cifra era 8,3\% en 1992 (\citeproc{ref-ine2024a}{Instituto
 Nacional de Estadísticas, 2025}) . Las nuevas proyecciones del INE
 indican que este proceso seguirá profundizándose en las próximas
 décadas, de manera que para 2045, la población de 65 años y más
 triplicaría a la población menor de 15 años
-(\citeproc{ref-INE2024b}{Instituto Nacional de Estadísticas, 2024}).
+(\citeproc{ref-ine2024b}{Instituto Nacional de Estadísticas, 2024}).
 
 Este proceso plantea interrogantes y desafíos respecto de las demandas
 futuras que podrían enfrentar las instituciones, y en particular el
@@ -577,44 +618,44 @@ sanitarios.
 En relación al envejecimiento demográfico, este es definido como el
 aumento progresivo de la proporción de personas mayores, producto de la
 evolución conjunta de fecundidad y mortalidad
-(\citeproc{ref-CEPAL}{Comisión Económica para América Latina y el Caribe
-(s.f.), s.f}). Desde una perspectiva individual y biológica, el
+(\citeproc{ref-cepal}{Comisión Económica para América Latina y el
+Caribe, s.~f.}). Desde una perspectiva individual y biológica, el
 envejecimiento implica cambios graduales de las capacidades físicas y
 mentales, y un mayor riesgo de enfermedad
-(\citeproc{ref-OMS2025}{Organización Mundial de la Salud, 2025, 1 de
-octubre}). Sin embargo, para esta investigación, el envejecimiento se
-aborda como proceso que se desarrolla a lo largo del curso de vida, por
-lo que la edad es una dimensión relevante pero no suficiente para
-explicar las diferencias en las condiciones de salud y la utilización de
-los servicios médicos.
+(\citeproc{ref-oms2025}{Organización Mundial de la Salud, s.~f.}). Sin
+embargo, para esta investigación, el envejecimiento se aborda como
+proceso que se desarrolla a lo largo del curso de vida, por lo que la
+edad es una dimensión relevante pero no suficiente para explicar las
+diferencias en las condiciones de salud y la utilización de los
+servicios médicos.
 
 En este sentido, y bajo el marco de los determinantes sociales de la
 salud, se señala que las personas que logran una mejor posición social
 tendrán menos probabilidades de estar expuestos a enfermedades y en caso
 de enfermar, tendrán mejores posibilidades para afrontarlo y sufrir
 menores consecuencias sociales y económicas
-(\citeproc{ref-MoscosoCuaresma}{Moscoso Cuaresma, J. R. et~al., 2017}).
-Por ello, las desigualdades acumuladas a lo largo del curso de vida
-pueden contribuir a que personas de una misma edad presenten diferentes
+(\citeproc{ref-moscosocuaresma}{Moscoso Cuaresma et~al., 2017}). Por
+ello, las desigualdades acumuladas a lo largo del curso de vida pueden
+contribuir a que personas de una misma edad presenten diferentes
 necesidades de salud y distintas posibilidades de acceder a atención
 sanitaria.
 
 Estas diferencias son relevantes al considerar el rol de las
 instituciones, ya que estas constituyen mecanismos desde el cual se
 canalizan las demandas de grupos vulnerables y se sostiene la
-cooperación colectiva (\citeproc{ref-Huenchuan}{Huenchuan, S., 2016}).
-En este marco, el sistema de salud representa la institución central
-para responder a las necesidades sanitarias de la población. Sin
-embargo, la forma en que se organizan y distribuyen los recursos
-institucionales puede contribuir a facilitar o restringir las
-posibilidades de acceso de distintos grupos sociales.
+cooperación colectiva (\citeproc{ref-huenchuan}{Huenchuan, 2016}). En
+este marco, el sistema de salud representa la institución central para
+responder a las necesidades sanitarias de la población. Sin embargo, la
+forma en que se organizan y distribuyen los recursos institucionales
+puede contribuir a facilitar o restringir las posibilidades de acceso de
+distintos grupos sociales.
 
 Para organizar analíticamente estos factores, se utilizará el Modelo
 Conductual del Uso de los Servicios de Salud de Andersen, el cual
 sugiere que ``el uso de los servicios de salud por parte de las personas
 depende de su predisposición a utilizarlos, así como de factores que
 facilitan o dificultan su uso y la necesidad de atención médica''
-(\citeproc{ref-Andersen}{2008, p. 651}). Para esto, desarrolla tres
+(\citeproc{ref-andersen}{2008, p. 651}). Para esto, desarrolla tres
 grupos de factores: factores predisponentes, los que corresponden a
 características individuales y sociales que anteceden a la utilización y
 que estructuran la propensión a utilizar servicios; factores
@@ -628,22 +669,22 @@ necesaria la utilización de servicios.
 \chapter{Propuesta metodológica}\label{propuesta-metodoluxf3gica}
 
 La investigación tendrá un enfoque cuantitativo, observacional y
-transversal. Se utilizará como fuente principal de datos la {[}Encuesta
-de Caracterización Socioeconómica Nacional (CASEN) 2024{]}
-(https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2024),
-desarrollada por el Ministerio de Desarrollo Social y Familia. La
-encuesta recopila información sobre aspectos demográficos, módulos de
-salud, educación, vivienda, trabajo e ingresos, que permite conocer
-periódicamente la situación de los hogares y de la población,
-especialmente de aquella en situación de pobreza y de aquellos grupos
-definidos como prioritarios por la política social, además, de evaluar
-el impacto de la política social (\citeproc{ref-MDSF2024}{Ministerio de
-Desarrollo Social y Familia, 2024})
+transversal. Se utilizará como fuente principal de datos la
+\href{https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2024}{Encuesta
+de Caracterización Socioeconómica Nacional (CASEN) 2024}, desarrollada
+por el Ministerio de Desarrollo Social y Familia. La encuesta recopila
+información sobre aspectos demográficos, módulos de salud, educación,
+vivienda, trabajo e ingresos, que permite conocer periódicamente la
+situación de los hogares y de la población, especialmente de aquella en
+situación de pobreza y de aquellos grupos definidos como prioritarios
+por la política social, además, de evaluar el impacto de la política
+social (\citeproc{ref-mdsf2024}{Ministerio de Desarrollo Social y
+Familia, 2024})
 
 La unidad de análisis de esta investigación corresponde a las personas
 residentes en los hogares particulares encuestados por la CASEN 2024. La
 encuesta contempla un total de 218.367 personas, pertenecientes a 78.654
-hogares y 77.618 viviendas (\citeproc{ref-MDSF2024}{Ministerio de
+hogares y 77.618 viviendas (\citeproc{ref-mdsf2024}{Ministerio de
 Desarrollo Social y Familia, 2024}). Para efectos de esta investigación,
 se utilizará como referencia la muestra de personas, mientras que el
 número de observaciones efectivo podrá variar entre los distintos
@@ -691,7 +732,7 @@ ciudadanía la base de microdatos (en formato SPSS, Stata y CSV), el
 libro de códigos, el diccionario de variables, la ficha técnica y el
 manual de aplicación del cuestionario, entre otros documentos
 metodológicos, sin requerir solicitud de acceso ni autorización previa
-(\citeproc{ref-MDSF2024}{Ministerio de Desarrollo Social y Familia,
+(\citeproc{ref-mdsf2024}{Ministerio de Desarrollo Social y Familia,
 2024}).
 
 \bookmarksetup{startatroot}
@@ -701,43 +742,47 @@ bibliográficas}\label{referencias-bibliogruxe1ficas}
 
 \protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\bibitem[\citeproctext]{ref-Andersen}
-Andersen, R. M. (2008). \emph{National Health Surveys and the Behavioral
-Model of Health Services Use}.
+\bibitem[\citeproctext]{ref-andersen}
+Andersen, R. M. (2008). National Health Surveys and the Behavioral Model
+of Health Services Use. \emph{Medical Care}, \emph{46}(7), 647-653.
 
-\bibitem[\citeproctext]{ref-CEPAL}
-Comisión Económica para América Latina y el Caribe (s.f.). (s.f).
-\emph{{Acerca de Envejecimiento \textbar{} CEPAL}}.
-https://www.cepal.org/es/temas/envejecimiento/acerca-envejecimiento.
+\bibitem[\citeproctext]{ref-cepal}
+Comisión Económica para América Latina y el Caribe. (s.~f.).
+\emph{{Acerca de Envejecimiento CEPAL}}. Recuperado
+\url{https://www.cepal.org/es/temas/envejecimiento/acerca-envejecimiento}
 
-\bibitem[\citeproctext]{ref-Huenchuan}
+\bibitem[\citeproctext]{ref-huenchuan}
 Huenchuan, S. (2016). \emph{{Envejecimiento e institucionalidad pública
-en América Latina y el Caribe: conceptos, metodologías y casos prácticos
-\textbar{} CEPAL}}.
-https://www.cepal.org/es/publicaciones/40197-envejecimiento-institucionalidad-publica-america-latina-caribe-conceptos.
+en América Latina y el Caribe: conceptos, metodologías y casos
+prácticos}}. {Comisión Económica para América Latina y el Caribe
+(CEPAL)}.
+\url{https://www.cepal.org/es/publicaciones/40197-envejecimiento-institucionalidad-publica-america-latina-caribe-conceptos}
 
-\bibitem[\citeproctext]{ref-INE2024b}
+\bibitem[\citeproctext]{ref-ine2024b}
 Instituto Nacional de Estadísticas. (2024). \emph{Estimaciones y
 Proyecciones de Población 1992-2070, Base 2024: Presentación de
 Resultados}.
 
-\bibitem[\citeproctext]{ref-INE2024a}
-Instituto Nacional de Estadísticas. (2025). {Primeros resultados del
-Censo 2024: 18.480.432 personas fueron censadas en Chile, manteniéndose
-la tendencia de envejecimiento de la población}. En \emph{Censo 2024}.
+\bibitem[\citeproctext]{ref-ine2024a}
+Instituto Nacional de Estadísticas. (2025). \emph{{Primeros resultados
+del Censo 2024: 18.480.432 personas fueron censadas en Chile,
+manteniéndose la tendencia de envejecimiento de la población}}.
+\url{https://censo2024.ine.gob.cl/primeros-resultados-del-censo-2024-18-480-432-personas-fueron-censadas-en-chile-manteniendose-la-tendencia-de-envejecimiento-de-la-poblacion/}
 
-\bibitem[\citeproctext]{ref-MDSF2024}
+\bibitem[\citeproctext]{ref-mdsf2024}
 Ministerio de Desarrollo Social y Familia. (2024). \emph{{Informe
 metodológico Casen 2024}}.
 
-\bibitem[\citeproctext]{ref-MoscosoCuaresma}
+\bibitem[\citeproctext]{ref-moscosocuaresma}
 Moscoso Cuaresma, J. R., Cárdenas, E., \& Juárez, C. (2017).
-\emph{Determinantes Sociales En Salud}.
+\emph{Determinantes Sociales en Salud}. {Universidad Peruana de Ciencias
+Aplicadas}.
+\url{https://www.researchgate.net/profile/Julio-Ricardo-Moscoso-Cuaresma/publication/385822723_Determinantes_sociales_en_salud/links/6736a966a78ba469f0617e2a/Determinantes-sociales-en-salud.pdf}
 
-\bibitem[\citeproctext]{ref-OMS2025}
-Organización Mundial de la Salud. (2025, 1 de octubre). {Envejecimiento
-y salud}. En \emph{World Health Organization}.
-https://www.who.int/es/news-room/fact-sheets/detail/ageing-and-health.
+\bibitem[\citeproctext]{ref-oms2025}
+Organización Mundial de la Salud. (s.~f.). \emph{{Envejecimiento y
+salud}}. Recuperado
+\url{https://www.who.int/es/news-room/fact-sheets/detail/ageing-and-health}
 
 \end{CSLReferences}
 
