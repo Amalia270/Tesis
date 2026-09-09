@@ -31,7 +31,7 @@ Empíricamente, se utilizará la Encuesta de Caracterización Socioeconómica Na
 
 ::: {.content-visible when-format="html"}
 ::: {.keywords-box}
-<strong>Palabras clave:</strong> Ciencia Social Abierta, Ultraderecha, Comportamiento Electoral, Autoritarismo, Confianza institucional, Intolerancia política, Meritocracia, Reticencia al cambio.
+<strong>Palabras clave:</strong> Sociologia, Chile, Envejecimiento poblacional, Sistema de salud chileno, Modelo conductual de Andersen, Encuesta CASEN, 
 :::
 :::
 
