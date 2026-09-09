@@ -3,7 +3,7 @@
 number-sections: false
 numbered: false
 ---
-# {.unnumbered}
+# Abstract {.unnumbered}
 
 ::: {=latex}
 \mainmatter
@@ -12,7 +12,7 @@ numbered: false
 ---
 
 ::: {.content-visible when-format="pdf"}
-\small\textbf{Palabras clave:} Sociologia, Chile, Envejecimiento poblacional, Sistema de salud
+\small\textbf{Palabras clave:} Sociologia, Chile, Envejecimiento poblacional, Sistema de salud chileno, Modelo conductual de Andersen, Encuesta CASEN, 
 \normalsize
 :::
 
