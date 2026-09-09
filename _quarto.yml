@@ -9,7 +9,7 @@ project:
 
 book:
   title: En un país que envejece:Análisis de la utilización de servicios de salud en Chile. 
-  subtitle: Entrega 1
+  subtitle: Informe de avance 1
   output-file: reportes-facso-plantilla
   repo-url: https://github.com/Amalia270/Tesis  #URL del repositorio del libro (cambia segun tu repo)
   author:
