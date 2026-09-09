@@ -3,7 +3,6 @@ _report/
 _book/
 _site/
 .DS_Store
-docs/
 _freeze/
 *.Rmd
 *.utf8.md
@@ -27,4 +26,3 @@ _freeze/
 renv/library/
 /.quarto/
 **/*.quarto_ipynb
-*.html
