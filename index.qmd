@@ -26,12 +26,12 @@ Esta investigación busca analizar la relación entre la estructura etaria de la
 Empíricamente, se utilizará la Encuesta de Caracterización Socioeconómica Nacional (CASEN) 2024 para estimar, mediante modelos de regresión logística binaria, la relación entre edad, características sociodemográficas, condiciones de acceso y necesidad de salud y la utilización de distintos servicios, tales como atención médica general, atención de especialidad y hospitalización. El análisis considerará además las diferencias asociadas a la adscripción previsional y otras condiciones sociales y territoriales. Finalmente, a partir de los patrones estimados y de las proyecciones de población del Instituto Nacional de Estadísticas (INE), se evaluará la factibilidad de desarrollar escenarios de proyección o microsimulación que permitan explorar cómo la transformación futura de la estructura etaria podría modificar los patrones de utilización del sistema de salud. La dimensión territorial podrá incorporarse en función de la disponibilidad y precisión de los datos, considerando especialmente el nivel regional.
 
 ::: {.content-visible when-format="pdf"}
-\noindent\small\textbf{Palabras clave:} Sociologia, Chile, Envejecimiento poblacional, Sistema de salud chileno, Modelo conductual de Andersen, Encuesta CASEN, \par
+\noindent\small\textbf{Palabras clave:} Sociologia, Chile, Envejecimiento poblacional, Sistema de salud chileno, Modelo conductual de Andersen, Encuesta CASEN. \par
 :::
 
 ::: {.content-visible when-format="html"}
 ::: {.keywords-box}
-<strong>Palabras clave:</strong> Sociologia, Chile, Envejecimiento poblacional, Sistema de salud chileno, Modelo conductual de Andersen, Encuesta CASEN, 
+<strong>Palabras clave:</strong> Sociologia, Chile, Envejecimiento poblacional, Sistema de salud chileno, Modelo conductual de Andersen, Encuesta CASEN. 
 :::
 :::
 
