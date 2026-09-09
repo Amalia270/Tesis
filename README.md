@@ -8,5 +8,5 @@
 Departamento de Sociología, Universidad de Chile
 
 ## Link al reporte
-[**AQUÍ**](https://amalia270.github.io/Tesis/docs/)
+[**AQUÍ**](https://amalia270.github.io/Tesis/)
 
