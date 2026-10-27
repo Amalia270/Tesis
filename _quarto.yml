@@ -9,7 +9,7 @@ project:
 
 book:
   title: En un país que envejece:Análisis de la utilización de servicios de salud en Chile. 
-  subtitle: Informe de avance 1
+  subtitle: Informe de avance 2
   output-file: reportes-facso-plantilla
   repo-url: https://github.com/Amalia270/Tesis  #URL del repositorio del libro (cambia segun tu repo)
   author:
@@ -40,6 +40,8 @@ book:
     - 01-introduccion.qmd 
     - 02-antecedentes-conceptuales.qmd
     - 03-antecedentes-empiricos.qmd 
+    - 04-metodologia.qmd
+    - 05-resultados-descriptivos.qmd 
     - references.qmd  
     # Para agregar un nuevo capitulo duplica un archivo .qmd y agregalo aqui:
     # ej: - 07-analisis-cualitativo.qmd
