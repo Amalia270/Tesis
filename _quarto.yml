@@ -74,7 +74,7 @@ format:
     include-after-body:
       - includes/logo-link.html
       - includes/citefix.html
-      - includes/renumber.html
+      #includes/renumber.html
       - includes/code-toggle.html
       - includes/toc-enhance.html
 
