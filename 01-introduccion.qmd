@@ -14,19 +14,25 @@ El argumento central de esta investigación es que, en un contexto de envejecimi
 Para abordar empíricamente esta problemática, la presente investigación utilizará [Encuesta de Caracterización Socioeconómica Nacional (CASEN) 2024](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2024) y se analizará la utilización declarada de tres tipos de servicio en la población de 18 años y más residente en viviendas particulares en Chile: medicina general, atención de especialidad y hospitalización o intervención quirúrgica. Se estimarán modelos de regresión logística binaria anidados, incorporando progresivamente los distintos grupos de factores de Andersen para examinar su asociación con la utilización de los servicios. 
 
 ## Objeto de estudio
-
-El objeto de estudio corresponde a la utilización de servicios de salud en el contexto del envejecimiento poblacional. 
+El objeto de estudio corresponde a la utilización declarada de servicios de salud (atención de medicina general, de especialidad y hospitalización o intervención quirúrgica) en la población adulta residente en viviendas particulares en Chile, y su diferenciación según la edad, el ingreso, la previsión de salud y el territorio de residencia.
 
 ## Pregunta de investigación
 
 A partir de lo anterior, se formula la siguiente pregunta de investigación:
 
-¿Cómo se relaciona el envejecimiento con la utilización de los servicios de salud en Chile y en qué medida esta relación se modifica según las necesidades de salud y las condiciones sociales, económicas, institucionales y territoriales de las personas? 
+¿Qué factores se asocian con la utilización de servicios de salud en las distintas edades de la población adulta en Chile?
 
 ## Objetivo general 
 
 Analizar qué factores se asocian con la utilización de servicios de salud en la población adulta de Chile y si esas asociaciones cambian entre grupos de edad. 
 
 ## Objetivos específicos 
+
+1. Describir los patrones de utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica según grupo de edad en la población de 18 años y más en Chile.
+2. Estimar la asociación del ingreso y la previsión de salud con la utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica, considerando ambas variables conjuntamente.
+3. Analizar la asociación del territorio de residencia con la utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica.
+4. Explorar si las asociaciones del ingreso, la previsión y el territorio con la utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica varían entre grupos de edad.
+5. Explorar si los patrones de utilización y sus asociaciones difieren entre hombres y mujeres.
+ 
 
 
