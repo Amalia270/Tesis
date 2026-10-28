@@ -130,6 +130,10 @@ p {
 
 </style>
 
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 
 <link rel="stylesheet" href="assets/styles.scss">
@@ -249,11 +253,344 @@ p {
 </header>
 
 
-<p>La investigación se sitúa inicialmente en la intersección de cuatro campos conceptuales: el envejecimiento poblacional, las desigualdades sociales en salud, las instituciones y la utilización de servicios sanitarios.</p>
-<p>En relación al envejecimiento demográfico, este es definido como el aumento progresivo de la proporción de personas mayores, producto de la evolución conjunta de fecundidad y mortalidad <span class="citation" data-cites="cepal">(<a href="references.html#ref-cepal" role="doc-biblioref"><strong>cepal?</strong></a>)</span>. Desde una perspectiva individual y biológica, el envejecimiento implica cambios graduales de las capacidades físicas y mentales, y un mayor riesgo de enfermedad <span class="citation" data-cites="oms2025">(<a href="references.html#ref-oms2025" role="doc-biblioref"><strong>oms2025?</strong></a>)</span>. Sin embargo, para esta investigación, el envejecimiento se aborda como proceso que se desarrolla a lo largo del curso de vida, por lo que la edad es una dimensión relevante pero no suficiente para explicar las diferencias en las condiciones de salud y la utilización de los servicios médicos.</p>
-<p>En este sentido, y bajo el marco de los determinantes sociales de la salud, se señala que las personas que logran una mejor posición social tendrán menos probabilidades de estar expuestos a enfermedades y en caso de enfermar, tendrán mejores posibilidades para afrontarlo y sufrir menores consecuencias sociales y económicas <span class="citation" data-cites="moscosocuaresma">(<a href="references.html#ref-moscosocuaresma" role="doc-biblioref"><strong>moscosocuaresma?</strong></a>)</span>. Por ello, las desigualdades acumuladas a lo largo del curso de vida pueden contribuir a que personas de una misma edad presenten diferentes necesidades de salud y distintas posibilidades de acceder a atención sanitaria.</p>
-<p>Estas diferencias son relevantes al considerar el rol de las instituciones, ya que estas constituyen mecanismos desde el cual se canalizan las demandas de grupos vulnerables y se sostiene la cooperación colectiva <span class="citation" data-cites="huenchuan">(<a href="references.html#ref-huenchuan" role="doc-biblioref"><strong>huenchuan?</strong></a>)</span>. En este marco, el sistema de salud representa la institución central para responder a las necesidades sanitarias de la población. Sin embargo, la forma en que se organizan y distribuyen los recursos institucionales puede contribuir a facilitar o restringir las posibilidades de acceso de distintos grupos sociales.</p>
-<p>Para organizar analíticamente estos factores, se utilizará el Modelo Conductual del Uso de los Servicios de Salud de Andersen, el cual sugiere que “el uso de los servicios de salud por parte de las personas depende de su predisposición a utilizarlos, así como de factores que facilitan o dificultan su uso y la necesidad de atención médica” <span class="citation" data-cites="andersen">(<a href="references.html#ref-andersen" role="doc-biblioref"><strong>andersen?</strong></a>)</span>. Para esto, desarrolla tres grupos de factores: factores predisponentes, los que corresponden a características individuales y sociales que anteceden a la utilización y que estructuran la propensión a utilizar servicios; factores facilitadores, los cuales representan recursos y condiciones que pueden permitir o dificultar la utilización; factores de necesidad que representan las condiciones que hacen necesaria o potencialmente necesaria la utilización de servicios.</p>
+<p>Tabla 1. Caracterización de la población de 18 años y más (%) La Tabla 1 presenta las características de la población de 18 años y más según los factores predisponentes, facilitadores y de necesidad. En términos de la estructura etaria, el 31,7% de la población adulta tiene entre 18 y 34 años y el 27,8% entre 35 y 49 años, mientras que las personas de 65 años y más representan el 17,9%, de las cuales el 4,1% tiene 80 años o más. En la distribución por sexo, los hombres representan un 48,9% y las mujeres un 51,1%. El nivel educacional se distribuye principalmente en educación superior con un 41,7%, seguida de un 31% con educación media completa frente a valores inferiores de educación básica completa o media incompleta con 17,4% y básica incompleta o menos con un 9,9%.</p>
+<p>Respecto de la necesidad, el 19,1% declara haber tenido un problema de salud en los últimos tres meses y el 11,5% presenta limitación funcional. En cuanto a los factores facilitadores, Fonasa concentra la mayoría de los casos con un 86,1% frente a un 13,9% en Isapres. En cuanto al territorio, el 88,5% reside en zonas urbanas y el 81,8% declara contar con un centro de salud cercano a su vivienda. Por último, la distribución por quintiles de ingreso varía desde un 16,3% en el quintil de menores ingresos (Q1) hasta un 22% en los quintiles Q4 y Q5. Esto se debe a que los quintiles se calcularon sobre la población total y a que los menores de 18 años se concentran en los quintiles de menores ingresos, en parte porque el ingreso per cápita es menor en los hogares con más integrantes.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<caption>Tabla 1. Caracterización de la población de 18 años y más (%)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Variable</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Categoría</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Grupo de edad</td>
+<td style="text-align: left;">18-34</td>
+<td style="text-align: left;">31,7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">35-49</td>
+<td style="text-align: left;">27,8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">50-64</td>
+<td style="text-align: left;">22,6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">65-79</td>
+<td style="text-align: left;">13,8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">80+</td>
+<td style="text-align: left;">4,1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sexo</td>
+<td style="text-align: left;">Hombre</td>
+<td style="text-align: left;">48,9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Mujer</td>
+<td style="text-align: left;">51,1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nivel educacional</td>
+<td style="text-align: left;">Básica incompleta o menos</td>
+<td style="text-align: left;">9,9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Básica completa o media incompleta</td>
+<td style="text-align: left;">17,4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Media completa</td>
+<td style="text-align: left;">31,0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Superior</td>
+<td style="text-align: left;">41,7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Problema de salud reciente</td>
+<td style="text-align: left;">Sí</td>
+<td style="text-align: left;">19,1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">80,9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Limitación funcional</td>
+<td style="text-align: left;">Sí</td>
+<td style="text-align: left;">11,5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">88,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Previsión de salud</td>
+<td style="text-align: left;">FONASA</td>
+<td style="text-align: left;">86,1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Isapre</td>
+<td style="text-align: left;">13,9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Quintil de ingreso</td>
+<td style="text-align: left;">Q1</td>
+<td style="text-align: left;">16,3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q2</td>
+<td style="text-align: left;">18,8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q3</td>
+<td style="text-align: left;">20,9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q4</td>
+<td style="text-align: left;">22,0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q5</td>
+<td style="text-align: left;">22,0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Área de residencia</td>
+<td style="text-align: left;">Urbano</td>
+<td style="text-align: left;">88,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Rural</td>
+<td style="text-align: left;">11,5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Centro de salud a menos de 20 cuadras o 2,5 km</td>
+<td style="text-align: left;">Sí</td>
+<td style="text-align: left;">81,8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">18,2</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><span style="font-style: italic;">Nota.</span> <sup></sup> Población de 18 años y más (n = 172.309). Los quintiles de ingreso total per cápita del hogar se calcularon sobre la población total, por lo que su distribución en la población adulta no es de 20% cada uno. Fuente: elaboración propia con datos de CASEN 2024. Porcentajes ponderados con el factor de expansión. Se excluyen los casos sin información.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+<p>Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%) La Tabla 2 muestra la distribución de los dos indicadores de necesidad y los tres tipos de utilización de los servicios de salud según los grupos etarios. Ambos indicadores de necesidad presentan un incremento progresivo a medida que aumenta la edad. El aumento más notorio se evidencia en las limitaciones funcionales, cuya prevalencia aumenta de 3,8% en el grupo 18-34 a 54,2% en las personas de 80 años y más. La utilización de servicios también aumenta con la edad: en este último grupo, el 44,7% utilizó medicina general, el 31,9% especialidad y el 14,7% se hospitalizó. Con todo, el aumento de la utilización es más moderado que el de la limitación funcional: la medicina general más que se duplica (19,0% a 44,7%), la especialidad se duplica aproximadamente (16,1% a 31,9%) y la hospitalización se triplica (4,7% a 14,7%), mientras que la limitación funcional se multiplica por más de catorce. Además, en las edades más altas el aumento de la utilización se hace más lento: entre los 65-79 años y los 80 años y más la limitación funcional se duplica (26,1% a 54,2%), pero la medicina general sube de 40,3% a 44,7% y la especialidad de 29,0% a 31,9%.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<caption>Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Grupo de edad</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Problema reciente</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Limitación funcional</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Medicina general</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Especialidad</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Hospitalización</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">18-34</td>
+<td style="text-align: left;">13,7</td>
+<td style="text-align: left;">3,8</td>
+<td style="text-align: left;">19,0</td>
+<td style="text-align: left;">16,1</td>
+<td style="text-align: left;">4,7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">35-49</td>
+<td style="text-align: left;">17,4</td>
+<td style="text-align: left;">5,1</td>
+<td style="text-align: left;">24,4</td>
+<td style="text-align: left;">19,6</td>
+<td style="text-align: left;">6,9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">50-64</td>
+<td style="text-align: left;">21,5</td>
+<td style="text-align: left;">13,4</td>
+<td style="text-align: left;">31,3</td>
+<td style="text-align: left;">22,2</td>
+<td style="text-align: left;">8,7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">65-79</td>
+<td style="text-align: left;">26,9</td>
+<td style="text-align: left;">26,1</td>
+<td style="text-align: left;">40,3</td>
+<td style="text-align: left;">29,0</td>
+<td style="text-align: left;">12,2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">80+</td>
+<td style="text-align: left;">31,7</td>
+<td style="text-align: left;">54,2</td>
+<td style="text-align: left;">44,7</td>
+<td style="text-align: left;">31,9</td>
+<td style="text-align: left;">14,7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Total 18 años y más</td>
+<td style="text-align: left;">19,1</td>
+<td style="text-align: left;">11,5</td>
+<td style="text-align: left;">27,3</td>
+<td style="text-align: left;">20,9</td>
+<td style="text-align: left;">7,7</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><span style="font-style: italic;">Nota.</span> <sup></sup> Población de 18 años y más. Problema reciente, medicina general y especialidad: últimos 3 meses. Hospitalización o intervención quirúrgica: últimos 12 meses; se excluyen las hospitalizaciones por embarazo, parto o cesárea. Limitación funcional: mucha dificultad o no puede en al menos uno de seis dominios. Como los períodos de referencia difieren, se comparan patrones y no niveles entre servicios. Fuente: elaboración propia con datos de CASEN 2024. Porcentajes ponderados con el factor de expansión. Se excluyen los casos sin información.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+<p>Tabla 3. Utilización de servicios según ingreso, previsión y territorio (%) La Tabla 3 muestra el porcentaje de personas que utilizan cada servicio según su quintil de ingreso, su previsión de salud y su territorio de residencia. En los tres servicios la utilización aumenta con el quintil de ingreso, y el gradiente más marcado se observa en la atención de especialidad, que va de 14,3% en el Q1 a 30,4% en el Q5; en medicina general va de 22,0% a 31,2% y en hospitalización de 6,5% a 8,9%. Las personas afiliadas a Isapre utilizan más los tres servicios que las afiliadas a Fonasa, con la mayor diferencia en la atención de especialidad (33,7% frente a 19,1%). En cuanto al territorio, residir en zona rural se asocia con menor utilización en los tres servicios, especialmente en especialidad (15,8% frente a 21,5% en zona urbana). La cercanía a un centro de salud muestra diferencias menores: quienes no cuentan con uno cercano utilizan menos la medicina general (26,0% frente a 27,6%) y la especialidad (18,5% frente a 21,4%), sin diferencias en hospitalización (7,7% en ambos casos). Se trata de porcentajes brutos, que no consideran las necesidades de salud ni la relación entre los propios factores, por lo que serán evaluados en los modelos multivariados.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<caption>Tabla 3. Utilización de servicios según ingreso, previsión y territorio (%)</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Variable</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Categoría</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Medicina general</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Especialidad</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold;">Hospitalización</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Quintil de ingreso</td>
+<td style="text-align: left;">Q1</td>
+<td style="text-align: left;">22,0</td>
+<td style="text-align: left;">14,3</td>
+<td style="text-align: left;">6,5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q2</td>
+<td style="text-align: left;">25,4</td>
+<td style="text-align: left;">16,8</td>
+<td style="text-align: left;">7,1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q3</td>
+<td style="text-align: left;">27,4</td>
+<td style="text-align: left;">18,6</td>
+<td style="text-align: left;">7,7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q4</td>
+<td style="text-align: left;">28,9</td>
+<td style="text-align: left;">21,9</td>
+<td style="text-align: left;">7,8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Q5</td>
+<td style="text-align: left;">31,2</td>
+<td style="text-align: left;">30,4</td>
+<td style="text-align: left;">8,9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Previsión de salud</td>
+<td style="text-align: left;">FONASA</td>
+<td style="text-align: left;">27,1</td>
+<td style="text-align: left;">19,1</td>
+<td style="text-align: left;">7,4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Isapre</td>
+<td style="text-align: left;">30,6</td>
+<td style="text-align: left;">33,7</td>
+<td style="text-align: left;">9,7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Área de residencia</td>
+<td style="text-align: left;">Urbano</td>
+<td style="text-align: left;">27,6</td>
+<td style="text-align: left;">21,5</td>
+<td style="text-align: left;">7,8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Rural</td>
+<td style="text-align: left;">25,0</td>
+<td style="text-align: left;">15,8</td>
+<td style="text-align: left;">6,8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centro de salud cercano</td>
+<td style="text-align: left;">Sí</td>
+<td style="text-align: left;">27,6</td>
+<td style="text-align: left;">21,4</td>
+<td style="text-align: left;">7,7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">26,0</td>
+<td style="text-align: left;">18,5</td>
+<td style="text-align: left;">7,7</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><span style="font-style: italic;">Nota.</span> <sup></sup> Población de 18 años y más. Porcentaje de personas que utilizó cada servicio dentro de cada categoría. Medicina general y especialidad: últimos 3 meses. Hospitalización o intervención quirúrgica: últimos 12 meses, sin embarazo, parto o cesárea. Fuente: elaboración propia con datos de CASEN 2024. Porcentajes ponderados con el factor de expansión. Se excluyen los casos sin información.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
 
 
 <!-- -->
@@ -1749,15 +2086,53 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Resultados descriptivos"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>La investigación se sitúa inicialmente en la intersección de cuatro campos conceptuales: el envejecimiento poblacional, las desigualdades sociales en salud, las instituciones y la utilización de servicios sanitarios.</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>En relación al envejecimiento demográfico, este es definido como el aumento progresivo de la proporción de personas mayores, producto de la evolución conjunta de fecundidad y mortalidad <span class="co">[</span><span class="ot">@cepal</span><span class="co">]</span>. Desde una perspectiva individual y biológica, el envejecimiento implica cambios graduales de las capacidades físicas y mentales, y un mayor riesgo de enfermedad <span class="co">[</span><span class="ot">@oms2025</span><span class="co">]</span>. Sin embargo, para esta investigación, el envejecimiento se aborda como proceso que se desarrolla a lo largo del curso de vida, por lo que la edad es una dimensión relevante pero no suficiente para explicar las diferencias en las condiciones de salud y la utilización de los servicios médicos.</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>En este sentido, y bajo el marco de los determinantes sociales de la salud,  se señala que las personas que logran una mejor posición social tendrán menos probabilidades de estar expuestos a enfermedades y en caso de enfermar, tendrán mejores posibilidades para afrontarlo y sufrir menores consecuencias sociales y económicas <span class="co">[</span><span class="ot">@moscosocuaresma</span><span class="co">]</span>. Por ello, las desigualdades acumuladas a lo largo del curso de vida pueden contribuir a que personas de una misma edad presenten diferentes necesidades de salud y distintas posibilidades de acceder a atención sanitaria.</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Estas diferencias son relevantes al considerar el rol de las instituciones, ya que estas constituyen mecanismos desde el cual se canalizan las demandas de grupos vulnerables y se sostiene la cooperación colectiva <span class="co">[</span><span class="ot">@huenchuan</span><span class="co">]</span>. En este marco, el sistema de salud representa la institución central para responder a las necesidades sanitarias de la población. Sin embargo, la forma en que se organizan y distribuyen los recursos institucionales puede contribuir a facilitar o restringir las posibilidades de acceso de distintos grupos sociales. </span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Para organizar analíticamente estos factores, se utilizará el Modelo Conductual del Uso de los Servicios de Salud de Andersen, el cual sugiere que “el uso de los servicios de salud por parte de las personas depende de su predisposición a utilizarlos, así como de factores que facilitan o dificultan su uso y la necesidad de atención médica” <span class="co">[</span><span class="ot">-@andersen, p.651</span><span class="co">]</span>. Para esto, desarrolla tres grupos de factores: factores predisponentes, los que corresponden a características individuales y sociales que anteceden a la utilización y que estructuran la propensión a utilizar servicios; factores facilitadores, los cuales representan recursos y condiciones que pueden permitir o dificultar la utilización; factores de necesidad que representan las condiciones que hacen necesaria o potencialmente necesaria la utilización de servicios.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">file.exists</span>(<span class="st">"output/tables/tablas_descriptivas.rds"</span>)) {</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stop</span>(<span class="st">"Falta output/tables/tablas_descriptivas.rds. Haz git pull o pídeselo a Elisa."</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>tablas <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"output/tables/tablas_descriptivas.rds"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>tabla_kbl <span class="ot">&lt;-</span> <span class="cf">function</span>(tabla, titulo, nota) {</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kbl</span>(tabla, <span class="at">booktabs =</span> <span class="cn">TRUE</span>, <span class="at">linesep =</span> <span class="st">""</span>, <span class="at">caption =</span> titulo) <span class="sc">%&gt;%</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">font_size =</span> <span class="dv">10</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                  <span class="at">latex_options =</span> <span class="fu">c</span>(<span class="st">"hold_position"</span>, <span class="st">"scale_down"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">row_spec</span>(<span class="dv">0</span>, <span class="at">bold =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">footnote</span>(<span class="at">general =</span> nota, <span class="at">general_title =</span> <span class="st">"Nota."</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>             <span class="at">threeparttable =</span> <span class="cn">TRUE</span>, <span class="at">footnote_as_chunk =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Tabla 1. Caracterización de la población de 18 años y más (%) </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>La Tabla 1 presenta las características de la población de 18 años y más según los factores predisponentes, facilitadores y de necesidad. En términos de la estructura etaria, el 31,7% de la población adulta tiene entre 18 y 34 años y el 27,8% entre 35 y 49 años, mientras que las personas de 65 años y más representan el 17,9%, de las cuales el 4,1% tiene 80 años o más. En la distribución por sexo, los hombres representan un 48,9% y las mujeres un 51,1%. El nivel educacional se distribuye principalmente en educación superior con un 41,7%, seguida de un 31% con educación media completa frente a valores inferiores de educación básica completa o media incompleta con 17,4% y básica incompleta o menos con un 9,9%.</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Respecto de la necesidad, el 19,1% declara haber tenido un problema de salud en los últimos tres meses y el 11,5% presenta limitación funcional. En cuanto a los factores facilitadores, Fonasa concentra la mayoría de los casos con un 86,1% frente a un 13,9% en Isapres. En cuanto al territorio, el 88,5% reside en zonas urbanas y el 81,8% declara contar con un centro de salud cercano a su vivienda. Por último, la distribución por quintiles de ingreso varía desde un 16,3% en el quintil de menores ingresos (Q1) hasta un 22% en los quintiles Q4 y Q5. Esto se debe a que los quintiles se calcularon sobre la población total y a que los menores de 18 años se concentran en los quintiles de menores ingresos, en parte porque el ingreso per cápita es menor en los hogares con más integrantes.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="fu">tabla_kbl</span>(tablas<span class="sc">$</span>t1, <span class="st">"Tabla 1. Caracterización de la población de 18 años y más (%)"</span>, tablas<span class="sc">$</span>nota1)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%) </span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>La Tabla 2 muestra la distribución de los dos indicadores de necesidad y los tres tipos de utilización de los servicios de salud según los grupos etarios. Ambos indicadores de necesidad presentan un incremento progresivo a medida que aumenta la edad. El aumento más notorio se evidencia en las limitaciones funcionales, cuya prevalencia aumenta de 3,8% en el grupo 18-34 a 54,2% en las personas de 80 años y más. La utilización de servicios también aumenta con la edad: en este último grupo, el 44,7% utilizó medicina general, el 31,9% especialidad y el 14,7% se hospitalizó. Con todo, el aumento de la utilización es más moderado que el de la limitación funcional: la medicina general más que se duplica (19,0% a 44,7%), la especialidad se duplica aproximadamente (16,1% a 31,9%) y la hospitalización se triplica (4,7% a 14,7%), mientras que la limitación funcional se multiplica por más de catorce. Además, en las edades más altas el aumento de la utilización se hace más lento: entre los 65-79 años y los 80 años y más la limitación funcional se duplica (26,1% a 54,2%), pero la medicina general sube de 40,3% a 44,7% y la especialidad de 29,0% a 31,9%.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="fu">tabla_kbl</span>(tablas<span class="sc">$</span>t2, <span class="st">"Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%)"</span>, tablas<span class="sc">$</span>nota2)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Tabla 3. Utilización de servicios según ingreso, previsión y territorio (%) </span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>La Tabla 3 muestra el porcentaje de personas que utilizan cada servicio según su quintil de ingreso, su previsión de salud y su territorio de residencia. En los tres servicios la utilización aumenta con el quintil de ingreso, y el gradiente más marcado se observa en la atención de especialidad, que va de 14,3% en el Q1 a 30,4% en el Q5; en medicina general va de 22,0% a 31,2% y en hospitalización de 6,5% a 8,9%. Las personas afiliadas a Isapre utilizan más los tres servicios que las afiliadas a Fonasa, con la mayor diferencia en la atención de especialidad (33,7% frente a 19,1%). En cuanto al territorio, residir en zona rural se asocia con menor utilización en los tres servicios, especialmente en especialidad (15,8% frente a 21,5% en zona urbana). La cercanía a un centro de salud muestra diferencias menores: quienes no cuentan con uno cercano utilizan menos la medicina general (26,0% frente a 27,6%) y la especialidad (18,5% frente a 21,4%), sin diferencias en hospitalización (7,7% en ambos casos). Se trata de porcentajes brutos, que no consideran las necesidades de salud ni la relación entre los propios factores, por lo que serán evaluados en los modelos multivariados.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="fu">tabla_kbl</span>(tablas<span class="sc">$</span>t3, <span class="st">"Tabla 3. Utilización de servicios según ingreso, previsión y territorio (%)"</span>, tablas<span class="sc">$</span>nota3)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

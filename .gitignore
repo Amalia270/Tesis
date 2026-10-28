@@ -26,3 +26,6 @@ _freeze/
 renv/library/
 /.quarto/
 **/*.quarto_ipynb
+
+input/data/*.RData
+input/data/*.rds
