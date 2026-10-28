@@ -7,7 +7,7 @@ title: "Resultados descriptivos"
 #| message: false
    options(repos = c(CRAN = "https://cloud.r-project.org"))
    for (p in c("knitr", "kableExtra")) {
-     if (!requireNamespace(p, quietly = TRUE)) install.packages(p)
+       if (!requireNamespace(p, quietly = TRUE)) install.packages(p, quiet = TRUE)
    }
    library(knitr)
    library(kableExtra)
