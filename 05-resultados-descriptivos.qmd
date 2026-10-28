@@ -5,8 +5,12 @@ title: "Resultados descriptivos"
 #| echo: false
 #| warning: false
 #| message: false
-library(knitr)
-library(kableExtra)
+   options(repos = c(CRAN = "https://cloud.r-project.org"))
+   for (p in c("knitr", "kableExtra")) {
+     if (!requireNamespace(p, quietly = TRUE)) install.packages(p)
+   }
+   library(knitr)
+   library(kableExtra)
 
 if (!file.exists("output/tables/tablas_descriptivas.rds")) {
   stop("Falta output/tables/tablas_descriptivas.rds. Haz git pull o pídeselo a Elisa.")
