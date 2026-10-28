@@ -1858,21 +1858,27 @@ document.addEventListener("DOMContentLoaded", () => {
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Para abordar empíricamente esta problemática, la presente investigación utilizará <span class="co">[</span><span class="ot">Encuesta de Caracterización Socioeconómica Nacional (CASEN) 2024</span><span class="co">](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2024)</span> y se analizará la utilización declarada de tres tipos de servicio en la población de 18 años y más residente en viviendas particulares en Chile: medicina general, atención de especialidad y hospitalización o intervención quirúrgica. Se estimarán modelos de regresión logística binaria anidados, incorporando progresivamente los distintos grupos de factores de Andersen para examinar su asociación con la utilización de los servicios. </span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objeto de estudio</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>El objeto de estudio corresponde a la utilización de servicios de salud en el contexto del envejecimiento poblacional. </span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pregunta de investigación</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>A partir de lo anterior, se formula la siguiente pregunta de investigación:</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>¿Cómo se relaciona el envejecimiento con la utilización de los servicios de salud en Chile y en qué medida esta relación se modifica según las necesidades de salud y las condiciones sociales, económicas, institucionales y territoriales de las personas? </span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivo general </span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>Analizar qué factores se asocian con la utilización de servicios de salud en la población adulta de Chile y si esas asociaciones cambian entre grupos de edad. </span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivos específicos </span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>El objeto de estudio corresponde a la utilización declarada de servicios de salud (atención de medicina general, de especialidad y hospitalización o intervención quirúrgica) en la población adulta residente en viviendas particulares en Chile, y su diferenciación según la edad, el ingreso, la previsión de salud y el territorio de residencia.</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Pregunta de investigación</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>A partir de lo anterior, se formula la siguiente pregunta de investigación:</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>¿Qué factores se asocian con la utilización de servicios de salud en las distintas edades de la población adulta en Chile?</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivo general </span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>Analizar qué factores se asocian con la utilización de servicios de salud en la población adulta de Chile y si esas asociaciones cambian entre grupos de edad. </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="fu">## Objetivos específicos </span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Describir los patrones de utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica según grupo de edad en la población de 18 años y más en Chile.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Estimar la asociación del ingreso y la previsión de salud con la utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica, considerando ambas variables conjuntamente.</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Analizar la asociación del territorio de residencia con la utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Explorar si las asociaciones del ingreso, la previsión y el territorio con la utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica varían entre grupos de edad.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Explorar si los patrones de utilización y sus asociaciones difieren entre hombres y mujeres.</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
