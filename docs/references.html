@@ -150,6 +150,35 @@ p {
 </style>
 
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="assets/styles.scss">
 </head>
@@ -268,47 +297,8 @@ p {
 </header>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-andersen" class="csl-entry" role="listitem">
-Andersen, R. M. (2008). National health surveys and the behavioral model
-of health services use. <em>Medical Care</em>, <em>46</em>(7), 647–653.
-<a href="https://doi.org/10.1097/MLR.0b013e31817a835d">https://doi.org/10.1097/MLR.0b013e31817a835d</a>
-</div>
-<div id="ref-cepal" class="csl-entry" role="listitem">
-Comisión Económica para América Latina y el Caribe. (n.d.).
-<em><span>Acerca de Envejecimiento CEPAL</span></em>. Retrieved <a href="https://www.cepal.org/es/temas/envejecimiento/acerca-envejecimiento">https://www.cepal.org/es/temas/envejecimiento/acerca-envejecimiento</a>
-</div>
-<div id="ref-huenchuan" class="csl-entry" role="listitem">
-Huenchuan, S. (2016). <em><span>Envejecimiento e institucionalidad
-pública en América Latina y el Caribe: conceptos, metodologías y casos
-prácticos</span></em>. <span>Comisión Económica para América Latina y el
-Caribe (CEPAL)</span>. <a href="https://www.cepal.org/es/publicaciones/40197-envejecimiento-institucionalidad-publica-america-latina-caribe-conceptos">https://www.cepal.org/es/publicaciones/40197-envejecimiento-institucionalidad-publica-america-latina-caribe-conceptos</a>
-</div>
-<div id="ref-ine2024b" class="csl-entry" role="listitem">
-Instituto Nacional de Estadísticas. (2024). <em>Estimaciones y
-Proyecciones de Población 1992-2070, Base 2024: Presentación de
-Resultados</em>. <a href="https://www.ine.gob.cl/docs/default-source/proyecciones-de-poblacion/publicaciones-y-anuarios/proyecci%C3%B3n-base-2024/estimaciones-y-proyecciones-de-poblaci%C3%B3n-1992-2070_base-2024_presentaci%C3%B3n-de-resultados.pdf?sfvrsn=41adcf84_5">https://www.ine.gob.cl/docs/default-source/proyecciones-de-poblacion/publicaciones-y-anuarios/proyecci%C3%B3n-base-2024/estimaciones-y-proyecciones-de-poblaci%C3%B3n-1992-2070_base-2024_presentaci%C3%B3n-de-resultados.pdf?sfvrsn=41adcf84_5</a>
-</div>
-<div id="ref-ine2024a" class="csl-entry" role="listitem">
-Instituto Nacional de Estadísticas. (2025). <em><span>Primeros
-resultados del Censo 2024: 18.480.432 personas fueron censadas en Chile,
-manteniéndose la tendencia de envejecimiento de la
-población</span></em>. <a href="https://censo2024.ine.gob.cl/primeros-resultados-del-censo-2024-18-480-432-personas-fueron-censadas-en-chile-manteniendose-la-tendencia-de-envejecimiento-de-la-poblacion/">https://censo2024.ine.gob.cl/primeros-resultados-del-censo-2024-18-480-432-personas-fueron-censadas-en-chile-manteniendose-la-tendencia-de-envejecimiento-de-la-poblacion/</a>
-</div>
-<div id="ref-mdsf2024" class="csl-entry" role="listitem">
-Ministerio de Desarrollo Social y Familia. (2024). <em><span>Informe
-metodológico Casen 2024</span></em>. <a href="https://observatorio.ministeriodesarrollosocial.gob.cl/storage/docs/casen/2024/Informe_metodologico_casen_2024.pdf">https://observatorio.ministeriodesarrollosocial.gob.cl/storage/docs/casen/2024/Informe_metodologico_casen_2024.pdf</a>
-</div>
-<div id="ref-moscosocuaresma" class="csl-entry" role="listitem">
-Moscoso Cuaresma, J. R., Cárdenas, E., &amp; Juárez, C. (2017).
-<em>Determinantes Sociales en Salud</em>. <span>Universidad Peruana de
-Ciencias Aplicadas</span>. <a href="https://www.researchgate.net/profile/Julio-Ricardo-Moscoso-Cuaresma/publication/385822723_Determinantes_sociales_en_salud/links/6736a966a78ba469f0617e2a/Determinantes-sociales-en-salud.pdf">https://www.researchgate.net/profile/Julio-Ricardo-Moscoso-Cuaresma/publication/385822723_Determinantes_sociales_en_salud/links/6736a966a78ba469f0617e2a/Determinantes-sociales-en-salud.pdf</a>
-</div>
-<div id="ref-oms2025" class="csl-entry" role="listitem">
-Organización Mundial de la Salud. (n.d.). <em><span>Envejecimiento y
-salud</span></em>. Retrieved <a href="https://www.who.int/es/news-room/fact-sheets/detail/ageing-and-health">https://www.who.int/es/news-room/fact-sheets/detail/ageing-and-health</a>
-</div>
-</div>
+
+
 
 
 <!-- -->
