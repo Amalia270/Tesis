@@ -1,5 +1,5 @@
 ﻿---
-title: "Antecedentes empíricos sobre la utilización de los servicios de salud"
+title: "Antecedentes empíricos"
 ---
 ## Antecedentes empíricos internacionales
 
@@ -18,7 +18,7 @@ Por último, entre los factores propios de los servicios de salud, la menor dist
 
 La investigación nacional ha documentado desigualdades en la utilización de servicios de salud en Chile, incluso considerando las diferencias en las necesidades sanitarias de la población. Sin embargo, estas desigualdades no se expresan de igual manera entre los tipos de utilización.
 
-### 3.2.1 Facilitadores individuales: ingreso y previsión de salud 
+### Facilitadores individuales: ingreso y previsión de salud 
 
 En relación a las desigualdades socioeconómicas en la utilización de servicios de salud, @nunez_equity_2013 analizaron la utilización y la equidad en el acceso mediante datos de las encuestas CASEN de 1992 a 2009 y de la Encuesta de Satisfacción y Gasto de Bolsillo en Salud de 2006. Sus resultados muestran que, tras ajustar por necesidad, el 20% de mayores ingresos utilizaba servicios médicos casi el doble que el 20% de menores ingresos. En particular, el quintil más pobre registraba una utilización un 7,3% inferior a la esperada según sus necesidades, mientras que en el quintil más rico era un 10,8% superior a lo esperado. 
 
@@ -30,7 +30,7 @@ En cuanto a la previsión de salud, @henriquez_desigualdades_2015 con datos de l
 
 **H2.** Estar afiliado a Isapre se asocia con mayor probabilidad de consulta de especialidad y de hospitalización o intervención quirúrgica que estar afiliado a Fonasa.
 
-### 3.2.2 Facilitadores contextuales
+### Facilitadores contextuales
 
 En Chile, la literatura sobre ruralidad se centra en las diferencias de acceso, distancia y distribución de los establecimientos de salud. Según los datos de la CASEN 2022, el 36% de los hogares rurales con personas mayores se encuentra a menos de 2,5 km de un centro de salud, frente al 88,9% de los hogares urbanos (Ministerio de Desarrollo Social y Familia [MDSF], 2023). Si bien, estos resultados señalan personas con edades avanzadas, ilustran diferencias territoriales en la proximidad de los servicios. A esto se suma la variabilidad geográfica del país, por ejemplo, en la macrozona norte llegar a centros de salud primaria puede tomar entre 57 y 224,3 minutos y para llegar al hospital o clínica más cercana toma entre 92,9 y 484,9 minutos (@observatoriodelenvejecimientouc-confuturo_envejecer_2023). En este contexto, la desigual distribución de la infraestructura hospitalaria afecta la posibilidad de acceder a atención en  salud, especialmente  lejos de la zona central del país (@fuenzalida_analisis_2023).
 
@@ -40,7 +40,7 @@ Por tanto, aunque la evidencia confirma la relevancia de las barreras territoria
 
 **H3.** Residir en zona rural o lejos de un centro de salud se asocia con menor probabilidad de consulta de especialidad.
 
-### 3.2.3 Medicina general y hospitalización
+### Medicina general y hospitalización
 
 A diferencia de lo observado en las consultas de especialidad, los resultados sobre medicina general y hospitalización son menos consistentes.@vasquez_incomerelated_2013 observaron que los resultados variaban según la medida de utilización: a igual necesidad, los grupos de menores ingresos concentraban más días de hospitalización, aunque la probabilidad de hospitalizarse mostraba una distribución ligeramente favorable a los grupos de mayores ingresos (p. 103, tabla 4). @paraje_health_2012 encontraron que la hospitalización presentó una distribución favorable a los grupos de menores ingresos, y que la medicina general pasó de una distribución ligeramente favorable a ellos en 2003 a otra favorable a los de mayores ingresos en 2009 (p. 13, tabla 6). Por su parte, @henriquez_desigualdades_2015 no encontraron una diferencia significativa en la hospitalización entre los mayores de 66 años y el tramo de 15 a 25 años (p. 17). Esto es coherente con la revisión internacional, donde el mayor uso hospitalario de los grupos desfavorecidos se explica principalmente por su peor estado de salud.Como la evidencia no permite anticipar una dirección clara, se exploran:
 
@@ -48,7 +48,7 @@ A diferencia de lo observado en las consultas de especialidad, los resultados so
 
 **P2.** Se explora si el territorio se asocia con la medicina general y la hospitalización de forma distinta a como lo hace con la especialidad.
 
-### 3.2.4 Edad y sexo
+### Edad y sexo
 
 En relación con la edad, @chovarvera_desigualdad_2014 analizaron la utilización de servicios médicos con las encuestas CASEN de 2000, 2003, 2009 y 2011, distinguiendo cuatro grupos etarios, sin embargo, en medicina general y días de hospitalización no se identificó un patrón consistente entre grupos etarios. Por su parte, @henriquez_desigualdades_2015 estimaron que, en los mayores de 66 años, la probabilidad de consulta general y de especialidad fue mayor que en el tramo de 15 a 25 años.
 
