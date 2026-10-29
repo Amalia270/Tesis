@@ -37,8 +37,7 @@ Respecto de la necesidad, el 19,1% declara haber tenido un problema de salud en 
 #| echo: false
 tabla_kbl(tablas$t1, "Tabla 1. Caracterización de la población de 18 años y más (%)")
 ```
-
-*Nota.* `r tablas$nota1`
+*Nota.* Elaboración propia con datos de CASEN 2024.
 
 
 **Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%)**
@@ -49,8 +48,7 @@ La Tabla 2 muestra la distribución de los dos indicadores de necesidad y los tr
 #| echo: false
 tabla_kbl(tablas$t2, "Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%)")
 ```
-
-*Nota.* `r tablas$nota2`
+*Nota.* Elaboración propia con datos de CASEN 2024.
 
 
 **Tabla 3. Utilización de servicios según ingreso, previsión y territorio (%)**
@@ -61,6 +59,5 @@ La Tabla 3 muestra el porcentaje de personas que utilizan cada servicio según s
 #| echo: false
 tabla_kbl(tablas$t3, "Tabla 3. Utilización de servicios según ingreso, previsión y territorio (%)")
 ```
-
-*Nota.* `r tablas$nota3`
+   *Nota.* Elaboración propia con datos de CASEN 2024.
 
