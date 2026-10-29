@@ -5,37 +5,41 @@ title: "Resultados descriptivos"
 #| echo: false
 #| warning: false
 #| message: false
-   options(repos = c(CRAN = "https://cloud.r-project.org"))
-   for (p in c("knitr", "kableExtra")) {
-       if (!requireNamespace(p, quietly = TRUE)) install.packages(p, quiet = TRUE)
-   }
-   library(knitr)
-   library(kableExtra)
+#| output: false
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+for (p in c("knitr", "kableExtra")) {
+  if (!requireNamespace(p, quietly = TRUE)) install.packages(p, quiet = TRUE)
+}
+library(knitr)
+library(kableExtra)
 
 if (!file.exists("output/tables/tablas_descriptivas.rds")) {
   stop("Falta output/tables/tablas_descriptivas.rds. Haz git pull o pídeselo a Elisa.")
 }
 tablas <- readRDS("output/tables/tablas_descriptivas.rds")
 
-tabla_kbl <- function(tabla, titulo, nota) {
+tabla_kbl <- function(tabla, titulo) {
   kbl(tabla, booktabs = TRUE, linesep = "", caption = titulo) %>%
     kable_styling(full_width = FALSE, font_size = 10,
                   latex_options = c("hold_position", "scale_down")) %>%
-    row_spec(0, bold = TRUE) %>%
-    footnote(general = nota, general_title = "Nota.",
-             threeparttable = TRUE, footnote_as_chunk = TRUE)
+    row_spec(0, bold = TRUE)
 }
 ```
+
 
 **Tabla 1. Caracterización de la población de 18 años y más (%)**
 
 La Tabla 1 presenta las características de la población de 18 años y más según los factores predisponentes, facilitadores y de necesidad. En términos de la estructura etaria, el 31,7% de la población adulta tiene entre 18 y 34 años y el 27,8% entre 35 y 49 años, mientras que las personas de 65 años y más representan el 17,9%, de las cuales el 4,1% tiene 80 años o más. En la distribución por sexo, los hombres representan un 48,9% y las mujeres un 51,1%. El nivel educacional se distribuye principalmente en educación superior con un 41,7%, seguida de un 31% con educación media completa frente a valores inferiores de educación básica completa o media incompleta con 17,4% y básica incompleta o menos con un 9,9%.
 
 Respecto de la necesidad, el 19,1% declara haber tenido un problema de salud en los últimos tres meses y el 11,5% presenta limitación funcional. En cuanto a los factores facilitadores, Fonasa concentra la mayoría de los casos con un 86,1% frente a un 13,9% en Isapres. En cuanto al territorio, el 88,5% reside en zonas urbanas y el 81,8% declara contar con un centro de salud cercano a su vivienda. Por último, la distribución por quintiles de ingreso varía desde un 16,3% en el quintil de menores ingresos (Q1) hasta un 22% en los quintiles Q4 y Q5. Esto se debe a que los quintiles se calcularon sobre la población total y a que los menores de 18 años se concentran en los quintiles de menores ingresos, en parte porque el ingreso per cápita es menor en los hogares con más integrantes.
+
 ```{r}
 #| echo: false
-tabla_kbl(tablas$t1, "Tabla 1. Caracterización de la población de 18 años y más (%)", tablas$nota1)
+tabla_kbl(tablas$t1, "Tabla 1. Caracterización de la población de 18 años y más (%)")
 ```
+
+*Nota.* `r tablas$nota1`
+
 
 **Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%)**
 
@@ -43,8 +47,11 @@ La Tabla 2 muestra la distribución de los dos indicadores de necesidad y los tr
 
 ```{r}
 #| echo: false
-tabla_kbl(tablas$t2, "Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%)", tablas$nota2)
+tabla_kbl(tablas$t2, "Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%)")
 ```
+
+*Nota.* `r tablas$nota2`
+
 
 **Tabla 3. Utilización de servicios según ingreso, previsión y territorio (%)**
  
@@ -52,5 +59,8 @@ La Tabla 3 muestra el porcentaje de personas que utilizan cada servicio según s
 
 ```{r}
 #| echo: false
-tabla_kbl(tablas$t3, "Tabla 3. Utilización de servicios según ingreso, previsión y territorio (%)", tablas$nota3)
+tabla_kbl(tablas$t3, "Tabla 3. Utilización de servicios según ingreso, previsión y territorio (%)")
 ```
+
+*Nota.* `r tablas$nota3`
+
