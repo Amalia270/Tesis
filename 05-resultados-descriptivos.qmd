@@ -37,7 +37,7 @@ Respecto de la necesidad, el 19,1% declara haber tenido un problema de salud en 
 tabla_kbl(tablas$t1, "Tabla 1. Caracterización de la población de 18 años y más (%)", tablas$nota1)
 ```
 
-**Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%)***
+**Tabla 2. Necesidad de salud y utilización de servicios según grupo de edad (%)**
 
 La Tabla 2 muestra la distribución de los dos indicadores de necesidad y los tres tipos de utilización de los servicios de salud según los grupos etarios. Ambos indicadores de necesidad presentan un incremento progresivo a medida que aumenta la edad. El aumento más notorio se evidencia en las limitaciones funcionales, cuya prevalencia aumenta de 3,8% en el grupo 18-34 a 54,2% en las personas de 80 años y más. La utilización de servicios también aumenta con la edad: en este último grupo, el 44,7% utilizó medicina general, el 31,9% especialidad y el 14,7% se hospitalizó. Con todo, el aumento de la utilización es más moderado que el de la limitación funcional: la medicina general más que se duplica (19,0% a 44,7%), la especialidad se duplica aproximadamente (16,1% a 31,9%) y la hospitalización se triplica (4,7% a 14,7%), mientras que la limitación funcional se multiplica por más de catorce. Además, en las edades más altas el aumento de la utilización se hace más lento: entre los 65-79 años y los 80 años y más la limitación funcional se duplica (26,1% a 54,2%), pero la medicina general sube de 40,3% a 44,7% y la especialidad de 29,0% a 31,9%.
 
