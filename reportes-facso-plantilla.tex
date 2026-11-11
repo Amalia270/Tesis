@@ -1702,17 +1702,39 @@ completo.
 
 \subsection{Variables dependientes}\label{variables-dependientes}
 
-Para esta investigación, las variables dependientes corresponden a tres
-indicadores de utilización declarada de servicios de salud, construidos
-como variables dicotómicas (1 = utilizó el servicio en el período de
-referencia; 0 = no lo utilizó): (a) atención de medicina general en los
-últimos tres meses (s20a\_preg); (b) atención de especialidad en los
-últimos tres meses (s23a\_preg); y (c) hospitalización o intervención
-quirúrgica en los últimos doce meses (s27a). Estos indicadores miden
-utilización efectivamente declarada, y no permiten evaluar la
-oportunidad, la pertinencia ni la calidad de la atención. Dado que los
-períodos de referencia difieren entre servicios, la comparación entre
-ellos se realiza sobre patrones y no sobre niveles de utilización.
+Todas las variables de esta tabla son dicotómicas (1 = utilizó el
+servicio; 0 = no lo utilizó) y miden la utilización efectivamente
+declarada.
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Variable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Código CASEN
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Período de referencia
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Observaciones / Tratamiento especial
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Atención de medicina general} & \texttt{s20a\_preg} & Últimos 3
+meses & - \\
+\textbf{Atención de especialidad} & \texttt{s23a\_preg} & Últimos 3
+meses & - \\
+\textbf{Hospitalización o intervención quirúrgica} & \texttt{s27a} &
+Últimos 12 meses & Se tratan como datos perdidos (NA) las
+hospitalizaciones por embarazo, parto o cesárea (0,8 \%). \\
+\end{longtable}
+}
 
 \subsection{Variables independientes}\label{variables-independientes}
 
@@ -1722,70 +1744,56 @@ Salud de Andersen (\citeproc{ref-andersen_revisiting_1995}{1995},
 \citeproc{ref-andersen_national_2008}{2008}), distinguiendo entre
 factores predisponentes, facilitadores y de necesidad.
 
-Los factores predisponentes corresponden a características
-sociodemográficas que anteceden a la utilización y pueden influir en la
-propensión a buscar atención. Se considerarán la edad, el sexo y el
-nivel educacional (educc). La edad se agrupa en cinco tramos 18-34,
-35-49, 50-64 y 65-79 y 80+. Aunque la Ley N° 19.828 define como adulta
-mayor a la persona de 60 años y más, se utiliza el umbral de 65 años
-para mantener la comparabilidad con las cifras del INE citadas en la
-introducción, y el de 80 años corresponde a la cuarta edad que define la
-misma ley. El sexo se operacionaliza como una variable categórica
-nominal dicotómica, codificada como 1 = hombre y 2 = mujer. Siguiendo a
-Andersen (\citeproc{ref-andersen_revisiting_1995}{1995},
-\citeproc{ref-andersen_national_2008}{2008}), la educación se trata como
-una característica de la estructura social y no como un recurso
-material. Se operacionaliza como categórica ordinal y se agrupa en
-cuatro categorías: básica incompleta o menos (códigos 0 y 1), básica
-completa o media incompleta (códigos 2 y 3), media completa (código 4) y
-educación superior (códigos 5 y 6). Los valores negativos, incluido el
-código −88 correspondiente a ``no sabe'' y se consideran como valores
-perdidos.
-
-Los factores de necesidad corresponden a condiciones de salud que pueden
-generar requerimientos de atención. Se consideran dos indicadores de
-necesidad percibida, y no evaluada por criterios profesionales
-(\citeproc{ref-andersen_revisiting_1995}{1995},
-\citeproc{ref-andersen_national_2008}{2008}): haber tenido un problema
-de salud, enfermedad o accidente en los últimos tres meses (s16), cuyo
-período coincide con el de la atención de medicina general y de
-especialidad, y la limitación funcional, construida a partir de seis
-dominios (h7a a h7f): se considera que hay limitación si la persona
-declara mucha dificultad o imposibilidad en al menos uno de ellos, según
-el criterio Washington Group dado en la misma encuesta. Hay que
-considerar que ambos indicadores son declarados por el informante del
-hogar y no equivalen a una evaluación clínica.
-
-Los factores facilitadores individuales comprenden los recursos
-materiales y financieros que pueden favorecer o dificultar la
-utilización de los servicios. Se incluirán el sistema previsional de
-salud (s13), agrupado en Fonasa e Isapre, y el quintil de ingreso total
-per cápita del hogar (ypchtotcor). Las personas con otro sistema
-previsional (FF.AA. y del Orden, ninguno u otro) quedan fuera del
-análisis, y los tramos de Fonasa (A--D) no se desagregan porque se
-definen por ingreso, que ya se incluye en el modelo. Se utiliza el
-ingreso per cápita porque permite comparar hogares de distinto tamaño y
-porque el gasto en salud se resuelve en gran medida en el hogar, y no
-solo con ingresos individuales, que no reflejan los recursos de quienes
-no perciben ingresos propios. Además,se emplea el ingreso total, que
-incluye las transferencias monetarias del Estado, y no el autónomo, por
-ser relevantes para la población mayor. Se agrupa en quintiles,
-calculados con el factor de expansión sobre la población total, porque
-describen la posición relativa, permiten capturar relaciones no lineales
-y reducen el efecto de los valores extremos.
-
-Los factores facilitadores territoriales incorporan las barreras
-espaciales y de disponibilidad de recursos. Se incluirán la región de
-residencia como una variable categórica nominal que identifica las
-distintas regiones del país el área geográfica (urbano/rural)
-operacionalizada como una variable categórica nominal dicotómica,
-codificada como 1 = urbano y 2 = rural, y la proximidad declarada de la
-vivienda a un centro de salud (v35c) que identifica si la vivienda se
-encuentra a menos de 20 cuadras o 2,5 km de un centro de salud de
-atención primaria o de nivel superior, con valores 1=sí y 2= no. Hay que
-considerar que esta variable constituye una aproximación a la cercanía
-territorial de los servicios y no una medida directa del acceso
-efectivo.
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Dimensión (Andersen)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Variable
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Código CASEN
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Categorías / Operacionalización
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Factores Predisponentes} & Edad & - & 5 tramos: 18-34, 35-49,
+50-64, 65-79, y 80+ años. \\
+\textbf{Factores Predisponentes} & Sexo & - & Nominal dicotómica: 1 =
+hombre, 2 = mujer. \\
+\textbf{Factores Predisponentes} & Nivel educacional & \texttt{educc} &
+Ordinal (4 categorías): Básica inc. o menos (0-1), Básica comp./Media
+inc. (2-3), Media comp. (4), y Educación superior (5-6). Valores
+negativos (-88) son perdidos. \\
+\textbf{Factores de Necesidad} & Problema de salud, enfermedad o
+accidente & \texttt{s16} & Percepción de ocurrencia en los últimos 3
+meses. \\
+\textbf{Factores de Necesidad} & Limitación funcional & \texttt{h7a} a
+\texttt{h7f} & Dicotómica (Sí/No): ``Sí'' indica mucha dificultad o
+imposibilidad en al menos uno de los 6 dominios (Criterio Washington
+Group). \\
+\textbf{Facilitadores Individuales} & Sistema previsional de salud &
+\texttt{s13} & Fonasa, Isapre (Se excluyen FF.AA., ninguno y otros del
+análisis). \\
+\textbf{Facilitadores Individuales} & Ingreso total per cápita del hogar
+& \texttt{ypchtotcor} & Agrupado en quintiles calculados con factor de
+expansión sobre la población total. \\
+\textbf{Facilitadores Territoriales} & Región de residencia & - &
+Nominal categórica: Distintas regiones del país. \\
+\textbf{Facilitadores Territoriales} & Área geográfica & - & Nominal
+dicotómica: 1 = urbano, 2 = rural. \\
+\textbf{Facilitadores Territoriales} & Proximidad a centro de salud &
+\texttt{v35c} & Dicotómica: 1 = sí (\textless{} 20 cuadras o 2,5 km), 2
+= no. \\
+\end{longtable}
+}
 
 \subsection{Valores perdidos}\label{valores-perdidos}
 
