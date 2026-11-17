@@ -31,8 +31,9 @@ Las variables independientes se organizarán de acuerdo con las dimensiones del 
 
 ```{r}
 #| label: tbl-operacionalizacion
-#| tbl-cap: "Operacionalización de variables según el modelo de Andersen"
+#| tbl-cap: "Variables independientes"
 #| echo: false
+#| classes: plain
 
 library(kableExtra)
 
