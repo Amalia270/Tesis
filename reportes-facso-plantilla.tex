@@ -364,9 +364,9 @@
   \newcommand\figurename{Lista de figuras}
 \fi
 \ifdefined\tablename
-  \renewcommand*\tablename{Lista de tablas}
+  \renewcommand*\tablename{Tabla}
 \else
-  \newcommand\tablename{Lista de tablas}
+  \newcommand\tablename{Tabla}
 \fi
 }
 \@ifpackageloaded{float}{}{\usepackage{float}}
@@ -1709,35 +1709,30 @@ Todas las variables de esta tabla son dicotómicas (1 = utilizó el
 servicio; 0 = no lo utilizó) y miden la utilización efectivamente
 declarada.
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Variable
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Código CASEN
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Período de referencia
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Observaciones / Tratamiento especial
-\end{minipage} \\
-\midrule\noalign{}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{4cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{6cm}}
+
+\caption{\label{tbl-dependientes}Variables dependientes}
+
+\tabularnewline
+
+\toprule
+Variable & Código CASEN & Período de referencia & Observaciones\\
+\midrule
+\endfirsthead
+\multicolumn{4}{@{}l}{\textit{(continued)}}\\
+\toprule
+Variable & Código CASEN & Período de referencia & Observaciones\\
+\midrule
 \endhead
-\bottomrule\noalign{}
+
+\endfoot
+\bottomrule
 \endlastfoot
-\textbf{Atención de medicina general} & \texttt{s20a\_preg} & Últimos 3
-meses & - \\
-\textbf{Atención de especialidad} & \texttt{s23a\_preg} & Últimos 3
-meses & - \\
-\textbf{Hospitalización o intervención quirúrgica} & \texttt{s27a} &
-Últimos 12 meses & Se tratan como datos perdidos (NA) las
-hospitalizaciones por embarazo, parto o cesárea (0,8 \%). \\
+\textbf{Atención de medicina general} & \ttfamily{s20a\_preg} & Últimos 3 meses & -\\
+\textbf{Atención de especialidad} & \ttfamily{s23a\_preg} & Últimos 3 meses & -\\
+\textbf{Hospitalización o intervención quirúrgica} & \ttfamily{s27a} & Últimos 12 meses & Se tratan como datos perdidos (NA) las hospitalizaciones por embarazo, parto o cesárea (0,8 \%).\\*
+
 \end{longtable}
-}
 
 \subsection{Variables independientes}\label{variables-independientes}
 
@@ -1747,56 +1742,46 @@ Salud de Andersen (\citeproc{ref-andersen_revisiting_1995}{1995},
 \citeproc{ref-andersen_national_2008}{2008}), distinguiendo entre
 factores predisponentes, facilitadores y de necesidad.
 
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
-\toprule\noalign{}
-\begin{minipage}[b]{\linewidth}\raggedright
-Dimensión (Andersen)
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Variable
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Código CASEN
-\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Categorías / Operacionalización
-\end{minipage} \\
-\midrule\noalign{}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{3cm}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{2cm}>{\raggedright\arraybackslash}p{6.5cm}}
+
+\caption{\label{tbl-operacionalizacion}Variables independientes}
+
+\tabularnewline
+
+\toprule
+Dimensión (Andersen) & Variable & Código CASEN & Categorías / Operacionalización\\
+\midrule
+\endfirsthead
+\multicolumn{4}{@{}l}{\textit{(continued)}}\\
+\toprule
+Dimensión (Andersen) & Variable & Código CASEN & Categorías / Operacionalización\\
+\midrule
 \endhead
-\bottomrule\noalign{}
+
+\endfoot
+\bottomrule
 \endlastfoot
-\textbf{Factores Predisponentes} & Edad & - & 5 tramos: 18-34, 35-49,
-50-64, 65-79, y 80+ años. \\
-\textbf{Factores Predisponentes} & Sexo & - & Nominal dicotómica: 1 =
-hombre, 2 = mujer. \\
-\textbf{Factores Predisponentes} & Nivel educacional & \texttt{educc} &
-Ordinal (4 categorías): Básica inc. o menos (0-1), Básica comp./Media
-inc. (2-3), Media comp. (4), y Educación superior (5-6). Valores
-negativos (-88) son perdidos. \\
-\textbf{Factores de Necesidad} & Problema de salud, enfermedad o
-accidente & \texttt{s16} & Percepción de ocurrencia en los últimos 3
-meses. \\
-\textbf{Factores de Necesidad} & Limitación funcional & \texttt{h7a} a
-\texttt{h7f} & Dicotómica (Sí/No): ``Sí'' indica mucha dificultad o
-imposibilidad en al menos uno de los 6 dominios (Criterio Washington
-Group). \\
-\textbf{Facilitadores Individuales} & Sistema previsional de salud &
-\texttt{s13} & Fonasa, Isapre (Se excluyen FF.AA., ninguno y otros del
-análisis). \\
-\textbf{Facilitadores Individuales} & Ingreso total per cápita del hogar
-& \texttt{ypchtotcor} & Agrupado en quintiles calculados con factor de
-expansión sobre la población total. \\
-\textbf{Facilitadores Territoriales} & Región de residencia & - &
-Nominal categórica: Distintas regiones del país. \\
-\textbf{Facilitadores Territoriales} & Área geográfica & - & Nominal
-dicotómica: 1 = urbano, 2 = rural. \\
-\textbf{Facilitadores Territoriales} & Proximidad a centro de salud &
-\texttt{v35c} & Dicotómica: 1 = sí (\textless{} 20 cuadras o 2,5 km), 2
-= no. \\
+ & Edad & \ttfamily{edad} & 5 tramos: 18-34, 35-49, 50-64, 65-79, y 80+ años.\\
+\nopagebreak
+ & Sexo & \ttfamily{sexo} & Nominal dicotómica: 1 = hombre, 2 = mujer.\\
+\nopagebreak
+\multirow[t]{-2}{3cm}[\normalbaselineskip]{\raggedright\arraybackslash \textbf{Factores Predisponentes}} & Nivel educacional & \ttfamily{educc} & Ordinal (4 categorías): Básica inc. o menos (0-1), Básica comp./Media inc. (2-3), Media comp. (4), y Educación superior (5-6). Valores negativos (-88) son perdidos.\\
+\cmidrule{1-4}\pagebreak[0]
+ & Problema de salud, enfermedad o accidente & \ttfamily{s16} & Percepción de ocurrencia en los últimos 3 meses.\\
+\nopagebreak
+\multirow[t]{-1}{3cm}[\normalbaselineskip]{\raggedright\arraybackslash \textbf{Factores de Necesidad}} & Limitación funcional & \ttfamily{h7a a h7f} & Dicotómica (Sí/No): "Sí" indica mucha dificultad o imposibilidad en al menos uno de los 6 dominios (Criterio Washington Group).\\
+\cmidrule{1-4}\pagebreak[0]
+ & Sistema previsional de salud & \ttfamily{s13} & Fonasa, Isapre (Se excluyen FF.AA., ninguno y otros del análisis).\\
+\nopagebreak
+\multirow[t]{-1}{3cm}[\normalbaselineskip]{\raggedright\arraybackslash \textbf{Facilitadores Individuales}} & Ingreso total per cápita del hogar & \ttfamily{ypchtotcor} & Agrupado en quintiles calculados con factor de expansión sobre la población total.\\
+\cmidrule{1-4}\pagebreak[0]
+ & Región de residencia & \ttfamily{region} & Nominal categórica: Distintas regiones del país.\\
+\nopagebreak
+ & Área geográfica & \ttfamily{area} & Nominal dicotómica: 1 = urbano, 2 = rural.\\
+\nopagebreak
+\multirow[t]{-2}{3cm}[\normalbaselineskip]{\raggedright\arraybackslash \textbf{Facilitadores Territoriales}} & Proximidad a centro de salud & \ttfamily{v35c} & Dicotómica: 1 = sí (< 20 cuadras o 2,5 km), 2 = no.\\*
+
 \end{longtable}
-}
 
 \subsection{Valores perdidos}\label{valores-perdidos}
 
