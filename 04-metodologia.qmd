@@ -34,21 +34,39 @@ Las variables independientes se organizarán de acuerdo con las dimensiones del 
 #| tbl-cap: "Operacionalización de variables según el modelo de Andersen"
 #| echo: false
 
-library(tibble)
 library(kableExtra)
 
-vars <- tribble(
-  ~Factor, ~Variable, ~Código, ~Descripción,
-  "Factores Predisponentes", "Edad", "edad", "5 tramos: 18-34, 35-49, 50-64, 65-79, y 80+ años.",
-  "Factores Predisponentes", "Sexo", "sexo", "Nominal dicotómica: 1 = hombre, 2 = mujer.",
-  "Factores Predisponentes", "Nivel educacional", "educc", "Ordinal (4 categorías): Básica inc. o menos (0-1), Básica comp./Media inc. (2-3), Media comp. (4), y Educación superior (5-6). Valores negativos (-88) son perdidos.",
-  "Factores de Necesidad", "Problema de salud, enfermedad o accidente", "s16", "Percepción de ocurrencia en los últimos 3 meses.",
-  "Factores de Necesidad", "Limitación funcional", "h7a a h7f", "Dicotómica (Sí/No): \"Sí\" indica mucha dificultad o imposibilidad en al menos uno de los 6 dominios (Criterio Washington Group).",
-  "Facilitadores Individuales", "Sistema previsional de salud", "s13", "Fonasa, Isapre (Se excluyen FF.AA., ninguno y otros del análisis).",
-  "Facilitadores Individuales", "Ingreso total per cápita del hogar", "ypchtotcor", "Agrupado en quintiles calculados con factor de expansión sobre la población total.",
-  "Facilitadores Territoriales", "Región de residencia", "region", "Nominal categórica: Distintas regiones del país.",
-  "Facilitadores Territoriales", "Área geográfica", "area", "Nominal dicotómica: 1 = urbano, 2 = rural.",
-  "Facilitadores Territoriales", "Proximidad a centro de salud", "v35c", "Dicotómica: 1 = sí (< 20 cuadras o 2,5 km), 2 = no."
+vars <- data.frame(
+  Factor = c(
+    rep("Factores Predisponentes", 3),
+    rep("Factores de Necesidad", 2),
+    rep("Facilitadores Individuales", 2),
+    rep("Facilitadores Territoriales", 3)
+  ),
+  Variable = c(
+    "Edad", "Sexo", "Nivel educacional",
+    "Problema de salud, enfermedad o accidente", "Limitación funcional",
+    "Sistema previsional de salud", "Ingreso total per cápita del hogar",
+    "Región de residencia", "Área geográfica", "Proximidad a centro de salud"
+  ),
+  Codigo = c(
+    "edad", "sexo", "educc",
+    "s16", "h7a a h7f",
+    "s13", "ypchtotcor",
+    "region", "area", "v35c"
+  ),
+  Descripcion = c(
+    "5 tramos: 18-34, 35-49, 50-64, 65-79, y 80+ años.",
+    "Nominal dicotómica: 1 = hombre, 2 = mujer.",
+    "Ordinal (4 categorías): Básica inc. o menos (0-1), Básica comp./Media inc. (2-3), Media comp. (4), y Educación superior (5-6). Valores negativos (-88) son perdidos.",
+    "Percepción de ocurrencia en los últimos 3 meses.",
+    "Dicotómica (Sí/No): \"Sí\" indica mucha dificultad o imposibilidad en al menos uno de los 6 dominios (Criterio Washington Group).",
+    "Fonasa, Isapre (Se excluyen FF.AA., ninguno y otros del análisis).",
+    "Agrupado en quintiles calculados con factor de expansión sobre la población total.",
+    "Nominal categórica: Distintas regiones del país.",
+    "Nominal dicotómica: 1 = urbano, 2 = rural.",
+    "Dicotómica: 1 = sí (< 20 cuadras o 2,5 km), 2 = no."
+  )
 )
 
 vars |>
