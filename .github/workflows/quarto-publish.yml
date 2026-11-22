@@ -24,6 +24,7 @@ jobs:
           TEXLIVE_DIR="${HOME}/.TinyTeX"
           TEXLIVE_BIN="$TEXLIVE_DIR/bin/$(uname -m)-linux"
           export PATH="$TEXLIVE_BIN:$PATH"
+          tlmgr update --self
           tlmgr install tex-gyre collection-fontsrecommended collection-langspanish babel-spanish hyphen-spanish
           tlmgr path add
       - name: Install R packages
@@ -42,17 +43,3 @@ jobs:
       - name: Initialize gh-pages branch
         if: steps.ghpages.outputs.exists == 'false'
         id: initghpages
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          EMPTY_TREE=$(git hash-object -t tree /dev/null)
-          EMPTY_COMMIT=$(git commit-tree "$EMPTY_TREE" -m "Initialize gh-pages branch")
-          git push origin "$EMPTY_COMMIT:refs/heads/gh-pages"
-          echo "created=true" >> "$GITHUB_OUTPUT"
-      - name: Publish to GitHub Pages
-        if: steps.ghpages.outputs.exists == 'true' || steps.initghpages.outputs.created == 'true'
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

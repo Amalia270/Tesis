@@ -3,7 +3,6 @@ _report/
 _book/
 _site/
 .DS_Store
-_freeze/
 *.Rmd
 *.utf8.md
 *.knit.md

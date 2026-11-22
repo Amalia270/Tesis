@@ -3,7 +3,7 @@ crossref:
   fig-prefix: Figura
   fig-title: Lista de figuras
   tbl-prefix: Tabla
-  tbl-title: Lista de tablas
+  tbl-title: "Tabla"
 df-print: default
 lang: es
 link-citations: true
