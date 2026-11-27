@@ -77,3 +77,9 @@ Finalmente, la literatura internacional muestra que las mujeres utilizan más lo
 **He7.** Se explora si las diferencias entre zonas urbanas y rurales en la utilización de servicios de salud son distintas entre hombres y mujeres.
 
 ## Diagrama de hipótesis 
+
+La @fig-hipotesis resume las hipótesis con dirección esperada.
+
+![Diagrama de hipótesis](assets/diagrama_hipotesis_final_v2.png){#fig-hipotesis width=95%}
+
+*Nota.* Las hipótesis H2, H3 y H7 plantean una mayor utilización entre las personas afiliadas a Isapre, residentes en zonas urbanas y mujeres, respectivamente. Las hipótesis exploratorias (He1 a He7) se presentan en el texto.
