@@ -284,7 +284,7 @@ t1 <- bind_rows(
   tabla_cat(dis_adultos, "educ",            "Nivel educacional"),
   tabla_cat(dis_adultos, "prob_reciente_f", "Problema de salud reciente"),
   tabla_cat(dis_adultos, "lim_func_f",      "Limitación funcional"),
-    tabla_cat(dis_adultos, "prevision_t1",    "Previsión de salud"),
+  tabla_cat(dis_adultos, "prevision_t1",    "Previsión de salud"),
   tabla_cat(dis_adultos, "quintil",         "Quintil de ingreso"),
   tabla_cat(dis_adultos, "area_f",          "Área de residencia"),
   tabla_cat(dis_adultos, "cerca_cs",        "Centro de salud a menos de 20 cuadras o 2,5 km"))
