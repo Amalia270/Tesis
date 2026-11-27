@@ -3,8 +3,11 @@ format:
   html:
     title-block-style: none
     toc: false
+    reference-location: margin
+    footnotes-hover: false
   pdf:
     title-block-style: none
+    reference-location: document
 ---
 
 ::: {.content-visible when-format="html"}
