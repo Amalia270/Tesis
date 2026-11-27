@@ -33,5 +33,5 @@ Analizar qué factores se asocian con la utilización de servicios de salud en l
 2. Estimar la asociación del ingreso y la previsión de salud con la utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica en la población adulta en su conjunto, controlando por las demás variables del modelo.
 3. Estimar la asociación del territorio de residencia con la utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica en la población adulta en su conjunto, controlando por las demás variables del modelo. 
 4. Analizar cómo varían las asociaciones del ingreso, la previsión y el territorio con la utilización de medicina general, atención de especialidad y hospitalización o intervención quirúrgica entre grupos de edad, identificando en qué dirección lo hacen.
-Comparar la utilización de servicios de salud entre hombres y mujeres.
-5. Explorar si las asociaciones del ingreso, la previsión y el territorio con la utilización difieren según sexo.
+5. Comparar la utilización de servicios de salud entre hombres y mujeres.
+6. Explorar si las asociaciones del ingreso, la previsión y el territorio con la utilización difieren según sexo.
