@@ -75,3 +75,5 @@ Finalmente, la literatura internacional muestra que las mujeres utilizan más lo
 **He6.** Se explora si las diferencias entre personas afiliadas a Isapre y a Fonasa en la utilización de servicios de salud son distintas entre hombres y mujeres.
 
 **He7.** Se explora si las diferencias entre zonas urbanas y rurales en la utilización de servicios de salud son distintas entre hombres y mujeres.
+
+## Diagrama de hipótesis 
