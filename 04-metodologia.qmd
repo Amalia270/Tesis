@@ -62,13 +62,6 @@ vars_dep |>
 
 Las variables independientes se organizarán de acuerdo con las dimensiones del Modelo Conductual de Utilización de los Servicios de Salud de Andersen [-@andersen_revisiting_1995; -@andersen_national_2008], distinguiendo entre factores predisponentes, facilitadores y de necesidad.
 
-La edad se agrupa en cinco tramos para captar relaciones no lineales con la utilización. Aunque la Ley N° 19.828 define como adulta mayor a la persona de 60 años y más, se utiliza el umbral de 65 años para mantener la comparabilidad con las cifras del INE citadas en la introducción, y el de 80 años corresponde a la cuarta edad que define la misma ley. Siguiendo a [@andersen_revisiting_1995], la educación se trata como una característica de la estructura social y no como un recurso material.
-
-Los dos indicadores de necesidad corresponden a necesidad percibida, y no evaluada por criterios profesionales [@andersen_national_2008]. Ambos son declarados por el informante del hogar y no equivalen a una evaluación clínica. El período de referencia del problema de salud reciente coincide con el de la atención de medicina general y de especialidad.
-
-Las personas con otro sistema previsional quedan fuera del análisis, por lo que los resultados de los modelos se refieren a la población adulta afiliada a Fonasa o Isapre. Los tramos de Fonasa no se desagregan porque se definen por ingreso, que ya se incluye en el modelo. Se utiliza el ingreso per cápita porque permite comparar hogares de distinto tamaño y porque el gasto en salud se resuelve en gran medida en el hogar. Se emplea el ingreso total, que incluye las transferencias monetarias del Estado, por su relevancia para la población mayor, y se agrupa en quintiles porque estos describen la posición relativa, permiten capturar relaciones no lineales y reducen el efecto de los valores extremos. Como prueba de robustez, los modelos se estimarán también con el ingreso autónomo per cápita del hogar, lo que permitirá evaluar en qué medida las transferencias modifican la relación entre el ingreso y la utilización, especialmente en la población mayor.
-
-Finalmente, la proximidad declarada a un centro de salud constituye una aproximación a la cercanía territorial de los servicios y no una medida directa del acceso efectivo.
 
 ```{r}
 #| label: tbl-operacionalizacion
@@ -124,6 +117,14 @@ vars |>
   column_spec(4, width = "6.5cm") |>
   collapse_rows(columns = 1, valign = "top", latex_hline = "major")
 ```
+
+La edad se agrupa en cinco tramos para captar relaciones no lineales con la utilización. Aunque la Ley N° 19.828 define como adulta mayor a la persona de 60 años y más, se utiliza el umbral de 65 años para mantener la comparabilidad con las cifras del INE citadas en la introducción, y el de 80 años corresponde a la cuarta edad que define la misma ley. Siguiendo a [@andersen_revisiting_1995], la educación se trata como una característica de la estructura social y no como un recurso material.
+
+Los dos indicadores de necesidad corresponden a necesidad percibida, y no evaluada por criterios profesionales [@andersen_national_2008]. Ambos son declarados por el informante del hogar y no equivalen a una evaluación clínica. El período de referencia del problema de salud reciente coincide con el de la atención de medicina general y de especialidad.
+
+Las personas con otro sistema previsional quedan fuera del análisis, por lo que los resultados de los modelos se refieren a la población adulta afiliada a Fonasa o Isapre. Los tramos de Fonasa no se desagregan porque se definen por ingreso, que ya se incluye en el modelo. Se utiliza el ingreso per cápita porque permite comparar hogares de distinto tamaño y porque el gasto en salud se resuelve en gran medida en el hogar. Se emplea el ingreso total, que incluye las transferencias monetarias del Estado, por su relevancia para la población mayor, y se agrupa en quintiles porque estos describen la posición relativa, permiten capturar relaciones no lineales y reducen el efecto de los valores extremos. Como prueba de robustez, los modelos se estimarán también con el ingreso autónomo per cápita del hogar, lo que permitirá evaluar en qué medida las transferencias modifican la relación entre el ingreso y la utilización, especialmente en la población mayor.
+
+Finalmente, la proximidad declarada a un centro de salud constituye una aproximación a la cercanía territorial de los servicios y no una medida directa del acceso efectivo.
 
 ### Valores perdidos
 
