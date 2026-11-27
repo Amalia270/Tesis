@@ -19,7 +19,7 @@ book:
     - name: Amalia Tsukame
       affiliation: Departamento de Sociología, Universidad de Chile
       orcid: 0009-0004-3578-1289
-  date: 2026-10-30          # Usa fecha fija (YYYY-MM-DD) si necesitas control editorial
+  date: 2026-11-27          # Usa fecha fija (YYYY-MM-DD) si necesitas control editorial
   date-format: D [de] MMMM [de] YYYY
   doi: ""
   sidebar:
@@ -53,6 +53,8 @@ reference-location: section      # Citas agrupadas al final de cada seccion
 
 format:
   html:
+    reference-location: margin
+    footnotes-hover: false
     theme:
       light: cosmo               # Cualquier tema Bootswatch (journal, litera, etc.)
     toc: true 
@@ -79,6 +81,7 @@ format:
       - includes/toc-enhance.html
 
   pdf:
+    reference-location: document
     pdf-engine: xelatex
     toc: false
     lof: false
