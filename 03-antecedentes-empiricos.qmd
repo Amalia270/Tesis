@@ -56,11 +56,11 @@ En relación con la edad, Chovar et al. [-@chovarvera_desigualdad_2014] analizar
 
 Estos antecedentes muestran que la utilización y su desigualdad varían con la edad, pero no permiten saber si las asociaciones del ingreso, la previsión y el territorio cambian a lo largo de la vida adulta. Desde la ventaja y desventaja acumulada cabría esperar que las diferencias sean mayores en edades avanzadas, porque han tenido más tiempo para acumularse. Sin embargo, estudiar a la población adulta mayor puede subestimar la desigualdad ya que la mortalidad actúa como filtro selectivo en grupos más vulnerables [@ferraro_aging_2009]. La evidencia internacional sugiere, además, que la distancia a los servicios puede ser una barrera particular para las personas mayores o con limitación funcional [@mendoza-sassi_utilizacion_2001]. Siguiendo el argumento central de esta investigación, se espera que la dirección de estas diferencias dependa del tipo de servicio, que crezcan con la edad en la atención de especialidad y que se reduzcan en la medicina general. Además, dado que la necesidad aumenta con la edad y la medicina general es gratuita para los afiliados a Fonasa en la red pública, cabría esperar que en las edades avanzadas su utilización dependa más de la necesidad que de los recursos [@andersen_revisiting_1995; @andersen_national_2008]. Sobre esta base, se plantea:
 
-H4. A mayor edad, mayores serán las diferencias por ingreso en la consulta de especialidad, con una mayor utilización entre las personas de mayores ingresos.
+**H4.** A mayor edad, mayores serán las diferencias por ingreso en la consulta de especialidad, con una mayor utilización entre las personas de mayores ingresos.
 
-H5. A mayor edad, menores serán las diferencias por ingreso en la consulta de medicina general.
+**H5.** A mayor edad, menores serán las diferencias por ingreso en la consulta de medicina general.
 
-H6. A mayor edad, mayor será la diferencia en la consulta de especialidad entre zonas urbanas y rurales, con una menor utilización en las zonas rurales.
+**H6.** A mayor edad, mayor será la diferencia en la consulta de especialidad entre zonas urbanas y rurales, con una menor utilización en las zonas rurales.
 
 **He3.** Se explora si las diferencias por ingreso en la hospitalización o intervención quirúrgica cambian con la edad.
 
