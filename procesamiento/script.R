@@ -73,6 +73,18 @@ casen <- casen %>%
 
 table(casen$s13_num, casen$prevision, useNA = "ifany")
 
+# Previsión con "Otra previsión" (solo para la Tabla 1)
+casen <- casen %>%
+  mutate(prevision_t1 = case_when(
+           s13_num == 1    ~ "FONASA",
+           s13_num == 2    ~ "Isapre",
+           s13_num %in% 3:5 ~ "Otra previsión"),
+         prevision_t1 = factor(prevision_t1,
+                               levels = c("FONASA", "Isapre", "Otra previsión")))
+
+table(casen$s13_num, casen$prevision_t1, useNA = "ifany")
+
+
 # Quintiles de ingreso total per cápita del hogar
 # Los cortes se calculan con el factor de expansión, sobre la población total
 cuantil_pond <- function(x, peso, probs) {
@@ -272,7 +284,7 @@ t1 <- bind_rows(
   tabla_cat(dis_adultos, "educ",            "Nivel educacional"),
   tabla_cat(dis_adultos, "prob_reciente_f", "Problema de salud reciente"),
   tabla_cat(dis_adultos, "lim_func_f",      "Limitación funcional"),
-  tabla_cat(dis_adultos, "prevision",       "Previsión de salud"),
+    tabla_cat(dis_adultos, "prevision_t1",    "Previsión de salud"),
   tabla_cat(dis_adultos, "quintil",         "Quintil de ingreso"),
   tabla_cat(dis_adultos, "area_f",          "Área de residencia"),
   tabla_cat(dis_adultos, "cerca_cs",        "Centro de salud a menos de 20 cuadras o 2,5 km"))
