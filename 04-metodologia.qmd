@@ -123,14 +123,79 @@ La previsión y la hospitalización tienen porcentajes mayores. En la previsión
 
 ## Estrategia de análisis
 
-Se utilizarán modelos de regresión logística binaria para estimar la probabilidad de utilización de cada uno de los tres tipos de servicios de salud (medicina general, atención de especialidad y hospitalización o intervención quirúrgica) en la población de 18 años y más. Todas las estimaciones incorporan los factores de expansión y el diseño muestral de CASEN 2024. Se estimará un conjunto de modelos anidados y secuenciales para cada resultado:
+Se utilizarán modelos de regresión logística binaria para estimar la probabilidad de utilización de cada uno de los tres tipos de servicios de salud (medicina general, atención de especialidad y hospitalización o intervención quirúrgica) en la población de 18 años y más. Todas las estimaciones incorporan los factores de expansión y el diseño muestral de CASEN 2024. Para cada persona $i$ y servicio $j$, se modela:
 
-- **Modelo 1: factores predisponentes.** Incorpora edad, sexo y nivel educacional.
 
-- **Modelo 2: factores de necesidad.** Agrega el problema de salud reciente y la limitación funcional.
+## 4.3 Estrategia de análisis
 
-- **Modelo 3: factores facilitadores.** Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la cercanía a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con los resultados de este modelo para medicina general y hospitalización se exploran además P1 y P2 (objetivos 2 y 3).
+Se utilizarán modelos de regresión logística binaria para estimar la probabilidad de utilización de cada uno de los tres tipos de servicios de salud (medicina general, atención de especialidad y hospitalización o intervención quirúrgica) en la población de 18 años y más. Todas las estimaciones incorporan los factores de expansión y el diseño muestral de CASEN 2024. Para cada persona $i$ y servicio $j$, se modela
 
-- **Modelo 4: interacciones.** Para cada servicio, agrega por separado las interacciones entre el grupo de edad y el ingreso (P3), el territorio (área de residencia y cercanía a un centro de salud) (P4) y la previsión de salud (P5) (objetivo 4), y entre el sexo y estos factores (P6) (objetivo 5). Cada interacción se estima en un modelo separado.
+$$
+\text{logit}(p_{ij}) = \ln\left(\frac{p_{ij}}{1-p_{ij}}\right)
+$$
+
+donde $p_{ij}$ es la probabilidad de que la persona $i$ haya utilizado el servicio $j$. Se estimará un conjunto de modelos anidados y secuenciales para cada resultado.
+
+**Modelo 1: factores predisponentes.** Incorpora edad, sexo y nivel educacional.
+
+$$
+\text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P
+$$ {#eq-m1}
+
+**Modelo 2: factores de necesidad.** Agrega el problema de salud reciente y la limitación funcional.
+
+$$
+\text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N
+$$ {#eq-m2}
+
+**Modelo 3: factores facilitadores.** Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la cercanía a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 5).
+
+$$
+\text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N + \mathbf{F}_i'\boldsymbol{\beta}_F + \mathbf{T}_i'\boldsymbol{\beta}_T
+$$ {#eq-m3}
+
+**Modelo 4: interacciones con la edad.** Para cada servicio, agrega por separado la interacción entre el grupo de edad y el ingreso (H4, H5 y He3), la previsión de salud (He4) y el área de residencia (H6) (objetivo 4).
+
+*4a. Edad × ingreso (H4, H5 y He3)*
+
+$$
+\text{logit}(p_{ij}) = \text{M3} + \sum_{g=2}^{5}\sum_{q=2}^{5}\gamma_{gq}\,(E_{gi}\times Q_{qi})
+$$ {#eq-m4a}
+
+*4b. Edad × previsión (He4)*
+
+$$
+\text{logit}(p_{ij}) = \text{M3} + \sum_{g=2}^{5}\gamma_{g}\,(E_{gi}\times \text{Isapre}_i)
+$$ {#eq-m4b}
+
+*4c. Edad × área de residencia (H6)*
+
+$$
+\text{logit}(p_{ij}) = \text{M3} + \sum_{g=2}^{5}\gamma_{g}\,(E_{gi}\times \text{Rural}_i)
+$$ {#eq-m4c}
+
+**Modelo 5: interacciones con el sexo.** Agrega por separado la interacción entre el sexo y el ingreso (He5), la previsión de salud (He6) y el área de residencia (He7) (objetivo 6).
+
+*5a. Sexo × ingreso (He5)*
+
+$$
+\text{logit}(p_{ij}) = \text{M3} + \sum_{q=2}^{5}\delta_{q}\,(\text{Mujer}_i\times Q_{qi})
+$$ {#eq-m5a}
+
+*5b. Sexo × previsión (He6)*
+
+$$
+\text{logit}(p_{ij}) = \text{M3} + \delta\,(\text{Mujer}_i\times \text{Isapre}_i)
+$$ {#eq-m5b}
+
+*5c. Sexo × área de residencia (He7)*
+
+$$
+\text{logit}(p_{ij}) = \text{M3} + \delta\,(\text{Mujer}_i\times \text{Rural}_i)
+$$ {#eq-m5c}
+
+Donde $\mathbf{P}_i$ corresponde al vector de factores predisponentes (grupo de edad, sexo y nivel educacional), $\mathbf{N}_i$ al de factores de necesidad (problema de salud reciente y limitación funcional), $\mathbf{F}_i$ al de facilitadores individuales (quintil de ingreso y previsión de salud) y $\mathbf{T}_i$ al de facilitadores territoriales (área de residencia, cercanía a un centro de salud y región). M3 representa todos los términos del Modelo 3. $E_{gi}$ indica el grupo de edad $g$ y $Q_{qi}$ el quintil de ingreso $q$. Las categorías de referencia son el grupo de 18 a 34 años, los hombres, el primer quintil, la afiliación a Fonasa y la zona urbana. Los coeficientes $\gamma$ y $\delta$ indican en qué medida la asociación de cada factor con la utilización difiere entre grupos de edad o entre hombres y mujeres.
+
+Cada modelo de interacción conserva todos los términos del Modelo 3, y la significancia de cada interacción se evaluará mediante pruebas conjuntas que consideran el diseño muestral. Las interacciones se interpretarán mediante probabilidades predichas por grupo de edad, comparando si las diferencias entre las categorías de cada factor aumentan o disminuyen a medida que aumenta la edad (Mize, 2019).
 
 Previo a la estimación, se evaluará la multicolinealidad entre nivel educacional, ingreso y previsión de salud mediante el factor de inflación de la varianza (VIF).
