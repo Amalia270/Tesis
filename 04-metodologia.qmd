@@ -17,7 +17,10 @@ Todas las estimaciones estadísticas se realizarán aplicando los factores de ex
 
 ### Variables dependientes
 
-Todas las variables de esta tabla son dicotómicas (1 = utilizó el servicio; 0 = no lo utilizó) y miden la utilización efectivamente declarada.
+Para esta investigación, las variables dependientes corresponden a tres indicadores de utilización declarada de servicios de salud, construidos como variables dicotómicas (1 = utilizó el servicio en el período de referencia; 0 = no lo utilizó). 
+
+Estos indicadores miden utilización efectivamente declarada, y no permiten evaluar la oportunidad, la pertinencia ni la calidad de la atención. Dado que los períodos de referencia difieren entre servicios, la comparación entre ellos se realiza sobre patrones y no sobre niveles de utilización.
+
 
 ```{r}
 #| label: tbl-dependientes
@@ -59,6 +62,14 @@ vars_dep |>
 
 Las variables independientes se organizarán de acuerdo con las dimensiones del Modelo Conductual de Utilización de los Servicios de Salud de Andersen [-@andersen_revisiting_1995; -@andersen_national_2008], distinguiendo entre factores predisponentes, facilitadores y de necesidad.
 
+La edad se agrupa en cinco tramos para captar relaciones no lineales con la utilización. Aunque la Ley N° 19.828 define como adulta mayor a la persona de 60 años y más, se utiliza el umbral de 65 años para mantener la comparabilidad con las cifras del INE citadas en la introducción, y el de 80 años corresponde a la cuarta edad que define la misma ley. Siguiendo a [@andersen_revisiting_1995], la educación se trata como una característica de la estructura social y no como un recurso material.
+
+Los dos indicadores de necesidad corresponden a necesidad percibida, y no evaluada por criterios profesionales [@andersen_national_2008]. Ambos son declarados por el informante del hogar y no equivalen a una evaluación clínica. El período de referencia del problema de salud reciente coincide con el de la atención de medicina general y de especialidad.
+
+Las personas con otro sistema previsional quedan fuera del análisis, por lo que los resultados de los modelos se refieren a la población adulta afiliada a Fonasa o Isapre. Los tramos de Fonasa no se desagregan porque se definen por ingreso, que ya se incluye en el modelo. Se utiliza el ingreso per cápita porque permite comparar hogares de distinto tamaño y porque el gasto en salud se resuelve en gran medida en el hogar. Se emplea el ingreso total, que incluye las transferencias monetarias del Estado, por su relevancia para la población mayor, y se agrupa en quintiles porque estos describen la posición relativa, permiten capturar relaciones no lineales y reducen el efecto de los valores extremos. Como prueba de robustez, los modelos se estimarán también con el ingreso autónomo per cápita del hogar, lo que permitirá evaluar en qué medida las transferencias modifican la relación entre el ingreso y la utilización, especialmente en la población mayor.
+
+Finalmente, la proximidad declarada a un centro de salud constituye una aproximación a la cercanía territorial de los servicios y no una medida directa del acceso efectivo.
+
 ```{r}
 #| label: tbl-operacionalizacion
 #| tbl-cap: "Variables independientes"
@@ -86,16 +97,16 @@ vars <- data.frame(
     "s13", "ypchtotcor",
     "region", "area", "v35c"
   ),
-  Descripcion = c(
-    "5 tramos: 18-34, 35-49, 50-64, 65-79, y 80+ años.",
-    "Nominal dicotómica: 1 = hombre, 2 = mujer.",
-    "Ordinal (4 categorías): Básica inc. o menos (0-1), Básica comp./Media inc. (2-3), Media comp. (4), y Educación superior (5-6). Valores negativos (-88) son perdidos.",
-    "Percepción de ocurrencia en los últimos 3 meses.",
-    "Dicotómica (Sí/No): \"Sí\" indica mucha dificultad o imposibilidad en al menos uno de los 6 dominios (Criterio Washington Group).",
-    "Fonasa, Isapre (Se excluyen FF.AA., ninguno y otros del análisis).",
-    "Agrupado en quintiles calculados con factor de expansión sobre la población total.",
-    "Nominal categórica: Distintas regiones del país.",
-    "Nominal dicotómica: 1 = urbano, 2 = rural.",
+    Descripcion = c(
+    "5 tramos: 18-34, 35-49, 50-64, 65-79 y 80+ años. Referencia: 18-34.",
+    "Nominal dicotómica: 1 = hombre, 2 = mujer. Referencia: hombre.",
+    "Ordinal (4 categorías): básica incompleta o menos (0-1), básica completa o media incompleta (2-3), media completa (4) y educación superior (5-6). Valores negativos (-88) son perdidos.",
+    "Dicotómica (Sí/No): declara algún problema de salud, enfermedad o accidente en los últimos 3 meses.",
+    "Dicotómica (Sí/No): \"Sí\" indica mucha dificultad o imposibilidad en al menos uno de los 6 dominios (criterio Washington Group).",
+    "Dicotómica: Fonasa e Isapre. Referencia: Fonasa. Se excluyen FF.AA. y del Orden, ninguno y otro.",
+    "Quintiles (Q1 a Q5) calculados con el factor de expansión sobre la población total. Referencia: Q1.",
+    "Nominal categórica: regiones del país. Referencia: Región Metropolitana.",
+    "Nominal dicotómica: 1 = urbano, 2 = rural. Referencia: urbano.",
     "Dicotómica: 1 = sí (< 20 cuadras o 2,5 km), 2 = no."
   )
 )
