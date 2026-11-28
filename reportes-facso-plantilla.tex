@@ -358,9 +358,9 @@
   \newcommand\listtablename{Listado de Tablas}
 \fi
 \ifdefined\figurename
-  \renewcommand*\figurename{Lista de figuras}
+  \renewcommand*\figurename{Figura}
 \else
-  \newcommand\figurename{Lista de figuras}
+  \newcommand\figurename{Figura}
 \fi
 \ifdefined\tablename
   \renewcommand*\tablename{Tabla}
@@ -1842,18 +1842,6 @@ probabilidad de utilización de cada uno de los tres tipos de servicios
 de salud (medicina general, atención de especialidad y hospitalización o
 intervención quirúrgica) en la población de 18 años y más. Todas las
 estimaciones incorporan los factores de expansión y el diseño muestral
-<<<<<<< HEAD
-de CASEN 2024. Para cada persona \(i\) y servicio \(j\), se modela:
-
-\section{Estrategia de análisis}\label{estrategia-de-anuxe1lisis-1}
-
-Se utilizarán modelos de regresión logística binaria para estimar la
-probabilidad de utilización de cada uno de los tres tipos de servicios
-de salud (medicina general, atención de especialidad y hospitalización o
-intervención quirúrgica) en la población de 18 años y más. Todas las
-estimaciones incorporan los factores de expansión y el diseño muestral
-=======
->>>>>>> cac0795029eec96477195ba3955a5582b2e727d8
 de CASEN 2024. Para cada persona \(i\) y servicio \(j\), se modela
 
 \[
@@ -1880,16 +1868,10 @@ reciente y la limitación funcional.
 
 \textbf{Modelo 3: factores facilitadores.} Agrega el ingreso y la
 previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la
-<<<<<<< HEAD
-cercanía a un centro de salud (H3; objetivo 3). La región de residencia
-se incluye como variable de control. Con este modelo se evalúan además
-He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 1).
-=======
 proximidad a un centro de salud (H3; objetivo 3). La región de
 residencia se incluye como variable de control. Con este modelo se
 evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7;
 objetivo 1).
->>>>>>> cac0795029eec96477195ba3955a5582b2e727d8
 
 \begin{equation}\protect\phantomsection\label{eq-m3}{
 \text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N + \mathbf{F}_i'\boldsymbol{\beta}_F + \mathbf{T}_i'\boldsymbol{\beta}_T
@@ -1959,13 +1941,8 @@ la significancia de cada interacción se evaluará mediante pruebas
 conjuntas que consideran el diseño muestral. Las interacciones se
 interpretarán mediante probabilidades predichas por grupo de edad,
 comparando si las diferencias entre las categorías de cada factor
-<<<<<<< HEAD
-aumentan o disminuyen a medida que aumenta la edad (Mize
-(\citeproc{ref-mize_best_2019}{2019})).
-=======
 aumentan o disminuyen a medida que aumenta la edad
 (\citeproc{ref-mize_best_2019}{Mize, 2019}).
->>>>>>> cac0795029eec96477195ba3955a5582b2e727d8
 
 Previo a la estimación, se evaluará la multicolinealidad entre nivel
 educacional, ingreso y previsión de salud mediante el factor de

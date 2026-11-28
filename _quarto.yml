@@ -103,15 +103,16 @@ format:
     fig-cap-location: top
     tbl-cap-location: top
 
+
 execute:
-  echo: true                    # Cambia a false si quieres ocultar codigo por defecto
+  echo: true
   warning: false
   message: false
-  freeze: auto                  # Usa true para congelar resultados, false para ejecutar siempre
+  freeze: auto
   fig-path: "docs/figures/"
 
-<<<<<<< HEAD
 lang: es
+
 language:
   crossref-fig-title: "Figura"
   crossref-tbl-title: "Tabla"
@@ -121,25 +122,8 @@ crossref:
   appendix-title: Anexo
   appendix-delim: " - "
 
-=======
->>>>>>> cac0795029eec96477195ba3955a5582b2e727d8
 metadata-files:
-  - _metadata.yml               # Ajustes adicionales (palabras clave, portada, etc.)
-
-lang: es
-language:
-  crossref-fig-title: "Figura"
-  crossref-fig-prefix: "Figura"
-  crossref-tbl-title: "Tabla"
-  crossref-tbl-prefix: "Tabla"
-
-crossref:
-  fig-title: "Figura"
-  fig-prefix: "Figura"
-  tbl-title: "Tabla"
-  tbl-prefix: "Tabla"
-  appendix-title: Anexo
-  appendix-delim: " - "
+  - _metadata.yml
 
 # Estructura complementaria sugerida:
 # input/         -> insumos (data-orig, data-proc, imagenes, bib, prereg)
