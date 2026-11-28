@@ -52,13 +52,9 @@ A diferencia de lo observado en las consultas de especialidad, los resultados so
 
 ### Edad y sexo
 
-<<<<<<< HEAD
 
 En relación con la edad, Chovar et al.[-@chovarvera_desigualdad_2014] analizaron la utilización de servicios médicos con las encuestas CASEN de 2000, 2003, 2009 y 2011, distinguiendo cuatro grupos etarios, y no identificaron un patrón consistente entre ellos en medicina general ni en días de hospitalización. Por su parte, @henriquez_desigualdades_2015 estimaron que, en los mayores de 66 años, la probabilidad de consulta general y de especialidad fue mayor que en el tramo de 15 a 25 años, mientras que en la hospitalización no encontraron una diferencia significativa entre ambos grupos (p. 17).
 
-=======
-En relación con la edad, Chovar et al. [-@chovarvera_desigualdad_2014] analizaron la utilización de servicios médicos con las encuestas CASEN de 2000, 2003, 2009 y 2011, distinguiendo cuatro grupos etarios. En medicina general y días de hospitalización no se identificó un patrón consistente entre grupos etarios. Por su parte, @henriquez_desigualdades_2015 estimaron que, en los mayores de 66 años, la probabilidad de consulta general y de especialidad fue mayor que en el tramo de 15 a 25 años.
->>>>>>> 5a225f1c8f146a213cebde6e26f2c3dd1f137ede
 
 Estos antecedentes muestran que la utilización y su desigualdad varían con la edad, pero no permiten saber si las asociaciones del ingreso, la previsión y el territorio cambian a lo largo de la vida adulta. Desde la ventaja y desventaja acumulada cabría esperar que las diferencias sean mayores en edades avanzadas, porque han tenido más tiempo para acumularse. Sin embargo, estudiar a la población adulta mayor puede subestimar la desigualdad ya que la mortalidad actúa como filtro selectivo en grupos más vulnerables [@ferraro_aging_2009]. La evidencia internacional sugiere, además, que la distancia a los servicios puede ser una barrera particular para las personas mayores o con limitación funcional [@mendoza-sassi_utilizacion_2001]. Siguiendo el argumento central de esta investigación, se espera que la dirección de estas diferencias dependa del tipo de servicio, que crezcan con la edad en la atención de especialidad y que se reduzcan en la medicina general. Además, dado que la necesidad aumenta con la edad y la medicina general es gratuita para los afiliados a Fonasa en la red pública, cabría esperar que en las edades avanzadas su utilización dependa más de la necesidad que de los recursos [@andersen_revisiting_1995; @andersen_national_2008]. En el caso de la previsión de salud, la selección entre ambos seguros y las modificaciones recientes del sector privado no permiten anticipar si sus diferencias aumentan o disminuyen con la edad. Sobre esta base, se plantea:
 
