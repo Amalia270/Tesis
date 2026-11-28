@@ -9,7 +9,7 @@ project:
 
 book:
   title: "En un país que envejece: Análisis de la utilización de servicios de salud en Chile"  
- # subtitle:  
+  # subtitle:  
   output-file: reportes-facso-plantilla
   repo-url: https://github.com/Amalia270/Tesis  #URL del repositorio del libro (cambia segun tu repo)
   author:
@@ -36,7 +36,6 @@ book:
   favicon: assets/favicon-2025-20251031.svg  # Apunta al favicon versionado para romper cache
   chapters:
     - index.qmd # Capitulo inicial o resumen ejecutivo
-    
     - 01-introduccion.qmd 
     - 02-antecedentes-conceptuales.qmd
     - 03-antecedentes-empiricos.qmd 
@@ -111,16 +110,23 @@ execute:
   freeze: auto                  # Usa true para congelar resultados, false para ejecutar siempre
   fig-path: "docs/figures/"
 
+metadata-files:
+  - _metadata.yml               # Ajustes adicionales (palabras clave, portada, etc.)
+
 lang: es
 language:
   crossref-fig-title: "Figura"
+  crossref-fig-prefix: "Figura"
+  crossref-tbl-title: "Tabla"
+  crossref-tbl-prefix: "Tabla"
 
 crossref:
+  fig-title: "Figura"
+  fig-prefix: "Figura"
+  tbl-title: "Tabla"
+  tbl-prefix: "Tabla"
   appendix-title: Anexo
   appendix-delim: " - "
-
-metadata-files:
-  - _metadata.yml               # Ajustes adicionales (palabras clave, portada, etc.)
 
 # Estructura complementaria sugerida:
 # input/         -> insumos (data-orig, data-proc, imagenes, bib, prereg)
