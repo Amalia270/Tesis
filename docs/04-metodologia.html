@@ -486,7 +486,7 @@ Tabla&nbsp;4.2: Variables independientes
 <p><span id="eq-m2"><span class="math display">\[
 \text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N
 \tag{4.2}\]</span></span></p>
-<p><strong>Modelo 3: factores facilitadores.</strong> Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la cercanía a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 5).</p>
+<p><strong>Modelo 3: factores facilitadores.</strong> Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la cercanía a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 1).</p>
 <p><span id="eq-m3"><span class="math display">\[
 \text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N + \mathbf{F}_i'\boldsymbol{\beta}_F + \mathbf{T}_i'\boldsymbol{\beta}_T
 \tag{4.3}\]</span></span></p>
@@ -503,7 +503,7 @@ Tabla&nbsp;4.2: Variables independientes
 <p><span id="eq-m4c"><span class="math display">\[
 \text{logit}(p_{ij}) = \text{M3} + \sum_{g=2}^{5}\gamma_{g}\,(E_{gi}\times \text{Rural}_i)
 \tag{4.6}\]</span></span></p>
-<p><strong>Modelo 5: interacciones con el sexo.</strong> Agrega por separado la interacción entre el sexo y el ingreso (He5), la previsión de salud (He6) y el área de residencia (He7) (objetivo 6).</p>
+<p><strong>Modelo 5: interacciones con el sexo.</strong> Agrega por separado la interacción entre el sexo y el ingreso (He5), la previsión de salud (He6) y el área de residencia (He7) (objetivo 5).</p>
 <p><em>5a. Sexo × ingreso (He5)</em></p>
 <p><span id="eq-m5a"><span class="math display">\[
 \text{logit}(p_{ij}) = \text{M3} + \sum_{q=2}^{5}\delta_{q}\,(\text{Mujer}_i\times Q_{qi})
@@ -2169,7 +2169,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>\text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N</span>
 <span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>$$ {#eq-m2}</span>
 <span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>**Modelo 3: factores facilitadores.** Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la cercanía a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 5).</span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>**Modelo 3: factores facilitadores.** Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la cercanía a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 1).</span>
 <span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>\text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N + \mathbf{F}_i'\boldsymbol{\beta}_F + \mathbf{T}_i'\boldsymbol{\beta}_T</span>
@@ -2195,7 +2195,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>\text{logit}(p_{ij}) = \text{M3} + \sum_{g=2}^{5}\gamma_{g}\,(E_{gi}\times \text{Rural}_i)</span>
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a>$$ {#eq-m4c}</span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>**Modelo 5: interacciones con el sexo.** Agrega por separado la interacción entre el sexo y el ingreso (He5), la previsión de salud (He6) y el área de residencia (He7) (objetivo 6).</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>**Modelo 5: interacciones con el sexo.** Agrega por separado la interacción entre el sexo y el ingreso (He5), la previsión de salud (He6) y el área de residencia (He7) (objetivo 5).</span>
 <span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>*5a. Sexo × ingreso (He5)*</span>
 <span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
