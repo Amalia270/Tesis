@@ -112,8 +112,12 @@ execute:
   fig-path: "docs/figures/"
 
 lang: es
+language:
+  crossref-fig-title: "Figura"
+  crossref-tbl-title: "Tabla"
 
 crossref:
+  fig-title: "Figura"
   appendix-title: Anexo
   appendix-delim: " - "
 
