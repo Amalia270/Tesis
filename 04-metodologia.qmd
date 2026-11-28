@@ -138,7 +138,7 @@ La previsión y la hospitalización tienen porcentajes mayores. En la previsión
 Se utilizarán modelos de regresión logística binaria para estimar la probabilidad de utilización de cada uno de los tres tipos de servicios de salud (medicina general, atención de especialidad y hospitalización o intervención quirúrgica) en la población de 18 años y más. Todas las estimaciones incorporan los factores de expansión y el diseño muestral de CASEN 2024. Para cada persona $i$ y servicio $j$, se modela:
 
 
-## 4.3 Estrategia de análisis
+## Estrategia de análisis
 
 Se utilizarán modelos de regresión logística binaria para estimar la probabilidad de utilización de cada uno de los tres tipos de servicios de salud (medicina general, atención de especialidad y hospitalización o intervención quirúrgica) en la población de 18 años y más. Todas las estimaciones incorporan los factores de expansión y el diseño muestral de CASEN 2024. Para cada persona $i$ y servicio $j$, se modela
 
