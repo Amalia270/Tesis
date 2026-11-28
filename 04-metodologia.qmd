@@ -118,7 +118,7 @@ vars |>
   collapse_rows(columns = 1, valign = "top", latex_hline = "major")
 ```
 
-La edad se agrupa en cinco tramos para captar relaciones no lineales con la utilización. Aunque la Ley N° 19.828 define como adulta mayor a la persona de 60 años y más, se utiliza el umbral de 65 años para mantener la comparabilidad con las cifras del INE citadas en la introducción, y el de 80 años corresponde a la cuarta edad que define la misma ley. Siguiendo a [@andersen_revisiting_1995], la educación se trata como una característica de la estructura social y no como un recurso material.
+La edad se agrupa en cinco tramos para captar relaciones no lineales con la utilización. Aunque la Ley N° 19.828 define como adulta mayor a la persona de 60 años y más, se utiliza el umbral de 65 años para mantener la comparabilidad con las cifras del INE citadas en la introducción, y el de 80 años corresponde a la cuarta edad que define la misma ley. Siguiendo a Siguiendo a @andersen_revisiting_1995, la educación se trata como una característica de la estructura social y no como un recurso material.
 
 Los dos indicadores de necesidad corresponden a necesidad percibida, y no evaluada por criterios profesionales [@andersen_national_2008]. Ambos son declarados por el informante del hogar y no equivalen a una evaluación clínica. El período de referencia del problema de salud reciente coincide con el de la atención de medicina general y de especialidad.
 
@@ -131,12 +131,6 @@ Finalmente, la proximidad declarada a un centro de salud constituye una aproxima
 Los porcentajes de valores perdidos se calcularon sobre los 172.309 adultos de la muestra, sin ponderar. Son de 0,0 % en el área de residencia; 0,1 % en el quintil de ingreso y en la limitación funcional; 0,2 % en la cercanía a un centro de salud, en la atención de medicina general y en la de especialidad; 0,3 % en el nivel educacional; y 0,7 % en el problema de salud reciente. La edad, el sexo y la región no presentan valores perdidos.
 
 La previsión y la hospitalización tienen porcentajes mayores. En la previsión, el 4,4 % de los adultos queda fuera del análisis: el 4,0 % tiene otra previsión, que se excluye por decisión metodológica, y el 0,4 % no tiene dato. En la hospitalización, el 1,0 % queda fuera: el 0,8 % corresponde a hospitalizaciones por embarazo, parto o cesárea, que se excluyen por corresponder a una lógica distinta a la de necesidad asociada a la edad, y el 0,2 % no tiene dato.
-
-
-## Estrategia de análisis
-
-Se utilizarán modelos de regresión logística binaria para estimar la probabilidad de utilización de cada uno de los tres tipos de servicios de salud (medicina general, atención de especialidad y hospitalización o intervención quirúrgica) en la población de 18 años y más. Todas las estimaciones incorporan los factores de expansión y el diseño muestral de CASEN 2024. Para cada persona $i$ y servicio $j$, se modela:
-
 
 ## Estrategia de análisis
 
@@ -160,7 +154,7 @@ $$
 \text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N
 $$ {#eq-m2}
 
-**Modelo 3: factores facilitadores.** Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la cercanía a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 1).
+**Modelo 3: factores facilitadores.** Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la proximidad a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 1).
 
 $$
 \text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N + \mathbf{F}_i'\boldsymbol{\beta}_F + \mathbf{T}_i'\boldsymbol{\beta}_T
@@ -208,7 +202,7 @@ $$ {#eq-m5c}
 
 Donde $\mathbf{P}_i$ corresponde al vector de factores predisponentes (grupo de edad, sexo y nivel educacional), $\mathbf{N}_i$ al de factores de necesidad (problema de salud reciente y limitación funcional), $\mathbf{F}_i$ al de facilitadores individuales (quintil de ingreso y previsión de salud) y $\mathbf{T}_i$ al de facilitadores territoriales (área de residencia, cercanía a un centro de salud y región). M3 representa todos los términos del Modelo 3. $E_{gi}$ indica el grupo de edad $g$ y $Q_{qi}$ el quintil de ingreso $q$. Las categorías de referencia son el grupo de 18 a 34 años, los hombres, el primer quintil, la afiliación a Fonasa y la zona urbana. Los coeficientes $\gamma$ y $\delta$ indican en qué medida la asociación de cada factor con la utilización difiere entre grupos de edad o entre hombres y mujeres.
 
-Cada modelo de interacción conserva todos los términos del Modelo 3, y la significancia de cada interacción se evaluará mediante pruebas conjuntas que consideran el diseño muestral. Las interacciones se interpretarán mediante probabilidades predichas por grupo de edad, comparando si las diferencias entre las categorías de cada factor aumentan o disminuyen a medida que aumenta la edad (@mize_best_2019).
+Cada modelo de interacción conserva todos los términos del Modelo 3, y la significancia de cada interacción se evaluará mediante pruebas conjuntas que consideran el diseño muestral. Las interacciones se interpretarán mediante probabilidades predichas por grupo de edad, comparando si las diferencias entre las categorías de cada factor aumentan o disminuyen a medida que aumenta la edad [@mize_best_2019].
 
 Previo a la estimación, se evaluará la multicolinealidad entre nivel educacional, ingreso y previsión de salud mediante el factor de inflación de la varianza (VIF).
 
