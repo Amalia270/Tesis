@@ -399,13 +399,6 @@
 
 \title{En un país que envejece: Análisis de la utilización de servicios
 de salud en Chile}
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{Informe de avance 2}
 \author{Elisa Calderón \and Amalia Tsukame}
 \date{27 de noviembre de 2026}
 \begin{document}
@@ -533,9 +526,9 @@ conductual de Andersen; Análisis multivariado.
 \chapter{Introducción}\label{introducciuxf3n}
 
 A nivel global, las tendencias demográficas muestran un aumento del
-envejecimiento de la población, ya que la proporción de personas de 65
-años o más pasó del 6\% en 1990 al 9\% en 2019 y se proyecta que alcance
-el 16\% en 2050 (United Nations,
+envejecimiento de la población, reflejado en la proporción de personas
+de 65 años o más que pasó del 6\% en 1990 al 9\% en 2019 y se proyecta
+que alcance el 16\% en 2050 (United Nations,
 \citeproc{ref-unitednations_world_2020}{2020}). En Chile, este proceso
 se ha intensificado durante las últimas décadas. Según los resultados
 del Censo 2024, la población de 65 años y más representa el 14\% de la
@@ -635,12 +628,11 @@ En este sentido, la presente investigación utilizará la
 \href{https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen-2024}{Encuesta
 de Caracterización Socioeconómica Nacional (CASEN) 2024} y se analizará
 la utilización declarada de tres tipos de servicio en la población de 18
-años y más residente en viviendas particulares en Chile: medicina
-general, atención de especialidad y hospitalización o intervención
-quirúrgica. Se estimarán modelos de regresión logística binaria
-anidados, incorporando progresivamente los distintos grupos de factores
-de Andersen para examinar su asociación con la utilización de los
-servicios.
+años y más en Chile: medicina general, atención de especialidad y
+hospitalización o intervención quirúrgica. Se estimarán modelos de
+regresión logística binaria anidados, incorporando progresivamente los
+distintos grupos de factores de Andersen para examinar su asociación con
+la utilización de los servicios.
 
 \section{Objeto de estudio}\label{objeto-de-estudio}
 
@@ -673,7 +665,7 @@ factores con la utilización entre grupos de edad.
 \item
   Caracterizar los patrones de utilización de medicina general, atención
   de especialidad y hospitalización o intervención quirúrgica según
-  grupo de edad en la población de 18 años y más en Chile.
+  grupo de edad y sexo en la población de 18 años y más en Chile.
 \item
   Estimar la asociación del ingreso y la previsión de salud con la
   utilización de medicina general, atención de especialidad y
@@ -688,9 +680,7 @@ factores con la utilización entre grupos de edad.
   Analizar cómo varían las asociaciones del ingreso, la previsión y el
   territorio con la utilización de medicina general, atención de
   especialidad y hospitalización o intervención quirúrgica entre grupos
-  de edad, identificando en qué dirección lo hacen.
-\item
-  Comparar la utilización de servicios de salud entre hombres y mujeres.
+  de edad, y en qué dirección.
 \item
   Explorar si las asociaciones del ingreso, la previsión y el territorio
   con la utilización difieren según sexo.
@@ -703,21 +693,14 @@ factores con la utilización entre grupos de edad.
 \section{Envejecimiento: transición demográfica y
 epidemiológica}\label{envejecimiento-transiciuxf3n-demogruxe1fica-y-epidemioluxf3gica}
 
-El envejecimiento constituye una de las transformaciones sociales más
-relevantes del siglo XXI (United Nations,
-\citeproc{ref-unitednations_world_2020}{2020}) y se configura como un
-fenómeno multidimensional, que puede abordarse desde perspectivas
-biológicas, sociales, económicas y culturales.
-
-De manera específica, el envejecimiento admite dos niveles de análisis,
-relacionados pero conceptualmente distintos. En el plano individual, es
-un proceso gradual, que ocurre a lo largo de toda la vida y es
-irreversible (\citeproc{ref-chackiel_envejecimiento_2000}{Chackiel,
-2000}). Por otro lado, en el plano demográfico, la Comisión Económica
-para América Latina y el Caribe (CEPAL,
-\citeproc{ref-cepal_acerca_sf}{s.~f.}) lo define como el aumento
-progresivo de la proporción de las personas de 60 años y más con
-respecto a la población total, lo que resulta en una progresiva
+El envejecimiento admite dos niveles de análisis, relacionados pero
+conceptualmente distintos. En el plano individual, es un proceso
+gradual, que ocurre a lo largo de toda la vida y es irreversible
+(\citeproc{ref-chackiel_envejecimiento_2000}{Chackiel, 2000}). Por otro
+lado, en el plano demográfico, la Comisión Económica para América Latina
+y el Caribe (CEPAL, \citeproc{ref-cepal_acerca_sf}{s.~f.}) lo define
+como el aumento progresivo de la proporción de las personas de 60 años y
+más con respecto a la población total, lo que resulta en una progresiva
 alteración de la estructura por edades. En Chile, la Ley N° 19.828
 define como adulta mayor a quien ha cumplido 60 años y adulto mayor de
 la cuarta edad a quien ha cumplido 80 años (\citeproc{ref-_ley_2002}{Ley
@@ -767,30 +750,28 @@ las proyecciones del INE, este proceso se profundizará y, para el año
 2045, la población de 65 años y más triplicaría a la menor de 15 años
 (INE, \citeproc{ref-ine_estimaciones_2026}{2026}).
 
-En paralelo, junto con el proceso de envejecimiento se ha producido en
-el país una transición epidemiológica, en la cual se ha experimentado un
-aumento de la morbimortalidad por enfermedades no transmisibles, tanto
-crónicas como agudas, siendo las primeras causas de muerte para el año
-2023 las enfermedades del sistema circulatorio (31.149), neoplasias
-(30.796), enfermedades respiratorias (13.728) y causas externas (8.279)
-(MINSAL, \citeproc{ref-minsal_informe_2023}{2023}; Departamento de
-Estadísticas e Información de Salud {[}DEIS{]},
-\citeproc{ref-deis_defunciones_2026}{2026}). Albala
-(\citeproc{ref-albala_envejecimiento_2020}{2020}) señala también que el
-envejecimiento produce una acumulación de enfermedades crónicas en
-mayores de 60 años, constituyéndose como un factor que influye en la
-utilización de los servicios de salud
-(\citeproc{ref-travassos_revisao_2004}{Travassos \& Martins, 2004}).
+En paralelo, el país ha experimentado una transición epidemiológica en
+la que predominan las enfermedades no transmisibles, que constituyen hoy
+las principales causas de muerte (MINSAL,
+\citeproc{ref-minsal_informe_2023}{2023}; Departamento de Estadísticas e
+Información de Salud {[}DEIS{]},
+\citeproc{ref-deis_defunciones_2026}{2026}). Este cambio es relevante
+porque la acumulación de enfermedades crónicas en las personas mayores
+(\citeproc{ref-albala_envejecimiento_2020}{Albala, 2020}) constituye un
+factor que influye en la utilización de los servicios de salud
+(\citeproc{ref-travassos_revisao_2004}{Travassos \& Martins, 2004}). Por
+ello, la comparación de la utilización entre grupos de edad requiere
+considerar las diferencias en la necesidad de atención.
 
 \section{Curso de vida y desigualdad
 acumulada}\label{curso-de-vida-y-desigualdad-acumulada}
 
 Para analizar las diferencias entre personas de distintas edades,
-resulta útil el enfoque del curso de vida, que desde finales de 1990 ha
-adquirido relevancia en la investigación sobre envejecimiento, al
-permitir examinar cómo los eventos históricos y los cambios económicos,
-demográficos y sociales configuran tanto las vidas individuales como las
-de las cohortes o generaciones
+resulta útil el enfoque del curso de vida, que desde finales de la
+década de 1990 ha adquirido relevancia en la investigación sobre
+envejecimiento, al permitir examinar cómo los eventos históricos y los
+cambios económicos, demográficos y sociales configuran tanto las vidas
+individuales como las de las cohortes o generaciones
 (\citeproc{ref-blanco_enfoque_2011}{Blanco, 2011};
 \citeproc{ref-robledomarin_teorias_2021}{Robledo Marín \& Orejuela
 Gómez, 2021}). Su concepto central es el de trayectoria: un recorrido a
@@ -831,9 +812,9 @@ diferencias en un momento dado y no el proceso que las produce, los
 resultados podrán ser coherentes o no con la acumulación de desventajas,
 pero no demostrarla. En segundo lugar, el rol moderador de las
 instituciones y los recursos permite anticipar que las brechas etarias
-variarán según el tipo de prestación, mientras que la gratuidad de la
-medicina general para los afiliados a Fonasa tendería a atenuar las
-desigualdades en el nivel primario, la concentración privada y urbana de
+variarán según el tipo de prestación. La gratuidad de la medicina
+general para los afiliados a Fonasa tendería a atenuar las desigualdades
+en el nivel primario, mientras que la concentración privada y urbana de
 la atención de especialidad favorecería su ampliación con la edad.
 
 Dannefer (\citeproc{ref-dannefer_cumulative_2003}{2003}) sostiene que el
@@ -842,12 +823,10 @@ en salud, con prácticas de salud diferenciadas y acceso estratificado a
 la atención (p.~S331). Señala también que dimensiones institucionales,
 independientes de las características individuales de las personas,
 inciden en factores como los ingresos, la estabilidad laboral y el
-acceso a la salud (p.~S332). A esto se suma que la intensidad de la CAD
-varía entre sociedades según sus políticas económicas y de bienestar
-(p.~S328). Esta idea se puede visualizar para el caso chileno en donde
-un sistema de salud segmentado entre Fonasa e Isapres funciona como una
-estructura que distribuye de manera diferenciada las oportunidades de
-acceso y utilización
+acceso a la salud (p.~S332). Esta idea se puede visualizar para el caso
+chileno en donde un sistema de salud segmentado entre Fonasa e Isapres
+funciona como una estructura que distribuye de manera diferenciada las
+oportunidades de acceso y utilización
 (\citeproc{ref-bassdelcampo_universalizacion_2025}{Bass del Campo,
 2025}), de modo que las ventajas y desventajas acumuladas previamente se
 traducen en formas distintas de relacionarse con el sistema en la vejez.
@@ -861,8 +840,8 @@ población ya ``truncada'' por la mortalidad, lo que puede dar la falsa
 impresión de que la desigualdad disminuye en la vejez. Dannefer
 (\citeproc{ref-dannefer_cumulative_2003}{2003}) también cuestiona la
 inferencia de trayectorias a partir de comparaciones transversales entre
-edades (p.~S328-S329). Finalmente, ambas aproximaciones se utilizan aquí
-para derivar expectativas sobre cómo varían las diferencias de
+edades (pp.~S328-S329). Finalmente, ambas aproximaciones se utilizan
+aquí para derivar expectativas sobre cómo varían las diferencias de
 utilización entre grupos de edad, pero los resultados no se
 interpretarán como prueba directa de un proceso de acumulación.
 
@@ -985,15 +964,13 @@ alternativas de atención existentes, por lo que no pueden interpretarse
 como una medida directa de las necesidades de salud
 (\citeproc{ref-asadi-lari_need_2003}{Asadi-Lari et~al., 2003}).
 
-Con todo lo anterior, la utilización está determinada simultáneamente
-por la oferta, la demanda y los recursos individuales, por lo que su
-análisis requiere controlar por los distintos factores que median entre
-tener una necesidad de salud y lograr atención médica efectiva. En
-consecuencia, analizar únicamente el uso efectivo resulta insuficiente
-para dar cuenta de todas las dimensiones del acceso, así como para
-afirmar que las necesidades de salud fueron efectivamente cubiertas. En
-esta investigación, la utilización se aproxima mediante el uso declarado
-de distintos tipos de servicios de salud.
+Con todo lo anterior, la utilización depende a la vez de la necesidad,
+de los recursos de las personas y de la oferta disponible. Por ello, su
+análisis requiere considerar los factores que median entre tener una
+necesidad de salud y recibir atención, y sus resultados no permiten
+afirmar por sí solos que las necesidades fueron cubiertas. En esta
+investigación, la utilización se aproxima mediante el uso declarado de
+distintos tipos de servicios de salud.
 
 \section{Modelo Conductual de
 Andersen}\label{modelo-conductual-de-andersen}
@@ -1092,9 +1069,9 @@ salud (\citeproc{ref-andersen_national_2008}{Andersen, 2008}), lo que
 favorece su operacionalización con datos poblacionales como los de la
 CASEN.
 
-\section{El sistema de salud chileno como contexto: organización,
-mecanismos de protección y distribución
-territorial}\label{el-sistema-de-salud-chileno-como-contexto-organizaciuxf3n-mecanismos-de-protecciuxf3n-y-distribuciuxf3n-territorial}
+\section{El sistema de salud chileno como contexto: segmentación, acceso
+y mecanismos de
+protección}\label{el-sistema-de-salud-chileno-como-contexto-segmentaciuxf3n-acceso-y-mecanismos-de-protecciuxf3n}
 
 Las instituciones constituyen mecanismos mediante los cuales se
 canalizan las demandas de los grupos vulnerables y se sostiene la
@@ -1113,69 +1090,51 @@ Salud, s.~f.-a}). Esta estructura dual busca garantizar la cobertura de
 toda la población mediante diversos mecanismos regulados y fiscalizados
 por el Estado, el cual delega la administración del sistema en distintas
 entidades (\citeproc{ref-gonzalez_estructura_2019}{González et~al.,
-2019, p. 16}). De esta manera, la rectoría recae en el Ministerio de
-Salud, cuya función es formular y controlar las políticas de salud
-pública a nivel nacional (MINSAL,
-\citeproc{ref-minsal_funciones_sf}{s.~f.}). Por su parte, la
-Superintendencia de Salud es un organismo autónomo, dotado de
-personalidad jurídica y patrimonio propio, encargado de fiscalizar a
-Fonasa, a las Isapres y a los prestadores de salud, y está compuesto por
-dos intendencias: la de Fondos y Seguros Previsionales de Salud y la de
-Prestadores (\citeproc{ref-gonzalez_estructura_2019}{González et~al.,
-2019, p. 41}). Sin embargo, tanto la Organización Panamericana de la
+2019, p. 16}). Sin embargo, tanto la Organización Panamericana de la
 Salud (OPS) como el Ministerio de Salud identifican como principales
 deficiencias del sistema su fragmentación administrativa y
 organizacional, que se expresa en un financiamiento desarticulado y en
 una provisión desigual de recursos
 (\citeproc{ref-goldstein_sistema_2018}{Goldstein, 2018}).
 
-El financiamiento de este sistema se sustenta en la obligación legal de
-todo trabajador, dependiente e independiente, de cotizar un 7\% de su
-renta imponible, permitiéndole al usuario elegir dónde destinar estos
-fondos (\citeproc{ref-superintendencia_como_sf}{Superintendencia de
-Salud, s.~f.-a}). El gran pilar estatal es Fonasa, un seguro público
-financiado por estas cotizaciones y aportes fiscales
-(\citeproc{ref-gonzalez_estructura_2019}{González et~al., 2019}). Sus
-afiliados se dividen en cuatro tramos (A, B, C y D) según sus ingresos.
-Sin embargo, todos ellos cuentan con atención gratuita (Copago Cero) al
-atenderse en la red pública bajo la Modalidad de Atención Institucional
+El financiamiento del sistema se sustenta en la cotización obligatoria
+del 7\% de la renta imponible de los trabajadores, quienes pueden
+destinarla al seguro público o a uno privado
 (\citeproc{ref-superintendencia_como_sf}{Superintendencia de Salud,
-s.~f.-a}). Además, los usuarios de los tramos B, C y D pueden optar por
-la Modalidad Libre Elección para comprar bonos y atenderse en clínicas
-privadas en convenio
-(\citeproc{ref-superintendencia_como_sf}{Superintendencia de Salud,
-s.~f.-a}).
-
-Por otro lado, se encuentran las Isapres, que administran las
-cotizaciones obligatorias, pudiendo también captar cotizaciones
-adicionales o voluntarias
-(\citeproc{ref-gonzalez_estructura_2019}{González et~al., 2019, p. 42}).
-Estas entidades ofrecen contratos bajo lógicas de mercado (estrictamente
-reguladas) que se financian con el 7\% legal más una cotización
-adicional voluntaria si el plan lo requiere
-(\citeproc{ref-gonzalez_estructura_2019}{González et~al., 2019, p. 82}).
-De forma paralela a estos dos grandes ejes, existe un subsistema cerrado
-operado por la Caja de Previsión de la Defensa Nacional (CAPREDENA),
-para las Fuerzas Armadas, y por la Dirección de Previsión de Carabineros
-(DIPRECA), a la que adscriben Carabineros, Gendarmería y la PDI
+s.~f.-a}). Fonasa, financiado por estas cotizaciones y por aportes
+fiscales, cubre a cerca del 80\% de la población
+(\citeproc{ref-gonzalez_estructura_2019}{González et~al., 2019};
+\citeproc{ref-munoz_otero_2025}{Muñoz \& Otero, 2025}). Sus afiliados se
+clasifican en cuatro tramos (A, B, C y D) según su ingreso, pero todos
+acceden a atención gratuita en la red pública bajo la Modalidad de
+Atención Institucional, y los tramos B, C y D pueden además atenderse
+con prestadores privados en convenio mediante la Modalidad Libre
+Elección (\citeproc{ref-superintendencia_como_sf}{Superintendencia de
+Salud, s.~f.-a}), aunque con copagos mayores
+(\citeproc{ref-atal_etal_2026}{Atal et~al., 2026}). Las Isapres, que
+cubren a alrededor del 15\% de la población, administran la cotización
+obligatoria y ofrecen planes bajo lógicas de mercado reguladas, que
+pueden requerir una cotización adicional
+(\citeproc{ref-gonzalez_estructura_2019}{González et~al., 2019}). Esta
+posibilidad de elección ha generado una selección entre ambos sectores,
+ya que Fonasa concentra a la población de menores recursos y mayor
+riesgo de enfermar, mientras que las Isapres cubren a personas de
+mayores ingresos, más sanas y más jóvenes (Pardo, 2019, como se citó en
+\citeproc{ref-menares_munoz_2025}{Menares \& Muñoz, 2025}). El resto de
+la población está cubierta por sistemas cerrados de las Fuerzas Armadas
+y de Orden, como CAPREDENA y DIPRECA
 (\citeproc{ref-gonzalez_estructura_2019}{González et~al., 2019}).
 
 En cuanto a la provisión de los servicios, la atención médica se
-articula a través de dos grandes redes. La red pública es administrada
-por el Estado mediante el Sistema Nacional de Servicios de Salud (SNSS)
-y sus 29 divisiones territoriales, que disponen de una red asistencial,
-constituida por hospitales e institutos de especialidad
-(\citeproc{ref-gonzalez_estructura_2019}{González et~al., 2019, p. 45}).
-A su vez la atención sanitaria se organiza en tres niveles según la
-complejidad y la cobertura de los problemas de salud que resuelven:
-primario, secundario y terciario
-(\citeproc{ref-vignolo_niveles_2011}{Vignolo et~al., 2011}).
-
-La atención primaria de salud (APS) es la puerta de entrada al sistema,
-tiene una complejidad básica y una amplia cobertura, con atención
-ambulatoria. Desarrolla un enfoque preventivo, promocional y familiar.
-Sus establecimientos están mayoritariamente bajo administración
-municipal y su alcance es territorial y comunitario
+articula en 29 servicios de salud y en tres niveles según la complejidad
+y la cobertura de los problemas de salud que resuelven: primario,
+secundario y terciario (\citeproc{ref-gonzalez_estructura_2019}{González
+et~al., 2019}; \citeproc{ref-vignolo_niveles_2011}{Vignolo et~al.,
+2011}). La atención primaria de salud (APS) es la puerta de entrada al
+sistema, tiene una complejidad básica y una amplia cobertura, con
+atención ambulatoria. Desarrolla un enfoque preventivo, promocional y
+familiar. Sus establecimientos están mayoritariamente bajo
+administración municipal y su alcance es territorial y comunitario
 (\citeproc{ref-gattini_sistema_2018}{Gattini, 2018};
 \citeproc{ref-olguin_niveles_2025}{Olguín, 2025}). Está constituida por
 Centros de Salud Familiar (CESFAM), Centros Comunitarios de Salud
@@ -1198,49 +1157,53 @@ establecimientos hospitalarios (SSMS,
 propia área de red asistencial o tener un carácter regional o
 suprarregional, y cuenta con recursos humanos de alta especialización y
 con recursos materiales y de infraestructura de mayor complejidad
-técnica (\citeproc{ref-gattini_sistema_2018}{Gattini, 2018}). Como
-contraparte, la red privada está conformada por clínicas, centros
-médicos, laboratorios y consultas particulares que absorben
-principalmente a los afiliados de Isapres, así como a los pacientes de
-Fonasa que utilizan la libre elección o que son derivados mediante
-licitaciones del Estado (\citeproc{ref-eunamed_como_2025}{Equipo
-EUNAMed, 2025}).
+técnica (\citeproc{ref-gattini_sistema_2018}{Gattini, 2018}).
 
-Más allá de la segmentación entre redes y seguros, el sistema contempla
-protecciones que se aplican a todas las personas. Según la
-Superintendencia de Salud
-(\citeproc{ref-superintendencia_garantias_sf}{s.~f.-b}),
-independientemente de si la persona está afiliada a Fonasa o a una
-Isapre, existen garantías universales transversales, entre las que se
-destaca el Plan de Garantías Explícitas en Salud (GES), que asegura por
-ley el acceso, la oportunidad de atención, la calidad y la protección
-financiera (con topes máximos de pago) para 90 problemas de salud de
-alto impacto. Sin embargo, estas garantías cubren un conjunto acotado de
-problemas de salud, y la evidencia previa indica que la implementación
-del régimen del Plan de Acceso Universal a Garantías Explícitas (AUGE),
-luego denominado GES, aumentó la utilización general sin eliminar las
-desigualdades socioeconómicas (\citeproc{ref-nunez_equity_2013}{Núñez \&
-Chi, 2013}). Asimismo, la Ley de Urgencia establece que, ante una
-emergencia de riesgo vital o riesgo de secuela funcional grave, el
-paciente debe ser atendido en el centro de salud más cercano, sea
-público o privado, sin que se le pueda exigir un cheque en garantía o
-pago previo. No obstante, esto no implica que la atención sea gratuita,
-ya que los costos se pagan posteriormente a través del seguro
-correspondiente. Una vez estabilizado, el usuario es derivado a la red
-que corresponda según su seguro (Biblioteca del Congreso Nacional de
-Chile {[}BCN{]}, \citeproc{ref-bcn_ley_sf}{s.~f.}).
+En la red pública, las personas deben inscribirse en el centro de
+atención primaria de su territorio, y el acceso a la atención de
+especialidad y hospitalaria se realiza mediante derivación desde ese
+nivel, según criterios definidos principalmente por el lugar de
+residencia (\citeproc{ref-munoz_otero_2025}{Muñoz \& Otero, 2025}). La
+red privada, en cambio, atiende principalmente a los afiliados a Isapre
+y a los de Fonasa que utilizan la Modalidad Libre Elección, mientras que
+casi la totalidad de quienes se atienden en hospitales públicos tiene
+seguro público (\citeproc{ref-munoz_otero_2025}{Muñoz \& Otero, 2025}).
+Así, para los afiliados a Fonasa en la red pública, el acceso a la
+especialidad depende de la derivación y de la oferta disponible en su
+territorio, mientras que quienes pueden costear la atención privada
+acceden a ella de forma directa.
 
-Finalmente, el contexto regulatorio del sistema se ha visto
-profundamente modificado tras la entrada en vigencia de la Ley Corta de
-Isapres (Ley N° 21.674) en 2024. Esta normativa fue promulgada para dar
-cumplimiento a un fallo de la Corte Suprema, que ordenó aplicar una
-Tabla Única de Factores (TUF) sin discriminación por sexo o edad, y para
-evitar una quiebra sistémica del sector privado. En ese marco,
-estableció la devolución gradual de los cobros en exceso realizados
-desde el año 2020. Además, impuso un ajuste de los planes al 7\% legal,
-reduciendo los excedentes al exigir mayores beneficios cuando el costo
-original era inferior a ese mínimo
-(\citeproc{ref-goldstein_resena_2024}{Goldstein, 2024}).
+El sistema contempla protecciones que se aplican a todas las personas.
+El Plan de Garantías Explícitas en Salud (GES), asegura por ley el
+acceso, la oportunidad de atención, la calidad y la protección
+financiera para 90 problemas de salud de alto impacto,
+independientemente del seguro de la persona
+(\citeproc{ref-superintendencia_garantias_sf}{Superintendencia de Salud,
+s.~f.-b}). Su implementación redujo la mortalidad por las enfermedades
+cubiertas y disminuyó la dispersión de la utilización entre hospitales
+(\citeproc{ref-menares_munoz_2025}{Menares \& Muñoz, 2025}), aunque no
+eliminó las desigualdades socioeconómicas en la utilización
+(\citeproc{ref-nunez_equity_2013}{Núñez \& Chi, 2013}).
+
+Asimismo, la Ley de Urgencia establece que, ante una emergencia de
+riesgo vital o riesgo de secuela funcional grave, el paciente debe ser
+atendido en el centro de salud más cercano, sea público o privado, sin
+que se le pueda exigir un cheque en garantía o pago previo. No obstante,
+esto no implica que la atención sea gratuita, ya que los costos se pagan
+posteriormente a través del seguro correspondiente. Una vez
+estabilizado, el usuario es derivado a la red que corresponda según su
+seguro (Biblioteca del Congreso Nacional de Chile {[}BCN{]},
+\citeproc{ref-bcn_ley_sf}{s.~f.}).
+
+Finalmente, la Ley N° 21.674, promulgada en 2024 para dar cumplimiento a
+un fallo de la Corte Suprema, ordenó aplicar en las Isapres una Tabla
+Única de Factores sin discriminación por sexo o edad, estableció la
+devolución gradual de cobros en exceso y ajustó los planes al 7\% legal
+(\citeproc{ref-goldstein_resena_2024}{Goldstein, 2024}). Dado que la
+CASEN 2024 se levantó entre noviembre de 2024 y febrero de 2025, los
+resultados reflejan un sector privado en transición, por lo que las
+diferencias entre Isapre y Fonasa, y en particular su variación con la
+edad, deben interpretarse considerando este contexto.
 
 \section{Distribución territorial de la
 oferta}\label{distribuciuxf3n-territorial-de-la-oferta}
@@ -1282,17 +1245,18 @@ con él, y se accede a ellos por vías distintas a la red pública
 
 Para el año 2024, el 67,3\% de los médicos en Chile tienen alguna
 especialidad, del total, 37,6\% pertenece al sector público y el 62,4\%
-al sector privado. En relación con su distribución territorial, la
-Superintendencia de Salud
-(\citeproc{ref-superintendencia_caracterizacion_2023}{2023}) muestra
-diferencias marcadas: la Región Metropolitana registra una tasa de 2,46
-médicos especialistas por cada 1.000 habitantes, seguida por Biobío
-(1,72) y Valparaíso (1,43), mientras que Tarapacá y Arica y Parinacota
-presentan tasas de 0,70 y 0,81, respectivamente, siendo alrededor de un
-tercio de la Región Metropolitana. Estas diferencias muestran que la
-disponibilidad territorial de especialistas es heterogénea y está
-asociada con factores demográficos y con la capacidad formadora de las
-instituciones presentes en aquellas regiones
+al sector privado
+(\citeproc{ref-clinicasdechile_dimensionamiento_2025}{Clínicas de Chile,
+2025}). En relación con su distribución territorial, la Superintendencia
+de Salud (\citeproc{ref-superintendencia_caracterizacion_2023}{2023})
+muestra diferencias marcadas: la Región Metropolitana registra una tasa
+de 2,46 médicos especialistas por cada 1.000 habitantes, seguida por
+Biobío (1,72) y Valparaíso (1,43), mientras que Tarapacá y Arica y
+Parinacota presentan tasas de 0,70 y 0,81, respectivamente, siendo
+alrededor de un tercio de la Región Metropolitana. Estas diferencias
+muestran que la disponibilidad territorial de especialistas es
+heterogénea y está asociada con factores demográficos y con la capacidad
+formadora de las instituciones presentes en aquellas regiones
 (\citeproc{ref-huaiquilaf-jorquera_medicos_2026}{Huaiquilaf-Jorquera
 et~al., 2026}).
 
@@ -1346,18 +1310,6 @@ distribución desigual de los recursos asociado al modelo de
 administración actual y fortalecer la capacidad resolutiva del nivel
 primario de atención en salud
 (\citeproc{ref-goldstein_sistema_2018}{Goldstein, 2018}).
-
-En síntesis, la distribución de la oferta sanitaria en Chile no es
-equilibrada. La concentración de especialistas y de camas, junto con las
-limitaciones de la red rural, sugiere que el lugar de residencia puede
-modificar las posibilidades de utilizar servicios de especialidad y
-hospitalarios, más allá de la necesidad de atención de cada persona.
-Asimismo, es relevante distinguir que la oferta de servicios no es lo
-mismo que el acceso ni que la utilización, dado que la existencia de
-infraestructura en un territorio no garantiza su accesibilidad ni se
-traduce automáticamente en su uso. Por eso, en esta investigación, la
-oferta se entiende como una condición del contexto que puede facilitar o
-restringir la utilización, y no como una medida de esta.
 
 \bookmarksetup{startatroot}
 
@@ -1536,8 +1488,8 @@ urbanas, diferencia que no resultó estadísticamente significativa.
 
 Por tanto, aunque la evidencia confirma la relevancia de las barreras
 territoriales, sus asociaciones con la utilización varían según el
-servicio y el período estudiado. Por esto, la diferencia observada en
-las consultas de especialidad resulta especialmente relevante ya que la
+servicio y el período estudiado. La diferencia observada en las
+consultas de especialidad resulta especialmente relevante ya que la
 oferta de especialistas tiende a concentrarse en los centros urbanos.
 Sobre esta base se plantea que:
 
@@ -1555,19 +1507,15 @@ consistentes. Vásquez et~al.
 resultados variaban según la medida de utilización: a igual necesidad,
 los grupos de menores ingresos concentraban más días de hospitalización,
 aunque la probabilidad de hospitalizarse mostraba una distribución
-ligeramente favorable a los grupos de mayores ingresos (p.~103, tabla
-4). Paraje \& Vásquez (\citeproc{ref-paraje_health_2012}{2012})
-encontraron que la hospitalización presentó una distribución favorable a
-los grupos de menores ingresos, y que la medicina general pasó de una
-distribución ligeramente favorable a ellos en 2003 a otra favorable a
-los de mayores ingresos en 2009 (p.~13, tabla 6). Por su parte,
-Henríquez \& Velasco (\citeproc{ref-henriquez_desigualdades_2015}{2015})
-no encontraron una diferencia significativa en la hospitalización entre
-los mayores de 66 años y el tramo de 15 a 25 años (p.~17). Esto es
-coherente con la revisión internacional, donde el mayor uso hospitalario
-de los grupos desfavorecidos se explica principalmente por su peor
-estado de salud. Como la evidencia no permite anticipar una dirección
-clara, se exploran:
+ligeramente favorable a los grupos de mayores ingresos (p.~103). Paraje
+\& Vásquez (\citeproc{ref-paraje_health_2012}{2012}) encontraron que la
+hospitalización presentó una distribución favorable a los grupos de
+menores ingresos, y que la medicina general pasó de una distribución
+ligeramente favorable a ellos en 2003 a otra favorable a los de mayores
+ingresos en 2009 (p.~13). Esto es coherente con la revisión
+internacional, donde el mayor uso hospitalario de los grupos
+desfavorecidos se explica principalmente por su peor estado de salud.
+Como la evidencia no permite anticipar una dirección clara, se exploran:
 
 \textbf{He1.} Se explora si el ingreso se relaciona con la consulta de
 medicina general y con la hospitalización o intervención quirúrgica.
@@ -1578,15 +1526,17 @@ intervención quirúrgica son menores que en la consulta de especialidad.
 
 \subsection{Edad y sexo}\label{edad-y-sexo}
 
-En relación con la edad, Chovar et al.
-(\citeproc{ref-chovarvera_desigualdad_2014}{2014}) analizaron la
+En relación con la edad, Chovar et
+al.(\citeproc{ref-chovarvera_desigualdad_2014}{2014}) analizaron la
 utilización de servicios médicos con las encuestas CASEN de 2000, 2003,
-2009 y 2011, distinguiendo cuatro grupos etarios. Sin embargo, en
-medicina general y días de hospitalización no se identificó un patrón
-consistente entre grupos etarios. Por su parte, Henríquez \& Velasco
+2009 y 2011, distinguiendo cuatro grupos etarios, y no identificaron un
+patrón consistente entre ellos en medicina general ni en días de
+hospitalización. Por su parte, Henríquez \& Velasco
 (\citeproc{ref-henriquez_desigualdades_2015}{2015}) estimaron que, en
 los mayores de 66 años, la probabilidad de consulta general y de
-especialidad fue mayor que en el tramo de 15 a 25 años.
+especialidad fue mayor que en el tramo de 15 a 25 años, mientras que en
+la hospitalización no encontraron una diferencia significativa entre
+ambos grupos (p.~17).
 
 Estos antecedentes muestran que la utilización y su desigualdad varían
 con la edad, pero no permiten saber si las asociaciones del ingreso, la
@@ -1609,8 +1559,10 @@ la medicina general es gratuita para los afiliados a Fonasa en la red
 pública, cabría esperar que en las edades avanzadas su utilización
 dependa más de la necesidad que de los recursos
 (\citeproc{ref-andersen_revisiting_1995}{Andersen, 1995},
-\citeproc{ref-andersen_national_2008}{2008}). Sobre esta base, se
-plantea:
+\citeproc{ref-andersen_national_2008}{2008}). En el caso de la previsión
+de salud, la selección entre ambos seguros y las modificaciones
+recientes del sector privado no permiten anticipar si sus diferencias
+aumentan o disminuyen con la edad. Sobre esta base, se plantea:
 
 \textbf{H4.} A mayor edad, mayores serán las diferencias por ingreso en
 la consulta de especialidad, con una mayor utilización entre las
@@ -1650,6 +1602,28 @@ entre hombres y mujeres.
 \textbf{He7.} Se explora si las diferencias entre zonas urbanas y
 rurales en la utilización de servicios de salud son distintas entre
 hombres y mujeres.
+
+\section{Diagrama de hipótesis}\label{diagrama-de-hipuxf3tesis}
+
+La Figura~\ref{fig-hipotesis} resume las hipótesis con dirección
+esperada.
+
+\begin{figure}
+
+\caption{\label{fig-hipotesis}Diagrama de hipótesis}
+
+\centering{
+
+\includegraphics[width=0.95\linewidth,height=\textheight,keepaspectratio]{assets/diagrama_hipotesis_final_v2.png}
+
+}
+
+\end{figure}%
+
+\emph{Nota.} Las hipótesis H2, H3 y H7 plantean una mayor utilización
+entre las personas afiliadas a Isapre, residentes en zonas urbanas y
+mujeres, respectivamente. Las hipótesis exploratorias (He1 a He7) se
+presentan en el texto.
 
 \bookmarksetup{startatroot}
 
@@ -1814,9 +1788,10 @@ la utilización. Aunque la Ley N° 19.828 define como adulta mayor a la
 persona de 60 años y más, se utiliza el umbral de 65 años para mantener
 la comparabilidad con las cifras del INE citadas en la introducción, y
 el de 80 años corresponde a la cuarta edad que define la misma ley.
-Siguiendo a (\citeproc{ref-andersen_revisiting_1995}{Andersen, 1995}),
-la educación se trata como una característica de la estructura social y
-no como un recurso material.
+Siguiendo a Siguiendo a Andersen
+(\citeproc{ref-andersen_revisiting_1995}{1995}), la educación se trata
+como una característica de la estructura social y no como un recurso
+material.
 
 Los dos indicadores de necesidad corresponden a necesidad percibida, y
 no evaluada por criterios profesionales
@@ -1869,15 +1844,6 @@ probabilidad de utilización de cada uno de los tres tipos de servicios
 de salud (medicina general, atención de especialidad y hospitalización o
 intervención quirúrgica) en la población de 18 años y más. Todas las
 estimaciones incorporan los factores de expansión y el diseño muestral
-de CASEN 2024. Para cada persona \(i\) y servicio \(j\), se modela:
-
-\section{4.3 Estrategia de análisis}\label{estrategia-de-anuxe1lisis-1}
-
-Se utilizarán modelos de regresión logística binaria para estimar la
-probabilidad de utilización de cada uno de los tres tipos de servicios
-de salud (medicina general, atención de especialidad y hospitalización o
-intervención quirúrgica) en la población de 18 años y más. Todas las
-estimaciones incorporan los factores de expansión y el diseño muestral
 de CASEN 2024. Para cada persona \(i\) y servicio \(j\), se modela
 
 \[
@@ -1904,9 +1870,10 @@ reciente y la limitación funcional.
 
 \textbf{Modelo 3: factores facilitadores.} Agrega el ingreso y la
 previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la
-cercanía a un centro de salud (H3; objetivo 3). La región de residencia
-se incluye como variable de control. Con este modelo se evalúan además
-He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 5).
+proximidad a un centro de salud (H3; objetivo 3). La región de
+residencia se incluye como variable de control. Con este modelo se
+evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7;
+objetivo 1).
 
 \begin{equation}\protect\phantomsection\label{eq-m3}{
 \text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N + \mathbf{F}_i'\boldsymbol{\beta}_F + \mathbf{T}_i'\boldsymbol{\beta}_T
@@ -1937,7 +1904,7 @@ y He3), la previsión de salud (He4) y el área de residencia (H6)
 
 \textbf{Modelo 5: interacciones con el sexo.} Agrega por separado la
 interacción entre el sexo y el ingreso (He5), la previsión de salud
-(He6) y el área de residencia (He7) (objetivo 6).
+(He6) y el área de residencia (He7) (objetivo 5).
 
 \emph{5a. Sexo × ingreso (He5)}
 
@@ -1976,7 +1943,8 @@ la significancia de cada interacción se evaluará mediante pruebas
 conjuntas que consideran el diseño muestral. Las interacciones se
 interpretarán mediante probabilidades predichas por grupo de edad,
 comparando si las diferencias entre las categorías de cada factor
-aumentan o disminuyen a medida que aumenta la edad (Mize, 2019).
+aumentan o disminuyen a medida que aumenta la edad
+(\citeproc{ref-mize_best_2019}{Mize, 2019}).
 
 Previo a la estimación, se evaluará la multicolinealidad entre nivel
 educacional, ingreso y previsión de salud mediante el factor de
@@ -2173,6 +2141,11 @@ Asadi-Lari, M., Packham, C., \& Gray, D. (2003). Need for redefining
 needs. \emph{Health and Quality of Life Outcomes}, \emph{1}.
 \url{https://doi.org/10.1186/1477-7525-1-34}
 
+\bibitem[\citeproctext]{ref-atal_etal_2026}
+Atal, J. P., Larroucau, T., Muñoz, P., \& Otero, C. (2026).
+\emph{Physicians' occupational licensing and the quantity-quality
+trade-off}. Documento de trabajo.
+
 \bibitem[\citeproctext]{ref-bancomundial_medicos_sf}
 Banco Mundial. (s.~f.). \emph{Médicos (cada 1.000 personas) - {Chile}}.
 Recuperado 18 de octubre de 2026, de
@@ -2235,11 +2208,6 @@ Departamento de Estadísticas e Información de Salud. (2026).
 defunción y año. Tablero de datos} {[}Dataset{]}. Ministerio de Salud de
 Chile.
 \url{https://informesdeis.minsal.cl/SASVisualAnalytics/?reportUri=\%2Freports\%2Freports\%2F4013de47-a3c2-47b8-8547-075525e4f819&sectionIndex=0&sso_guest=true&reportViewOnly=true&reportContextBar=false&sas-welcome=false}
-
-\bibitem[\citeproctext]{ref-eunamed_como_2025}
-Equipo EUNAMed. (2025, octubre 10). \emph{Cómo funciona el sistema de
-salud en Chile}. EUNAMed.com.
-\url{https://eunamed.com/blog/como-funciona-el-sistema-de-salud-en-chile/}
 
 \bibitem[\citeproctext]{ref-ferraro_aging_2009}
 Ferraro, K. F., \& Shippee, T. P. (2009). Aging and cumulative
@@ -2352,6 +2320,12 @@ Ley N° 19.828. (2002, septiembre 27). \emph{Crea el Servicio Nacional
 del Adulto Mayor}. Ministerio Secretaría General de la Presidencia.
 \url{https://www.bcn.cl/leychile/navegar?idNorma=202950}
 
+\bibitem[\citeproctext]{ref-menares_munoz_2025}
+Menares, F., \& Muñoz, P. (2025). The impact of standardized
+disease-specific healthcare coverage. \emph{Journal of Public
+Economics}, \emph{242}, 105312.
+\url{https://doi.org/10.1016/j.jpubeco.2025.105312}
+
 \bibitem[\citeproctext]{ref-mendoza-sassi_utilizacion_2001}
 Mendoza-Sassi, R., \& Béria, J. U. (2001). Utilización de los servicios
 de salud: una revisión sistemática sobre los factores relacionados.
@@ -2362,11 +2336,6 @@ de salud: una revisión sistemática sobre los factores relacionados.
 Ministerio de Desarrollo Social y Familia. (2026). \emph{Informe
 metodológico Casen 2024}. Observatorio Social.
 \url{https://observatorio.ministeriodesarrollosocial.gob.cl/storage/docs/casen/2024/Informe_metodologico_casen_2024.pdf}
-
-\bibitem[\citeproctext]{ref-minsal_funciones_sf}
-Ministerio de Salud. (s.~f.). \emph{Funciones y objetivos}. Gobierno de
-Chile. Recuperado 20 de octubre de 2026, de
-\url{https://www.minsal.cl/funciones-objetivos/}
 
 \bibitem[\citeproctext]{ref-minsal_informe_2023}
 Ministerio de Salud, Departamento de Epidemiología. (2023).
@@ -2386,11 +2355,21 @@ Ministerio de Salud, \& Organización Panamericana de la Salud. (2025).
 de Salud.
 \url{https://www.paho.org/sites/default/files/2026/09/minsal-ops-2025-levantamiento-informacion-psr-final-comprimido.pdf}
 
+\bibitem[\citeproctext]{ref-mize_best_2019}
+Mize, T. D. (2019). Best practices for estimating, interpreting, and
+presenting nonlinear interaction effects. \emph{Sociological Science},
+\emph{6}, 81-117. \url{https://doi.org/10.15195/v6.a4}
+
 \bibitem[\citeproctext]{ref-moscosocuaresma_determinantes_2017}
 Moscoso Cuaresma, J. R., Cárdenas, E., \& Juárez, C. (2017).
 \emph{Determinantes sociales en salud}. Universidad Peruana de Ciencias
 Aplicadas.
 \url{https://www.researchgate.net/profile/Julio-Ricardo-Moscoso-Cuaresma/publication/385822723_Determinantes_sociales_en_salud/links/6736a966a78ba469f0617e2a/Determinantes-sociales-en-salud.pdf}
+
+\bibitem[\citeproctext]{ref-munoz_otero_2025}
+Muñoz, P., \& Otero, C. (2025). Managers and public hospital
+performance. \emph{American Economic Review}, \emph{115}(11), 4040-4074.
+\url{https://doi.org/10.1257/aer.20240615}
 
 \bibitem[\citeproctext]{ref-nunez_equity_2013}
 Núñez, A., \& Chi, C. (2013). Equity in health care utilization in

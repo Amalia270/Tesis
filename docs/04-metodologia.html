@@ -290,7 +290,6 @@ window.Quarto = {
   <li><a href="#valores-perdidos" id="toc-valores-perdidos" class="nav-link" data-scroll-target="#valores-perdidos"><span class="header-section-number">4.2.3</span> Valores perdidos</a></li>
   </ul></li>
   <li><a href="#estrategia-de-análisis" id="toc-estrategia-de-análisis" class="nav-link" data-scroll-target="#estrategia-de-análisis"><span class="header-section-number">4.3</span> Estrategia de análisis</a></li>
-  <li><a href="#estrategia-de-análisis-1" id="toc-estrategia-de-análisis-1" class="nav-link" data-scroll-target="#estrategia-de-análisis-1"><span class="header-section-number">4.4</span> Estrategia de análisis</a></li>
   </ul>
 </nav>
     </div>
@@ -456,7 +455,7 @@ Tabla&nbsp;4.2: Variables independientes
 </figure>
 </div>
 </div>
-<p>La edad se agrupa en cinco tramos para captar relaciones no lineales con la utilización. Aunque la Ley N° 19.828 define como adulta mayor a la persona de 60 años y más, se utiliza el umbral de 65 años para mantener la comparabilidad con las cifras del INE citadas en la introducción, y el de 80 años corresponde a la cuarta edad que define la misma ley. Siguiendo a <span class="citation" data-cites="andersen_revisiting_1995">(<a href="references.html#ref-andersen_revisiting_1995" role="doc-biblioref">Andersen, 1995</a>)</span>, la educación se trata como una característica de la estructura social y no como un recurso material.</p>
+<p>La edad se agrupa en cinco tramos para captar relaciones no lineales con la utilización. Aunque la Ley N° 19.828 define como adulta mayor a la persona de 60 años y más, se utiliza el umbral de 65 años para mantener la comparabilidad con las cifras del INE citadas en la introducción, y el de 80 años corresponde a la cuarta edad que define la misma ley. Siguiendo a Siguiendo a <span class="citation" data-cites="andersen_revisiting_1995">Andersen (<a href="references.html#ref-andersen_revisiting_1995" role="doc-biblioref">1995</a>)</span>, la educación se trata como una característica de la estructura social y no como un recurso material.</p>
 <p>Los dos indicadores de necesidad corresponden a necesidad percibida, y no evaluada por criterios profesionales <span class="citation" data-cites="andersen_national_2008">(<a href="references.html#ref-andersen_national_2008" role="doc-biblioref">Andersen, 2008</a>)</span>. Ambos son declarados por el informante del hogar y no equivalen a una evaluación clínica. El período de referencia del problema de salud reciente coincide con el de la atención de medicina general y de especialidad.</p>
 <p>Las personas con otro sistema previsional quedan fuera del análisis, por lo que los resultados de los modelos se refieren a la población adulta afiliada a Fonasa o Isapre. Los tramos de Fonasa no se desagregan porque se definen por ingreso, que ya se incluye en el modelo. Se utiliza el ingreso per cápita porque permite comparar hogares de distinto tamaño y porque el gasto en salud se resuelve en gran medida en el hogar. Se emplea el ingreso total, que incluye las transferencias monetarias del Estado, por su relevancia para la población mayor, y se agrupa en quintiles porque estos describen la posición relativa, permiten capturar relaciones no lineales y reducen el efecto de los valores extremos. Como prueba de robustez, los modelos se estimarán también con el ingreso autónomo per cápita del hogar, lo que permitirá evaluar en qué medida las transferencias modifican la relación entre el ingreso y la utilización, especialmente en la población mayor.</p>
 <p>Finalmente, la proximidad declarada a un centro de salud constituye una aproximación a la cercanía territorial de los servicios y no una medida directa del acceso efectivo.</p>
@@ -469,10 +468,6 @@ Tabla&nbsp;4.2: Variables independientes
 </section>
 <section id="estrategia-de-análisis" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="estrategia-de-análisis"><span class="header-section-number">4.3</span> Estrategia de análisis</h2>
-<p>Se utilizarán modelos de regresión logística binaria para estimar la probabilidad de utilización de cada uno de los tres tipos de servicios de salud (medicina general, atención de especialidad y hospitalización o intervención quirúrgica) en la población de 18 años y más. Todas las estimaciones incorporan los factores de expansión y el diseño muestral de CASEN 2024. Para cada persona <span class="math inline">\(i\)</span> y servicio <span class="math inline">\(j\)</span>, se modela:</p>
-</section>
-<section id="estrategia-de-análisis-1" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="estrategia-de-análisis-1"><span class="header-section-number">4.4</span> Estrategia de análisis</h2>
 <p>Se utilizarán modelos de regresión logística binaria para estimar la probabilidad de utilización de cada uno de los tres tipos de servicios de salud (medicina general, atención de especialidad y hospitalización o intervención quirúrgica) en la población de 18 años y más. Todas las estimaciones incorporan los factores de expansión y el diseño muestral de CASEN 2024. Para cada persona <span class="math inline">\(i\)</span> y servicio <span class="math inline">\(j\)</span>, se modela</p>
 <p><span class="math display">\[
 \text{logit}(p_{ij}) = \ln\left(\frac{p_{ij}}{1-p_{ij}}\right)
@@ -486,7 +481,7 @@ Tabla&nbsp;4.2: Variables independientes
 <p><span id="eq-m2"><span class="math display">\[
 \text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N
 \tag{4.2}\]</span></span></p>
-<p><strong>Modelo 3: factores facilitadores.</strong> Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la cercanía a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 1).</p>
+<p><strong>Modelo 3: factores facilitadores.</strong> Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la proximidad a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 1).</p>
 <p><span id="eq-m3"><span class="math display">\[
 \text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N + \mathbf{F}_i'\boldsymbol{\beta}_F + \mathbf{T}_i'\boldsymbol{\beta}_T
 \tag{4.3}\]</span></span></p>
@@ -517,7 +512,7 @@ Tabla&nbsp;4.2: Variables independientes
 \text{logit}(p_{ij}) = \text{M3} + \delta\,(\text{Mujer}_i\times \text{Rural}_i)
 \tag{4.9}\]</span></span></p>
 <p>Donde <span class="math inline">\(\mathbf{P}_i\)</span> corresponde al vector de factores predisponentes (grupo de edad, sexo y nivel educacional), <span class="math inline">\(\mathbf{N}_i\)</span> al de factores de necesidad (problema de salud reciente y limitación funcional), <span class="math inline">\(\mathbf{F}_i\)</span> al de facilitadores individuales (quintil de ingreso y previsión de salud) y <span class="math inline">\(\mathbf{T}_i\)</span> al de facilitadores territoriales (área de residencia, cercanía a un centro de salud y región). M3 representa todos los términos del Modelo 3. <span class="math inline">\(E_{gi}\)</span> indica el grupo de edad <span class="math inline">\(g\)</span> y <span class="math inline">\(Q_{qi}\)</span> el quintil de ingreso <span class="math inline">\(q\)</span>. Las categorías de referencia son el grupo de 18 a 34 años, los hombres, el primer quintil, la afiliación a Fonasa y la zona urbana. Los coeficientes <span class="math inline">\(\gamma\)</span> y <span class="math inline">\(\delta\)</span> indican en qué medida la asociación de cada factor con la utilización difiere entre grupos de edad o entre hombres y mujeres.</p>
-<p>Cada modelo de interacción conserva todos los términos del Modelo 3, y la significancia de cada interacción se evaluará mediante pruebas conjuntas que consideran el diseño muestral. Las interacciones se interpretarán mediante probabilidades predichas por grupo de edad, comparando si las diferencias entre las categorías de cada factor aumentan o disminuyen a medida que aumenta la edad (<span class="citation" data-cites="mize_best_2019">Mize (<a href="references.html#ref-mize_best_2019" role="doc-biblioref">2019</a>)</span>).</p>
+<p>Cada modelo de interacción conserva todos los términos del Modelo 3, y la significancia de cada interacción se evaluará mediante pruebas conjuntas que consideran el diseño muestral. Las interacciones se interpretarán mediante probabilidades predichas por grupo de edad, comparando si las diferencias entre las categorías de cada factor aumentan o disminuyen a medida que aumenta la edad <span class="citation" data-cites="mize_best_2019">(<a href="references.html#ref-mize_best_2019" role="doc-biblioref">Mize, 2019</a>)</span>.</p>
 <p>Previo a la estimación, se evaluará la multicolinealidad entre nivel educacional, ingreso y previsión de salud mediante el factor de inflación de la varianza (VIF).</p>
 
 
@@ -2166,7 +2161,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>\text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N</span>
 <span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>$$ {#eq-m2}</span>
 <span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>**Modelo 3: factores facilitadores.** Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la cercanía a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 1).</span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a>**Modelo 3: factores facilitadores.** Agrega el ingreso y la previsión de salud (H1 y H2; objetivo 2) y el área de residencia y la proximidad a un centro de salud (H3; objetivo 3). La región de residencia se incluye como variable de control. Con este modelo se evalúan además He1 y He2 (objetivos 2 y 3) y la diferencia por sexo (H7; objetivo 1).</span>
 <span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>\text{logit}(p_{ij}) = \beta_0 + \mathbf{P}_i'\boldsymbol{\beta}_P + \mathbf{N}_i'\boldsymbol{\beta}_N + \mathbf{F}_i'\boldsymbol{\beta}_F + \mathbf{T}_i'\boldsymbol{\beta}_T</span>
